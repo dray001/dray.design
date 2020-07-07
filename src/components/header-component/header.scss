@@ -1,0 +1,47 @@
+
+header {
+    // background: rebeccapurple;
+    margin-bottom: 1.45rem;
+    
+
+    .headerContainer {
+            // margin: 0 auto;
+            width: 100%;
+            height: 60px;
+            display: flex;
+            justify-content: space-between;
+            // max-width: 1224px;
+            padding: 64px 108px;
+
+            button {
+                border: none; 
+                background-color: white;
+                text-decoration: none;
+                cursor: pointer;
+                margin-right: 32px;
+            }
+
+            button:hover {
+                border-bottom: solid 1px black;
+            }
+
+        
+            a {
+            // color: white;
+            width: 180px;
+            cursor: pointer;
+            display: flex;
+            align-content: center;
+            justify-content: space-between;
+            justify-items: center;
+            text-decoration: none; 
+
+                span:last-child {
+                    display: flex;
+                    background-color: red;
+                    align-items: center;
+                }
+            }
+        
+    }
+}
