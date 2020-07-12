@@ -1,0 +1,56 @@
+section {
+    margin-top: 2%;
+    height: 100vh;
+    display: flex;
+    justify-content: space-between;
+
+    .introContent {
+        width: 50%;
+        // max-width: 600px; 
+
+        .textWrapper {
+            .textp1 {
+                margin-top: 20px;
+            }
+
+            .textp2 {
+                margin-top: 64px;
+            }
+        }
+
+        .buttonWrapper {
+
+            p {
+                font-size: 18px;
+                position: relative;
+                display: inline;
+
+                &::before {
+                    content: '';
+                    position: absolute;
+                    z-index: -1;
+                    height: 14px;
+                    width: 90%;
+                    top: 50%;
+                    right: -20px;
+                    background-color: #F8C8C8;;
+                    display: block;
+                }
+            }
+
+            .buttonHolder {
+                margin-top: 32px;
+                display: grid;
+                grid-template-columns: 1fr 1fr;
+                grid-gap: 24px;
+            }
+        }
+     
+    }
+
+    img {
+        width: 400px;
+        height: 500px;
+        object-fit: cover;
+    }
+}
