@@ -5,12 +5,12 @@
  * See: https://www.gatsbyjs.org/docs/use-static-query/
  */
 
-import React from "react"
+import React, {useEffect, useState} from "react"
 import PropTypes from "prop-types"
 import { useStaticQuery, graphql } from "gatsby"
 
 import Header from "./header-component/header"
-import "./layout.css"
+import "./layout.scss"
 
 const Layout = ({ children }) => {
   const data = useStaticQuery(graphql`
@@ -20,19 +20,41 @@ const Layout = ({ children }) => {
           title
         }
       }
+      allContentfulText {
+        edges {
+          node {
+            landingTitle
+          }
+        }
+      }
     }
   `)
 
+const [state, setState] = useState(false);
+
+useEffect(
+  ()=> {
+    window.addEventListener('scroll', handleScroll)
+  },
+[]);
+
+const handleScroll = (event) => {
+  const scrollTop = window.pageYOffset;
+  if(scrollTop > 50) {
+    setState(true);
+  }
+  else {
+    setState(false);
+  }
+}
+
   return (
     <>
-      <Header siteTitle={data.site.siteMetadata.title} />
-      <div
-        style={{
-          margin: `0 auto`,
-          padding: `64px 108px`,
-          backgroundColor: 'none',
-        }}
-      >
+      <header className = {state ? 'pageHeader sadow' : 'pageHeader'} >
+        <Header  siteTitle={data.site.siteMetadata.title} />
+      </header>
+      
+      <div className='childrenWrapper'>
         <main>{children}</main>
         <footer>
           © {new Date().getFullYear()}, Built with

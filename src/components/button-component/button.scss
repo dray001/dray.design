@@ -1,8 +1,12 @@
+@import 'src/styles/common.scss';
+
 .linky {
     text-decoration: none;
     color: #000;
+    display: inline-flex;
+    min-width: 100%;
     background: #F3F3F3;
-    padding: 24px;
+    padding: 16px;
     position: relative;
     border: 1px solid #000000;
     transition: transform 0.2s;
@@ -23,7 +27,13 @@
             position: absolute;
             top: -6px;
             left: -6px;
-        }
-        
+        } 
+    }
+}
+
+@include for-desktop-only {
+    .linky {
+        padding: 24px;
+        min-width: 100%;
     }
 }

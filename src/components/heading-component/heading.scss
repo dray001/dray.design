@@ -1,7 +1,10 @@
+@import 'src/styles/common.scss';
+
 .titleHeading {
     font-weight: bold;
-    font-size: 68px;
+    font-size: 40px;
     line-height: 56px;
+    color: #000;
     position: relative;
     display: inline-block;
     margin: 0;
@@ -15,7 +18,20 @@
         height: 34px;
         right: -10px;
         top: 50%;
-        background-color: #E7FF57;
+        background-color: yellow;
     }
 }
+
+@include for-desktop-only () {
+
+    .titleHeading {
+        font-size: 68px;
+        &::before {
+            background-color: yellow;
+        }
+    }
+}
+
+
+
 
