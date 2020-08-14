@@ -1,5 +1,4 @@
 import React, { useEffect } from "react"
-// import { Link } from "gatsby"
 import Layout from "../components/layout"
 import Heading from "../components/heading-component/heading"
 import { graphql } from 'gatsby'
@@ -28,43 +27,45 @@ const IndexPage = ({data}) => {
   let Smile = ({skill, op1, op2, op3, op4}) => (
     <div className='skilly'>
       <span> {skill || 'non'} </span>
-      <svg width="296" height="56" viewBox="0 0 296 56" fill="none" xmlns="http://www.w3.org/2000/svg">
-        <g class="smiles">
-    
-        <g id="smiley1" opacity={op1 || 0.2}>
-        <circle id="Ellipse 1" cx="28" cy="28" r="27" stroke="black" stroke-width="2"/>
-        <path id="Ellipse 4" d="M42.6043 35.6103C38.1678 32.8982 33.0637 31.475 27.864 31.5003C22.6642 31.5256 17.5742 32.9983 13.1643 35.7534" stroke="black" stroke-width="2" stroke-linecap="round"/>
-        <circle id="Ellipse 2" cx="17.5" cy="21" r="3.5" fill="black"/>
-        <circle id="Ellipse 3" cx="38.5" cy="21" r="3.5" fill="black"/>
-        </g>
-    
-        <g id="smiley2" opacity={op2 || 0.2}>
-        <circle id="Ellipse 1_2" cx="108" cy="28" r="27" stroke="black" stroke-width="2"/>
-        <path id="Ellipse 4_2" d="M122.604 35.6103L93.1643 35.7534" stroke="black" stroke-width="2" stroke-linecap="round"/>
-        <circle id="Ellipse 2_2" cx="97.5" cy="21" r="3.5" fill="black"/>
-        <circle id="Ellipse 3_2" cx="118.5" cy="21" r="3.5" fill="black"/>
-        </g>
-    
-        <g id="smiley3" opacity={op3 || 0.2}>
-        <circle id="Ellipse 1_3" cx="188" cy="28" r="27" stroke="black" stroke-width="2"/>
-        <path id="Ellipse 4_3" d="M202.604 31.643C198.168 34.3552 193.064 35.7783 187.864 35.753C182.664 35.7278 177.574 34.2551 173.164 31.5" stroke="black" stroke-width="2" stroke-linecap="round"/>
-        <circle id="Ellipse 2_3" cx="177.5" cy="21" r="3.5" fill="black"/>
-        <circle id="Ellipse 3_3" cx="198.5" cy="21" r="3.5" fill="black"/>
-        </g>
-    
-        <g id="smiley4" opacity={op4 || 0.2}>
-        <circle id="Ellipse 1_4" cx="268" cy="28" r="27" stroke="black" stroke-width="2"/>
-        <g id="Ellipse 4_4">
-        <mask id="path-14-inside-1" fill="white">
-        <path d="M254 31.5C254 35.213 255.475 38.774 258.101 41.3995C260.726 44.025 264.287 45.5 268 45.5C271.713 45.5 275.274 44.025 277.899 41.3995C280.525 38.774 282 35.213 282 31.5L268 31.5H254Z"/>
-        </mask>
-        <path d="M254 31.5C254 35.213 255.475 38.774 258.101 41.3995C260.726 44.025 264.287 45.5 268 45.5C271.713 45.5 275.274 44.025 277.899 41.3995C280.525 38.774 282 35.213 282 31.5L268 31.5H254Z" fill="black" stroke="black" stroke-width="4" mask="url(#path-14-inside-1)"/>
-        </g>
-        <path id="Rectangle 2942" d="M262.45 21L257.5 16.0502L252.55 21" stroke="black" stroke-width="2" stroke-linecap="round"/>
-        <path id="Rectangle 2943" d="M281.399 21L276.45 16.0502L271.5 21" stroke="black" stroke-width="2" stroke-linecap="round"/>
-        </g>
-        </g>
-    </svg>
+      <div>
+        <svg width="296" height="56" viewBox="0 0 296 56" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <g class="smiles">
+          <g id="smiley1" opacity={op1 || 0.2}>
+          <circle id="Ellipse 1" cx="28" cy="28" r="27" stroke="black" stroke-width="2"/>
+          <path id="Ellipse 4" d="M42.6043 35.6103C38.1678 32.8982 33.0637 31.475 27.864 31.5003C22.6642 31.5256 17.5742 32.9983 13.1643 35.7534" stroke="black" stroke-width="2" stroke-linecap="round"/>
+          <circle id="Ellipse 2" cx="17.5" cy="21" r="3.5" fill="black"/>
+          <circle id="Ellipse 3" cx="38.5" cy="21" r="3.5" fill="black"/>
+          </g>
+      
+          <g id="smiley2" opacity={op2 || 0.2}>
+          <circle id="Ellipse 1_2" cx="108" cy="28" r="27" stroke="black" stroke-width="2"/>
+          <path id="Ellipse 4_2" d="M122.604 35.6103L93.1643 35.7534" stroke="black" stroke-width="2" stroke-linecap="round"/>
+          <circle id="Ellipse 2_2" cx="97.5" cy="21" r="3.5" fill="black"/>
+          <circle id="Ellipse 3_2" cx="118.5" cy="21" r="3.5" fill="black"/>
+          </g>
+      
+          <g id="smiley3" opacity={op3 || 0.2}>
+          <circle id="Ellipse 1_3" cx="188" cy="28" r="27" stroke="black" stroke-width="2"/>
+          <path id="Ellipse 4_3" d="M202.604 31.643C198.168 34.3552 193.064 35.7783 187.864 35.753C182.664 35.7278 177.574 34.2551 173.164 31.5" stroke="black" stroke-width="2" stroke-linecap="round"/>
+          <circle id="Ellipse 2_3" cx="177.5" cy="21" r="3.5" fill="black"/>
+          <circle id="Ellipse 3_3" cx="198.5" cy="21" r="3.5" fill="black"/>
+          </g>
+      
+          <g id="smiley4" opacity={op4 || 0.2}>
+          <circle id="Ellipse 1_4" cx="268" cy="28" r="27" stroke="black" stroke-width="2"/>
+          <g id="Ellipse 4_4">
+          <mask id="path-14-inside-1" fill="white">
+          <path d="M254 31.5C254 35.213 255.475 38.774 258.101 41.3995C260.726 44.025 264.287 45.5 268 45.5C271.713 45.5 275.274 44.025 277.899 41.3995C280.525 38.774 282 35.213 282 31.5L268 31.5H254Z"/>
+          </mask>
+          <path d="M254 31.5C254 35.213 255.475 38.774 258.101 41.3995C260.726 44.025 264.287 45.5 268 45.5C271.713 45.5 275.274 44.025 277.899 41.3995C280.525 38.774 282 35.213 282 31.5L268 31.5H254Z" fill="black" stroke="black" stroke-width="4" mask="url(#path-14-inside-1)"/>
+          </g>
+          <path id="Rectangle 2942" d="M262.45 21L257.5 16.0502L252.55 21" stroke="black" stroke-width="2" stroke-linecap="round"/>
+          <path id="Rectangle 2943" d="M281.399 21L276.45 16.0502L271.5 21" stroke="black" stroke-width="2" stroke-linecap="round"/>
+          </g>
+          </g>
+      </svg>
+      </div>
+      
     </div>
   );
 
@@ -134,8 +135,8 @@ const IndexPage = ({data}) => {
         <section>
           <div className='introContent'>
             <div className='textWrapper' >
-  
-                <Heading title={`About Me`} />
+
+              <Heading title={`About Me`} />
 
               <p className='textp2' >
               {paragraph(1)}
@@ -143,8 +144,10 @@ const IndexPage = ({data}) => {
 
             </div>
 
-
-            <Button link='/page-2' text='See my work' />
+            <div style={{width: '30%'}}>
+              <Button link='/projectList/projectListing' text='See my work' />
+            </div>
+            
 
           </div>
 
@@ -154,6 +157,7 @@ const IndexPage = ({data}) => {
                 <div><img src={imgSrc2} alt="someImg" /></div>
             </div>
           </div>
+
         </section>
 
         <section>

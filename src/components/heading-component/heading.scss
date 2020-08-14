@@ -22,13 +22,17 @@
     }
 }
 
+@include for-tablet-only () {
+
+    .titleHeading {
+        font-size: 58px;
+    }
+}
+
 @include for-desktop-only () {
 
     .titleHeading {
         font-size: 68px;
-        &::before {
-            background-color: yellow;
-        }
     }
 }
 

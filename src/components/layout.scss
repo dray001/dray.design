@@ -19,16 +19,26 @@ header.pageHeader {
     padding: 24px;
   }
 
-@include for-desktop-only () {
+  @include for-tablet-only() {
+    header.pageHeader {
+      z-index: 1;
+      display: block;
+      width: 100%;
+      position: fixed;
+      background-color: white;
+      transition: box-shadow 0.2s;
+    }
 
-  header.pageHeader {
-    z-index: 1;
-    display: block;
-    width: 100%;
-    position: fixed;
-    background-color: white;
-    transition: box-shadow 0.2s;
+    .pageHeader.sadow {
+      box-shadow: 0px 16px 25px rgba(0, 0, 0, 0.1);
+    }
+
+    .childrenWrapper {
+      padding: 32px;
+    }
   }
+
+@include for-desktop-only () {
 
   .pageHeader.sadow {
     box-shadow: 0px 16px 25px rgba(0, 0, 0, 0.1);

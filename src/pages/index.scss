@@ -59,15 +59,12 @@
     }
 
     section:nth-child(2) {
-
         .Img { 
         display: none;
         }
-
     }
 
     section:last-child {
-        // display: none;
         .skillset {
             width: 100%;
 
@@ -75,17 +72,10 @@
                 width: 100%;
                 display: block;
                 padding: 8px 0;
-                align-items: center;
 
                 svg {
-                        margin-top: 16px;
-                        // width: 100%;
-                        position: relative;
-
-                    .smiles {
-                        width: 100%;
-                    }
-                    
+                    transform-origin: top left;
+                    margin-top: 16px;
                 }
             }
         }
@@ -97,15 +87,25 @@
     .b3, .b4 {
         grid-column: 1 / 3;
       }
+    
+    .skilly {
+
+        svg {
+            transform: scale(0.9);
+
+            .smiles {
+                width: 100%;
+            } 
+        }
+    }
 
 }
 
 @include for-tablet-only() {
     .secWrapper {
-        // background: blue;
 
         section {
-            display: block;
+            margin-top: 104px;
             
             .introContent {
             width: 100%;
@@ -117,16 +117,32 @@
                 display: none
             }
         }
+
+        section:last-child {
+            .skillset {
+                width: 100%;
+                display: flex;
+                flex-wrap: wrap;
+    
+                .skilly {
+                    width: 50%;
+                    // margin-left: 3px;
+                    display: block;
+                    padding: 20px 0;
+                }
+            }
+        }
     }  
 }
 
 @include for-desktop-only() {
 
     .secWrapper {
+
+         margin-top: 40px;
     
         section {
-            // border-top: #F8C8C8 1px;
-            // margin-top: 50px;
+            margin-top: 0;
             height: 80vh;
             margin-bottom: 10px;
             // totally height of section should be the height of view port - height of header
@@ -145,9 +161,6 @@
         
                 .textWrapper {
     
-                    .title {
-                        margin-top: 164px;
-                    }
                     .textp1 {
                         margin-top: 20px;
                     }
@@ -170,11 +183,6 @@
                         margin-top: 32px;
                         grid-template-columns: 1fr 1fr;
                         grid-gap: 24px;
-
-                        .b1 {
-                            width: 100%;
-                            background-color: blue;
-                        }
                     }
                 }
              
@@ -194,7 +202,7 @@
                 .ImgWrapper {
                     div {
                         img {
-                        width: 400px;
+                        width: 560px;
                         height: 500px;
                         object-fit: cover;
                         }
@@ -229,6 +237,7 @@
         section:last-child {
             .skillset {
                 width: 50%;
+                display: block;
                 padding-left: 50px;
                 margin-left: 50px;
                 border-left: 1px solid #C8C8C8;

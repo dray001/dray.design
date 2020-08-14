@@ -3,7 +3,7 @@
 }
 
 @mixin for-desktop-only {
-    @media only screen and (min-width: 768px) { @content; }
+    @media only screen and (min-width: 1025px) { @content; }
 }
 
 @mixin for-tinnyP-only {
