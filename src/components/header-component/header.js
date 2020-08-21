@@ -3,16 +3,16 @@ import PropTypes from "prop-types"
 import React from "react"
 import "./header.scss"
 
-const Header = ({ siteTitle }) => (
+const Header = ({ siteTitle}) => (
   <header>
     <div className="headerContainer">
       <div className="headerLink">
-        <button>Dare Oni</button>
-        <button>About Me</button>
-        <button>My Skills</button>
+        <Link to = '/#dareOni'> Dare Oni </Link>
+        <Link to = '/#AboutMe' > About Me </Link>
+        <Link href='/#mySkills' > My Skills </Link>
       </div>
 
-      <div>
+      <div className="leaveAmessageButton">
         <Link to="/">
         <span>Leave a Message</span> 
         <span>

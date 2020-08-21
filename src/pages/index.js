@@ -98,7 +98,7 @@ const IndexPage = ({data}) => {
 
     observer1.observe(text[2]);
 
-  });
+  },[]);
 
   return (
     <Layout>
@@ -106,7 +106,7 @@ const IndexPage = ({data}) => {
       <SEO title="Home" />
 
       <div className='secWrapper'>
-        <section>
+        <section id='dareOni'>
           <div className='introContent'>
             <div className='textWrapper' >
             <div className='title'>
@@ -115,14 +115,14 @@ const IndexPage = ({data}) => {
               
               <p className='textp1'>Product Designer | Illustrator | Amateur Artist </p>
               <p className='textp2' >
-              {paragraph(0)}
+              {paragraph(1)}
               </p>
             </div>
 
             <div className='buttonWrapper'>
               <p>See what I have been up to:</p>
               <div className='buttonHolder'>
-                <div className='b1'> <Button link='/' text='Projects' /> </div>
+                <div className='b1'> <Button link='/projectList/projectListing' text='Projects' /> </div>
                 <div className='b2'> <Button link='/' text='Articles' /> </div>
                 <div className='b3'> <Button link='/' text='Illustrations' /> </div>
                 <div className='b4'> <Button link='/' text='Experiments' /> </div>
@@ -132,21 +132,21 @@ const IndexPage = ({data}) => {
           </div>
         </section>
 
-        <section>
+        <section id='AboutMe'>
           <div className='introContent'>
             <div className='textWrapper' >
 
               <Heading title={`About Me`} />
 
               <p className='textp2' >
-              {paragraph(1)}
+              {paragraph(0)}
               </p>
 
             </div>
 
-            <div style={{width: '30%'}}>
-              <Button link='/projectList/projectListing' text='See my work' />
-            </div>
+            
+            <Button buttonWidth={true} link='/projectList/projectListing' text='See my work' />
+            
             
 
           </div>
@@ -160,7 +160,7 @@ const IndexPage = ({data}) => {
 
         </section>
 
-        <section>
+        <section id='mySkills'>
           <div className='introContent'>
             <div className='textWrapper' >
               <Heading title={`My Skillset`} />

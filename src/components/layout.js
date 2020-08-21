@@ -51,7 +51,7 @@ const handleScroll = (event) => {
   return (
     <>
       <header className = {state ? 'pageHeader sadow' : 'pageHeader'} >
-        <Header  siteTitle={data.site.siteMetadata.title} />
+        <Header siteTitle={data.site.siteMetadata.title} />
       </header>
       
       <div className='childrenWrapper'>

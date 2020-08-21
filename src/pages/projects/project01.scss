@@ -1,0 +1,97 @@
+@import './src/styles/common.scss';
+
+.project01Wapper {
+    display: flex;
+    justify-content: space-between;
+    flex-direction: row-reverse;
+
+    margin: 0 0 80px;
+
+    .project01Content {
+        margin-right: 100px;
+
+        p {
+            margin-top: 40px;
+        }
+
+        section {
+            padding-top: 100px;
+        }
+
+        .secBrief {
+            .secBriefImg {
+                margin-top: 48px;
+                width: auto;
+                height: 480px;
+                background-color: #CDA5A5;
+            }
+
+            // .secBriefPara {
+            // }
+        }
+
+        .secChallenges {
+
+            .secChallengesContent {
+                margin-top: 48px;
+                display: flex;
+                justify-content: space-between;
+
+                .secChallengesImg {
+                    width: 389px;
+                    height: 315px;
+                    background-color: #CDA5A5;
+                }
+
+            }
+
+            .secChallengesPara {
+                width: 55%;
+                p {
+                    margin-top: 0;
+                }
+            }
+        }
+    }
+
+    .project01StickyNav {
+
+        div {
+            position: sticky;
+            top: 180px;
+        }
+
+        button {
+            border: none;
+            outline: none;
+        }
+
+        a, button {
+            display: inline-block;
+            text-decoration: none;
+            color: rgb(133, 133, 133);
+            font-size: 14px;
+            padding: 8px;
+            text-align: center;
+            border-radius: 4px;
+            margin-bottom: 16px;
+            width: 156px;
+            // background-color: red;
+        }
+
+        a.active , button.active{
+            border: 1px solid #555555;
+            color: #000;
+        }
+        
+    }
+}
+
+// @include for-desktop-only() {
+    
+// }
+
+
+
+
+

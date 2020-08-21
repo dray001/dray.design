@@ -1,10 +1,10 @@
 import React from "react";
 import './heading.scss'
 
-const Heading = ({title}) => {
+const Heading = ({title, size}) => {
 
     return (
-        <h1 className= 'titleHeading' >
+        <h1 style={{fontSize: `${size}`}} className= 'titleHeading' >
            {title}
         </h1>
     );

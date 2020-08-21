@@ -13,9 +13,9 @@ const SecondPage = () => {
       <div className='projectListContentArea'>
         <h1>{title}</h1>
         <p> {description} </p>
-        <div className='buttonHolder'>
-          <Button link={link} text='Read Case Study' />
-        </div>
+        
+          <Button buttonWidth={true} link={link} text='Read Case Study' />
+        
       </div>
 
       <div className='imageHolder' >
@@ -37,6 +37,7 @@ const SecondPage = () => {
 
       <Sec 
       title = 'Aella Finance App'
+      link = '/projects/project01'
       description = 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Velit sed orci et purus amet. Ullamcorper in lectus suspendisse non, et in quam phasellus.'
       />
 

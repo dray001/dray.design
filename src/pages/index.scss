@@ -178,7 +178,7 @@
                     }
         
                     .buttonHolder {
-                        width: 100%;
+                        width: 88%;
                         justify-items: stretch;
                         margin-top: 32px;
                         grid-template-columns: 1fr 1fr;
@@ -197,13 +197,13 @@
                 display: block;
             position: fixed;
             top: 25%;
-            right: 108px;
+            right: 156px;
     
                 .ImgWrapper {
                     div {
                         img {
-                        width: 560px;
-                        height: 500px;
+                        width: 500px;
+                        height: 600px;
                         object-fit: cover;
                         }
                     }
