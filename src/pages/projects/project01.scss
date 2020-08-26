@@ -80,8 +80,8 @@
         }
 
         a.active , button.active{
-            border: 1px solid #555555;
-            color: #000;
+            border: 1px solid var(--textNormal);
+            color: var(--textNormal);
         }
         
     }

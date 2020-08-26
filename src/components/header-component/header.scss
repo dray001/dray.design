@@ -1,63 +1,106 @@
-@import 'src/styles/common.scss';
+@import "src/styles/common.scss";
 
 header {
-    width: 100%;
+  width: 100%;
 
-    .headerContainer {
-        display: flex;
-        justify-content: space-between;
-        // max-width: 1224px;
-        padding: 32px 108px;
+  .headerContainer {
+    background-color: var(--bg);
+    display: flex;
+    justify-content: space-between;
+    padding: 32px;
 
-        .headerLink {
-            display: flex;
+    .headerLink {
+      display: flex;
 
-            a {
-                border: none;
-                color: #000;
-                background-color: white;
-                text-decoration: none;
-                cursor: pointer;
-                margin-right: 32px;
-            }
-    
-            a:hover {
-                border-bottom: solid 1px black;
-            }
-        }
+      a {
+        border: none;
+        color: var(--textNormal);
+        text-decoration: none;
+        cursor: pointer;
+        margin-right: 32px;
+      }
 
-        .leaveAmessageButton {
-
-            a {
-                color: #000;
-                cursor: pointer;
-                display: flex;
-                text-decoration: none; 
-        
-                span:last-child {
-                    margin-left: 14px;
-                    display: flex;
-                    align-items: center;
-                }
-            }
-        }
- 
+      a:hover {
+        border-bottom: solid 1px var(--textNormal);;
+      }
     }
+
+    .leaveAmessageButton {
+      display: flex;
+
+      .switch {
+        position: relative;
+        display: inline-block;
+        width: 24px;
+        height: 24px;
+
+        input {
+            opacity: 0;
+            width: 0;
+            height: 0;
+        }
+
+        .sunnyMoon {
+            position: absolute;
+            cursor: pointer;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background-image: url('../../images/moon.svg');
+            background-position: center;
+            transform: rotate(0deg);
+            transition: transform 0.3s ease-out;
+            background-repeat: no-repeat;
+            background-size: contain;
+        }
+
+        input:checked + .sunnyMoon {
+            background-image: url('../../images/sun.svg');
+            background-size: cover;
+            transform: rotate(180deg);
+
+          }
+
+
+      }
+
+      a {
+        color: var(--textNormal);;
+        cursor: pointer;
+        display: flex;
+        text-decoration: none;
+        padding-right: 50px;
+
+        span:last-child {
+          margin-left: 14px;
+          display: flex;
+          align-items: center;
+
+          svg {
+            path {
+              fill: var(--textNormal);
+            }
+          }
+        }
+      }
+    }
+  }
 }
 
 @include for-tablet-only() {
-    header {
-        .headerContainer {
-            // max-width: 1224px;
-            padding: 32px;
-        }
+  header {
+    .headerContainer {
+      // max-width: 1224px;
+      padding: 32px;
     }
+  }
 }
 
 @include for-desktop-only() {
-    header {
-        .headerContainer {
-            padding: 32px 156px;
-        }
+  header {
+    .headerContainer {
+      padding: 32px 8%;
     }
+  }
 }

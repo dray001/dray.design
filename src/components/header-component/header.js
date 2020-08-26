@@ -1,11 +1,14 @@
 import { Link } from "gatsby"
-import PropTypes from "prop-types"
 import React from "react"
+import PropTypes from "prop-types"
 import "./header.scss"
+import { ThemeToggler } from 'gatsby-plugin-dark-mode'
 
-const Header = ({ siteTitle}) => (
-  <header>
+const Header = ({ siteTitle}) => {
+  return (
+    <header>
     <div className="headerContainer">
+    
       <div className="headerLink">
         <Link to = '/#dareOni'> Dare Oni </Link>
         <Link to = '/#AboutMe' > About Me </Link>
@@ -22,6 +25,24 @@ const Header = ({ siteTitle}) => (
           </svg>
         </span>
         </Link>
+
+        <span>
+          <ThemeToggler>
+            {({ theme, toggleTheme }) => (
+              <label  className='switch'>
+                <input
+                  type="checkbox"
+                  onChange={e => {
+                    toggleTheme(e.target.checked ? 'dark' : 'light')
+                  }}
+                  checked={theme === 'dark'}
+                />
+                <span className='sunnyMoon'>
+                </span>
+              </label>
+            )}
+          </ThemeToggler>
+        </span>     
       </div>
       {/* <h1>
         <Link to="/" >
@@ -30,7 +51,8 @@ const Header = ({ siteTitle}) => (
       </h1> */}
     </div>
   </header>
-)
+  );
+}
 
 Header.propTypes = {
   siteTitle: PropTypes.string,

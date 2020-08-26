@@ -7,6 +7,11 @@ html {
   scroll-behavior: smooth;
 }
 
+body {
+  background-color: var(--bg);
+  color: var(--textNormal);
+}
+
 * {
   margin: 0;
   padding: 0;
@@ -47,7 +52,7 @@ header.pageHeader {
 
   .childrenWrapper {
     margin: 0 auto;
-    padding: 64px 156px;
+    padding: 64px 8%;
     background-color: none;
   }
 

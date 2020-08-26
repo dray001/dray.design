@@ -9,3 +9,29 @@
 @mixin for-tinnyP-only {
     @media only screen and (max-width: 320px) { @content; }
 }
+
+body {
+    --bg: #FBFCF7;
+    --textNormal: #222;
+    --textTitle: #222;
+    --headingAccent: yellow;
+    --textAccent: #F8C8C8;
+    --buttonBg: #F3F3F3;
+    --buttonHover: #222;
+    --textLink: blue;
+    --hr: hsla(0, 0%, 0%, 0.2);
+    background-color: var(--bg);   
+  }
+  
+  body.dark {
+    -webkit-font-smoothing: antialiased;
+    --headingAccent: #045757;
+    --buttonBg: none;
+    --textAccent: #055D4D;
+    --buttonHover: #045757;
+    --bg: #121212;
+    --textNormal: rgb(190, 190, 190);
+    --textTitle: #E4E4E4;
+    --textLink: yellow;
+    --hr: hsla(0, 0%, 100%, 0.2);
+  }

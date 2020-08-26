@@ -5,7 +5,6 @@
 
     section {
         margin-bottom: 48px;
-        // height: 80vh;
         display: block;
         position: relative;
 
@@ -14,9 +13,9 @@
     
             .textWrapper {
 
-                .title {
-                    margin-top: 64px;
-                }
+                // .title {
+                //     margin-top: 64px;
+                // }
                 .textp1 {
                     margin-top: 24px;
                 }
@@ -30,7 +29,6 @@
     
                 p {
                     font-size: 16px;
-                    font-weight: 600;
                     position: relative;
                     display: inline;
     
@@ -42,7 +40,7 @@
                         width: 90%;
                         top: 50%;
                         right: -20px;
-                        background-color: #F8C8C8;;
+                        background-color: var(--textAccent);
                         display: block;
                     }
                 }
@@ -66,6 +64,7 @@
 
     section:last-child {
         .skillset {
+            margin-top: 24px;
             width: 100%;
 
             .skilly {
@@ -76,6 +75,18 @@
                 svg {
                     transform-origin: top left;
                     margin-top: 16px;
+                    
+                    circle {
+                        stroke: var(--textNormal);
+                      }
+                    
+                      .circleFill {
+                        fill: var(--textNormal);
+                      }
+                    
+                      path {
+                        stroke: var(--textNormal);
+                      }
                 }
             }
         }
@@ -105,7 +116,7 @@
     .secWrapper {
 
         section {
-            margin-top: 104px;
+            padding-top: 104px;
             
             .introContent {
             width: 100%;
@@ -120,6 +131,7 @@
 
         section:last-child {
             .skillset {
+                margin-top: 40px;
                 width: 100%;
                 display: flex;
                 flex-wrap: wrap;
@@ -139,12 +151,11 @@
 
     .secWrapper {
 
-         margin-top: 40px;
+         padding-top: 0;
     
         section {
-            margin-top: 0;
+            padding-top: 108px;
             height: 80vh;
-            margin-bottom: 10px;
             // totally height of section should be the height of view port - height of header
             // height: calc(100vh - 200px);
             display: flex;
@@ -185,8 +196,11 @@
                         grid-gap: 24px;
                     }
                 }
-             
             }
+        }
+
+        section:first-child {
+            padding-top: 200px;
         }
     
         section:nth-child(2) {
@@ -196,14 +210,14 @@
             .Img {
                 display: block;
             position: fixed;
-            top: 25%;
-            right: 156px;
+            top: 20%;
+            right: 8%;
     
                 .ImgWrapper {
                     div {
                         img {
                         width: 500px;
-                        height: 600px;
+                        height: 70vh;
                         object-fit: cover;
                         }
                     }
@@ -235,20 +249,35 @@
         }
     
         section:last-child {
-            .skillset {
-                width: 50%;
-                display: block;
-                padding-left: 50px;
-                margin-left: 50px;
-                border-left: 1px solid #C8C8C8;
-    
-                .skilly {
-                    width: 100%;
-                    justify-content: space-between;
-                    display: flex;
-                    padding: 20px 0;
-                    align-items: center;
+            display: block;
+            h1 {
+                margin-bottom: 50px;
+              } 
+
+            .skillHolder {
+                display: flex;
+
+                .textWrapper{
+                    .text {
+                        margin-top: 32px;
+                    }
                 }
+
+                .skillset {
+                    width: 60%;
+                    display: block;
+                    padding-right: 50px;
+                    margin-right: 50px;
+                    border-right: 1px solid #C8C8C8;
+        
+                    .skilly {
+                        width: 90%;
+                        justify-content: space-between;
+                        display: flex;
+                        padding: 8px 0;
+                        align-items: center;
+                    }
+                }    
             }
         }
     }
