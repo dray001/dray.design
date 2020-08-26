@@ -3,9 +3,8 @@ import { Link } from "gatsby"
 import Heading from "../../components/heading-component/heading"
 import Layout from "../../components/layout"
 import SEO from "../../components/seo"
-import staticdata from "./staticdata.js"
+import {staticData} from '../../data/staticdata'
 import './project01.scss';
-// import { Router } from "@reach/router";
 
 const SecondPage = () => {
 
@@ -60,20 +59,20 @@ export default SecondPage
 const Brief = ({moveTo}) => {
   return (
     <section id={moveTo} className='secBrief'>
-      <Heading size='42px' title={staticdata.projectAellaApp[0].title} />
+      <Heading size='42px' title={staticData.projectAellaApp[0].title} />
       <div className='secBriefImg'>
         {/* image here */}
       </div>
-      <div className='secBriefPara' dangerouslySetInnerHTML={{ __html: staticdata.projectAellaApp[0].para}} />
+      <div className='secBriefPara' dangerouslySetInnerHTML={{ __html: staticData.projectAellaApp[0].para}} />
     </section>)
 }
 
 const Challenges = ({moveTo}) => {
   return (
     <section id={moveTo} className='secChallenges'>
-      <Heading size='42px' title={staticdata.projectAellaApp[1].title} />
+      <Heading size='42px' title={staticData.projectAellaApp[1].title} />
       <div className='secChallengesContent'>
-      <div className='secChallengesPara' dangerouslySetInnerHTML={{ __html: staticdata.projectAellaApp[1].para }} />
+      <div className='secChallengesPara' dangerouslySetInnerHTML={{ __html: staticData.projectAellaApp[1].para }} />
         <div className='secChallengesImg'>
           {/* image here */}
         </div>

@@ -5,6 +5,7 @@ import Layout from "../../components/layout"
 import SEO from "../../components/seo"
 import { Button } from "../../components/button-component/button";
 import './projectListing.scss';
+
 const SecondPage = () => {
 
   let Sec = ({title, description, link, image}) => (
