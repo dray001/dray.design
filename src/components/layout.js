@@ -20,13 +20,6 @@ const Layout = ({ children }) => {
           title
         }
       }
-      allContentfulText {
-        edges {
-          node {
-            landingTitle
-          }
-        }
-      }
     }
   `)
 
@@ -34,7 +27,8 @@ const [state, setState] = useState(false);
 
 useEffect(
   ()=> {
-    window.addEventListener('scroll', handleScroll)
+    window.addEventListener('scroll', handleScroll);
+    // window.addEventListener('load', resetScroll);
   },
 []);
 
@@ -48,19 +42,28 @@ const handleScroll = (event) => {
   }
 }
 
+// const resetScroll = (event) => {
+//   const scrolTop = window.pageYOffset;
+//   scrolTop = 0;
+// }
+
   return (
     <>
-      <header className = {state ? 'pageHeader sadow' : 'pageHeader'} >
-        <Header siteTitle={data.site.siteMetadata.title} />
-      </header>
-      
-      <div className='childrenWrapper'>
-        <main>{children}</main>
-        <footer>
-          © {new Date().getFullYear()}, Built with
-          {` `}
-          <a href="https://www.gatsbyjs.org">Gatsby</a>
-        </footer>
+      <div className='pageWrapper'>
+        <main>
+          <div className = {state ? 'pageHeader sadow' : 'pageHeader'} >
+          <Header modalState={false} siteTitle={data.site.siteMetadata.title} />
+          </div>
+          <div className='childrenWrapper'>
+            {children}
+            <footer>
+              © {new Date().getFullYear()}, Built with
+              {` `}
+              <a href="https://www.gatsbyjs.org">Gatsby</a>
+            </footer>
+          </div>
+        </main>
+        
       </div>
     </>
   )

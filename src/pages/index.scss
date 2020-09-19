@@ -13,9 +13,6 @@
     
             .textWrapper {
 
-                // .title {
-                //     margin-top: 64px;
-                // }
                 .textp1 {
                     margin-top: 24px;
                 }
@@ -50,6 +47,9 @@
                     display: grid;
                     grid-template-columns: 1fr 1fr;
                     grid-gap: 16px;
+                    .b3, .b4 {
+                        grid-column: 1 / 3;
+                      }
                 }
             }
          
@@ -95,9 +95,20 @@
 
 @include for-tinnyP-only() {
 
-    .b3, .b4 {
-        grid-column: 1 / 3;
-      }
+    .buttonWrapper {
+
+        .buttonHolder {
+                margin-top: 16px;
+                grid-template-columns: 1fr;
+                background: rgb(199, 112, 112);
+
+                .b3, .b4 {
+                    grid-column: unset;
+                }
+            }
+    }
+
+    
     
     .skilly {
 
@@ -114,9 +125,9 @@
 
 @include for-tablet-only() {
     .secWrapper {
+        // margin-top: 104px;
 
         section {
-            padding-top: 104px;
             
             .introContent {
             width: 100%;
@@ -151,19 +162,16 @@
 
     .secWrapper {
 
-         padding-top: 0;
+        //  padding-top: 48px;
     
         section {
-            padding-top: 108px;
-            height: 80vh;
+            // padding-top: 108px;
             // totally height of section should be the height of view port - height of header
-            // height: calc(100vh - 200px);
+            height: calc(100vh - 180px);
             display: flex;
             position: relative;
             align-items: center;
             justify-content: space-between;
-    
-            
         
             .introContent {
                 width: 50%;
@@ -171,13 +179,14 @@
                 // max-width: 600px; 
         
                 .textWrapper {
+                    
     
                     .textp1 {
-                        margin-top: 20px;
+                        margin-top: 24px;
                     }
         
                     .textp2 {
-                        margin-top: 64px;
+                        margin-top: 40px;
                     }
                 }
         
@@ -194,30 +203,29 @@
                         margin-top: 32px;
                         grid-template-columns: 1fr 1fr;
                         grid-gap: 24px;
+
+                        .b3, .b4 {
+                            grid-column: 1 / 3;
+                          }
                     }
                 }
             }
         }
-
-        section:first-child {
-            padding-top: 200px;
-        }
     
         section:nth-child(2) {
-            // background-color: red;
-            // position: relative;
+            padding-top: 140px;
     
             .Img {
-                display: block;
+            display: block;
             position: fixed;
             top: 20%;
-            right: 8%;
+            right: 6%;
     
                 .ImgWrapper {
                     div {
                         img {
                         width: 500px;
-                        height: 70vh;
+                        height: 68vh;
                         object-fit: cover;
                         }
                     }
@@ -250,6 +258,7 @@
     
         section:last-child {
             display: block;
+            padding-top: 80px;
             h1 {
                 margin-bottom: 50px;
               } 
@@ -260,6 +269,11 @@
                 .textWrapper{
                     .text {
                         margin-top: 32px;
+                        span {
+                            background: #000;
+                            padding: 0 8px;
+                            color: white;
+                        }
                     }
                 }
 

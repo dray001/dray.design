@@ -2,27 +2,12 @@ import React, { useEffect } from "react"
 import Layout from "../components/layout"
 import Heading from "../components/heading-component/heading"
 import { graphql } from 'gatsby'
-// import Image from "../components/image"
 import SEO from "../components/seo"
 import './index.scss'
 import { Button } from "../components/button-component/button";
+import {homePageData} from '../data/homePageData'
 
 const IndexPage = ({data}) => {
-
-  let imgSrc1 = "https://images.unsplash.com/photo-1504568758572-1c648768a420?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=800&q=60";
-  let imgSrc2 = "https://images.unsplash.com/photo-1585834048942-a33cac0c6e8f?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=800&q=60";
-
-  let paragraph = (index) => {
-  
-    let paraData = data.allContentfulParagraphes.edges.map(edge => edge.node.paragraphes.paragraphes);
-    let paraInfo = [];
-
-    for(let i = 0; i < paraData.length; i++) {
-      paraInfo.push(paraData[i]);
-    }
-    
-    return paraInfo[index];
-  }
 
   let Smile = ({skill, op1, op2, op3, op4}) => (
     <div className='skilly'>
@@ -76,7 +61,7 @@ const IndexPage = ({data}) => {
     const options1 = {
       root: null,
       threshold: 0,
-      rootMargin: "20px"
+      rootMargin: "0px"
 
     };
 
@@ -106,26 +91,23 @@ const IndexPage = ({data}) => {
       <SEO title="Home" />
 
       <div className='secWrapper'>
-        <section id='dareOni'>
+        <section >
           <div className='introContent'>
             <div className='textWrapper' >
             <div className='title'>
-              <Heading title={`I'm Dare Oni`} />
+              <Heading title={homePageData.homeData[0].title} />
             </div>
               
               <p className='textp1'>Product Designer | Illustrator | Amateur Artist </p>
-              <p className='textp2' >
-              {paragraph(1)}
-              </p>
+              <div className='textp2' dangerouslySetInnerHTML={{ __html: homePageData.homeData[0].para}} />
             </div>
 
             <div className='buttonWrapper'>
               <p>See what I have been up to:</p>
               <div className='buttonHolder'>
-                <div className='b1'> <Button link='/projectList/projectListing' text='Projects' /> </div>
-                <div className='b2'> <Button link='/' text='Articles' /> </div>
-                <div className='b3'> <Button link='/' text='Illustrations' /> </div>
-                <div className='b4'> <Button link='/' text='Experiments' /> </div>
+                <div className='b1'> <Button link='/projects/projectListing' text='My Projects' /> </div>
+                <div className='b2'> <Button link='https://medium.com/@dareony' text='My Articles' /> </div>
+                <div className='b3'> <Button link='/IllustrationAndArt/IllustrationAndArt' text='Illustrations and Sketches' /> </div>
               </div>
             </div>
 
@@ -136,11 +118,9 @@ const IndexPage = ({data}) => {
           <div className='introContent'>
             <div className='textWrapper' >
 
-              <Heading title={`About Me`} />
+              <Heading title={homePageData.homeData[1].title} />
 
-              <p className='textp2' >
-              {paragraph(0)}
-              </p>
+              <div className='textp2' dangerouslySetInnerHTML={{ __html: homePageData.homeData[1].para}} />
 
             </div>
 
@@ -153,15 +133,16 @@ const IndexPage = ({data}) => {
 
           <div className='Img'>
             <div className='ImgWrapper'>
-                <div><img src={imgSrc1} alt="someImg" /></div>
-                <div><img src={imgSrc2} alt="someImg" /></div>
+                <div><img src={data.allCloudinaryMedia.edges[0].node.secure_url} alt="someImg" /></div>
+                {/* data.allCloudinaryMedia.edges[0].node.secure_url */}
+                <div><img src={data.allCloudinaryMedia.edges[1].node.secure_url} alt="someImg" /></div>
             </div>
           </div>
 
         </section>
 
         <section id='mySkills'>
-          <Heading title='My Skillset' />
+          <Heading title={homePageData.homeData[2].title} />
           
           <div className='skillHolder'>
             
@@ -175,14 +156,7 @@ const IndexPage = ({data}) => {
 
            <div className='introContent'>
               <div className='textWrapper' >
-    
-                <p className='text' >
-                  Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum risus nunc arcu dolor. Vitae purus facilisis
-                  viverra eu feugiat auctor a. Donec nunc venenatis, neque amet. Ultrices arcu est, metus aliquet facilisis tincidunt
-                  blandit. Ac tempor velit porttitor vitae bibendum massa.
-                  Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum risus nunc arcu dolor.
-                </p>
-
+                <div className='text' dangerouslySetInnerHTML={{ __html: homePageData.homeData[2].para}} />
               </div>
             </div>
 
@@ -197,19 +171,10 @@ const IndexPage = ({data}) => {
 
 export const query = graphql`
   query HomePageQuery {
-    allContentfulText {
+    allCloudinaryMedia {
       edges {
         node {
-          landingTitle
-        }
-      }
-    }
-    allContentfulParagraphes {
-      edges {
-        node {
-          paragraphes {
-            paragraphes
-          }
+          secure_url
         }
       }
     }

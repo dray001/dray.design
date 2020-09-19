@@ -26,7 +26,6 @@ const SecondPage = () => {
 
     </div>
     
-    
   )
 
   
@@ -38,7 +37,7 @@ const SecondPage = () => {
 
       <Sec 
       title = 'Aella Finance App'
-      link = '/projects/project01'
+      link = '/projects/aellaFinanceApp/aellaFinDesignProcess'
       description = 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Velit sed orci et purus amet. Ullamcorper in lectus suspendisse non, et in quam phasellus.'
       />
 

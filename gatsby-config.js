@@ -1,3 +1,5 @@
+require('dotenv').config();
+
 module.exports = {
   siteMetadata: {
     title: `Dray.Design`,
@@ -24,11 +26,14 @@ module.exports = {
       },
     },
     {
-      resolve: `gatsby-source-contentful`,
+      resolve:`gatsby-source-cloudinary`,
       options: {
-        spaceId: `vizxh1b7xyjr`,
-        accessToken: `5-4AqA5OVIuUwaoVAbRQFC2L06vmVo50kk2hfzUZ-Bs`,
-      },
+      cloudName: process.env.CLOUDINARY_CLOUD_NAME,
+      apiKey: process.env.CLOUDINARY_API_KEY,
+      apiSecret: process.env.CLOUDINARY_API_SECRET,
+      resourceType: `image`,
+      prefix: `portfolioImages/`
+      }
     },
     {
       resolve: `gatsby-plugin-manifest`,

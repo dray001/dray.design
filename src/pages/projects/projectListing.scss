@@ -1,8 +1,7 @@
 @import './src/styles/common.scss';
 
 .projectListingWapper {
-
-    margin: 104px 0 80px;
+    margin-top: 104px;
 
     .projectListComponent {
         display: flex;
@@ -31,8 +30,6 @@
 @include for-desktop-only() {
     
     .projectListingWapper {
-
-        margin: 104px 0 80px;
     
         .projectListComponent {
             display: flex;

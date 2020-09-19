@@ -1,10 +1,10 @@
 import React, { useEffect } from "react"
 import { Link } from "gatsby"
-import Heading from "../../components/heading-component/heading"
-import Layout from "../../components/layout"
-import SEO from "../../components/seo"
-import {staticData} from '../../data/staticdata'
-import './project01.scss';
+import Heading from "../../../components/heading-component/heading"
+import Layout from "../../../components/layout"
+import SEO from "../../../components/seo"
+import {staticData} from '../../../data/staticdata'
+import './aellaFinDesignProcess.scss';
 
 const SecondPage = () => {
 
@@ -12,7 +12,7 @@ const SecondPage = () => {
     let navButtons = document.querySelectorAll('.project01Button a');
 
     const test = (e) => {
-      const active_button = e.currentTarget
+      const active_button = e.currentTarget;
       navButtons.forEach(norm_button => {
         norm_button.classList.remove("active")
       });
