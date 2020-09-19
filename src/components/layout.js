@@ -42,11 +42,6 @@ const handleScroll = (event) => {
   }
 }
 
-// const resetScroll = (event) => {
-//   const scrolTop = window.pageYOffset;
-//   scrolTop = 0;
-// }
-
   return (
     <>
       <div className='pageWrapper'>
