@@ -23,12 +23,12 @@ const ArtPage = () => {
 
         <div className="imgHolder">
           <ImgComp
-            image="https://2.bp.blogspot.com/-LhD1KnnmheA/VyEfRp5P_PI/AAAAAAAACtk/dSlgldDyL88xPXVdXb26VqNwqLwckoAYACLcB/s1600/-a.jpg"
+            image="https://cdn.dribbble.com/users/2212622/screenshots/5718438/output.gif"
             description="this is just going to be a short description"
           />
 
           <ImgComp
-            image="https://images.unsplash.com/photo-1535902677902-a9ce6e79193a?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=800&q=60"
+            image="https://cdn.dribbble.com/users/2212622/screenshots/6329798/figma.png"
             description="ddd"
           />
 

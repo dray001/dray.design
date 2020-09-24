@@ -1,0 +1,62 @@
+@import 'src/styles/common.scss';
+
+.bannerWrapper {
+    width: 100%;
+    position: relative;
+    overflow: hidden;
+
+    .bannerContentHolder {
+        width: 100%;
+        padding: 5%;
+        color: white;
+        overflow: hidden;
+        width: 50%;
+        height: 480px;
+        position: relative;
+
+        .bannerContent {
+            
+            p {
+                color: #C0C0C0;
+                font-weight: lighter;
+                margin: 0 0 40px 0;
+                font-size: 16px;
+                mix-blend-mode: screen;
+            }
+
+            div {
+
+                a {
+                color: rgb(199, 199, 199);
+                }
+
+                p {
+                    color: white;
+                    margin: 0 0 16px 0;
+                    mix-blend-mode: screen;
+                    span {
+                        color: #C0C0C0;
+                    }
+                }
+            }
+        }             
+    }
+
+    .bannerMobile {
+        position: absolute;
+        right: -18%;
+        bottom: -20%;
+        height: 80%;
+        width: auto;
+        transform: rotate(-45deg);
+        z-index: 0;
+    }
+
+    .bannerDesktop {
+        position: absolute;
+        right: -12%;
+        bottom: 5%;
+        height: 70%;
+        width: auto;
+    }
+}

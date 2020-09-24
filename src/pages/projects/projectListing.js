@@ -3,10 +3,11 @@ import { Link } from "gatsby"
 import Heading from "../../components/heading-component/heading"
 import Layout from "../../components/layout"
 import SEO from "../../components/seo"
+import { graphql } from 'gatsby'
 import { Button } from "../../components/button-component/button";
 import './projectListing.scss';
 
-const SecondPage = () => {
+const SecondPage = ({data}) => {
 
   let Sec = ({title, description, link, image}) => (
     <div className='projectListComponent' >
@@ -20,10 +21,8 @@ const SecondPage = () => {
       </div>
 
       <div className='imageHolder' >
-        {/* image here */}
+        <img src={image} alt="Aella"/>
       </div>
-
-
     </div>
     
   )
@@ -37,17 +36,21 @@ const SecondPage = () => {
 
       <Sec 
       title = 'Aella Finance App'
+      image = {data.allCloudinaryMedia.edges[0].node.secure_url}
       link = '/projects/aellaFinanceApp/aellaFinDesignProcess'
+      description = 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Velit sed orci et purus amet. Ullamcorper in lectus suspendisse non, et in quam phasellus.'
+      />
+
+
+      <Sec 
+      title = 'Konga Online Shopping'
+      image = {data.allCloudinaryMedia.edges[1].node.secure_url}
       description = 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Velit sed orci et purus amet. Ullamcorper in lectus suspendisse non, et in quam phasellus.'
       />
 
       <Sec 
       title = 'Aella branding'
-      description = 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Velit sed orci et purus amet. Ullamcorper in lectus suspendisse non, et in quam phasellus.'
-      />
-
-      <Sec 
-      title = 'Konga Online Shopping'
+      image = {data.allCloudinaryMedia.edges[0].node.secure_url}
       description = 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Velit sed orci et purus amet. Ullamcorper in lectus suspendisse non, et in quam phasellus.'
       />
 
@@ -57,5 +60,17 @@ const SecondPage = () => {
   </Layout>
   )
 }
+
+export const query = graphql`
+query productListingQuery {
+  allCloudinaryMedia(filter: {tags: {eq: "folio"}}) {
+    edges {
+      node {
+        secure_url
+      }
+    }
+  }
+}
+`
 
 export default SecondPage

@@ -4,7 +4,7 @@
     position: relative;
 
     section {
-        margin-bottom: 48px;
+        padding-top: 80px;
         display: block;
         position: relative;
 
@@ -12,6 +12,12 @@
             width: 100%;
     
             .textWrapper {
+
+                span {
+                    background: #000;
+                    padding: 0 8px;
+                    color: white;
+                }
 
                 .textp1 {
                     margin-top: 24px;
@@ -56,6 +62,12 @@
         }
     }
 
+    section:nth-child(1) {
+        padding-top: 32px; 
+    }
+
+
+
     section:nth-child(2) {
         .Img { 
         display: none;
@@ -99,11 +111,11 @@
 
         .buttonHolder {
                 margin-top: 16px;
-                grid-template-columns: 1fr;
-                background: rgb(199, 112, 112);
+                grid-template-columns: repeat(2, 1fr);;
+                // background: rgb(199, 112, 112);
 
-                .b3, .b4 {
-                    grid-column: unset;
+                div {
+                    grid-column: 1 / -1;
                 }
             }
     }
@@ -161,11 +173,9 @@
 @include for-desktop-only() {
 
     .secWrapper {
-
-        //  padding-top: 48px;
     
         section {
-            // padding-top: 108px;
+            padding: 0;
             // totally height of section should be the height of view port - height of header
             height: calc(100vh - 180px);
             display: flex;
@@ -175,9 +185,7 @@
         
             .introContent {
                 width: 50%;
-                
-                // max-width: 600px; 
-        
+       
                 .textWrapper {
                     
     
@@ -219,7 +227,7 @@
             display: block;
             position: fixed;
             top: 20%;
-            right: 6%;
+            right: 8%;
     
                 .ImgWrapper {
                     div {
@@ -258,7 +266,9 @@
     
         section:last-child {
             display: block;
-            padding-top: 80px;
+            padding-top: 140px;
+            margin-bottom: 80px;
+            height: auto;
             h1 {
                 margin-bottom: 50px;
               } 
@@ -269,11 +279,6 @@
                 .textWrapper{
                     .text {
                         margin-top: 32px;
-                        span {
-                            background: #000;
-                            padding: 0 8px;
-                            color: white;
-                        }
                     }
                 }
 

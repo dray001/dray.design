@@ -9,10 +9,8 @@ homeData: [
             para: 
             `<div>
                 <p>
-                Ac tempor velit porttitor vitae bibendum massa.
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
-                Vestibulum risus nunc arcu dolor.consectetur adipiscing elit. 
-                Vestibulum risus nunc arcu dolor
+                Empathy is the driving force for creating solutions to day to day problems faced by humanity.
+                Currently the <strong> Lead Designer at Aella </strong>, putting smiles to costumers by providing easy banking experience.
                 </p>         
             </div>`
 

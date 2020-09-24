@@ -31,7 +31,7 @@ const Header = ({siteTitle}) => {
    
   return (
     <header>
-      <div onClick={toggleMenu} className={openState ? 'hambugerModal' : 'hambugerModal off' }></div>
+      <div className={openState ? 'hambugerModal' : 'hambugerModal off' }></div>
     <div className="headerContainer">
     <Link onClick={closeMenu} to = '/'>
       <svg className="logo" width="50" height="25" viewBox="0 0 50 25" fill="none" xmlns="http://www.w3.org/2000/svg">

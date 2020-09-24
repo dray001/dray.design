@@ -14,7 +14,7 @@
             width: 100%;
 
             h1 {
-                margin-top: 40px;
+                margin-bottom: 40px;
             }
 
         }
@@ -36,7 +36,8 @@
             justify-content: space-between;
             flex-direction: row;
             align-items: center;
-            height: 56vh;
+            // height: 60vh;
+            margin-bottom: 180px;
     
             &:nth-child(odd) {
                 flex-direction: row-reverse;
@@ -47,9 +48,15 @@
             }
     
             .imageHolder {
-                background-color: grey; 
-                width: 40%; 
-                height: 430px;
+                background-color: rgb(240, 240, 240); 
+                width: 50%; 
+                padding: 40px;
+                display: grid;
+                height: 50vh;
+
+                img {
+                    align-self: center;
+                }
             }
         }
     }

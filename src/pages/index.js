@@ -125,9 +125,7 @@ const IndexPage = ({data}) => {
             </div>
 
             
-            <Button buttonWidth={true} link='/projectList/projectListing' text='See my work' />
-            
-            
+            <Button buttonWidth={true} link='/projects/projectListing' text='See my work' />
 
           </div>
 
@@ -170,15 +168,15 @@ const IndexPage = ({data}) => {
 }
 
 export const query = graphql`
-  query HomePageQuery {
-    allCloudinaryMedia {
-      edges {
-        node {
-          secure_url
-        }
+query MyQuery {
+  allCloudinaryMedia(filter: {tags: {eq: "home"}}) {
+    edges {
+      node {
+        secure_url
       }
     }
   }
+}
 `
 
 {/* <div>
