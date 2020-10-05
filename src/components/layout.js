@@ -28,7 +28,7 @@ const [state, setState] = useState(false);
 useEffect(
   ()=> {
     window.addEventListener('scroll', handleScroll);
-    // window.addEventListener('load', resetScroll);
+    // window.addEventListener('load', test);
   },
 []);
 

@@ -1,46 +1,362 @@
 @import './src/styles/common.scss';
 
-.project01Wapper {
-    display: flex;
-    justify-content: space-between;
-    flex-direction: row-reverse;
+.aellaWapper{
+    display: block;
 
-    margin: 0 0 80px;
+    .aellaContentInfo {
+        margin-top: 40px;
+        width: 100%;
 
-    .project01StickyNav {
-            // height: 600px;
+        h1 {
+            font-size: 28px;
+        }
+
+        .role {
             margin-top: 40px;
-        .project01Button {
-            position: sticky;
-            // background: #000;
-            top: 180px;
-            margin-right: 60px;
+        }
 
-            a {
-            display: block;
-            text-decoration: none;
-            color: rgb(133, 133, 133);
-            font-size: 14px;
-            padding: 8px;
-            border: none;
-            outline: none;
-            text-align: center;
-            border-radius: 4px;
-            margin-bottom: 16px;
-            width: 156px;
-                &.active {
-                    border: 1px solid var(--textNormal);
-                    color: var(--textNormal);
+        .sectionHolder {
+            padding-top: 72px;
+            .sectionHolderDescription {
+                width: 100%;
+            }
+            .step {
+                border-left: 4px solid var(--textNormal);
+                padding-left: 8px;
+            }
+        }
+
+        .designBrief {
+            margin-top: 40px;
+            .briefCards {
+                display: grid;
+                grid-template-columns: 1fr;
+                grid-gap: 24px;
+
+                .briefContent {
+                    h3, p {margin: 0; padding: 0;}
+                    width: auto;
+                    padding: 24px;
+                    display: flex;
+                    align-items: center;
+                    border: 1px var(--textNormal) solid;
+                    border-radius: 4px;
+
+                    div {
+                        width: 60%;
+                        p {
+                            margin-top: 8px;
+                        }
+                    }
+
+                    img {
+                        margin-left: 32px;
+                        width: auto;
+                    }
                 }
             }
         }
-        
+
+        ul {
+            margin: 0;
+            li {
+                padding-left: 0;
+                margin: 0 0 40px 20px;
+                list-style: none;
+                position: relative;
+                &::before {
+                    content: '';
+                    position: absolute;
+                    top: 12px;
+                    left: -18px;
+                    width: 8px;
+                    height: 8px;
+                    background: var(--textNormal);
+                }
+            }
+        }
+
+        .stepOneProcess {
+            .stepOneProcessBreakdownHolder {
+                margin-top: 60px;
+                display: block;
+                .stepOneProcessBreakdown {
+                    width: 100%;
+                }        
+            }
+        }
+
+        .stepTwoProcess {
+    
+            .personaSection {
+                display: block;
+                img {
+                    width: 224px;
+                }
+            }
+
+            .stepTwoProcessConclusion {
+                margin-top: 30px;
+            }
+        }
+
+        .stepEightProcess {
+            .stepSevenProcessFlow {
+                .videoHolder {
+                    display: block;
+                    video {
+                        &:first-child{
+                            margin-right: 0px;
+                        }
+                   display: block;
+                   height: 80vh;
+                    width: 100%;
+                }
+                }
+               
+            }  
+        }
+    }
+
+    .project01StickyNav {
+        display: none;
     }
 }
 
-// @include for-desktop-only() {
+@include for-desktop-only() {
+    .aellaWapper {
+        display: flex;
+        justify-content: space-between;
+        flex-direction: row-reverse;
+        margin: 0 0 80px;
     
-// }
+        .aellaContentInfo {
+            margin-top: 40px;
+            width: 80%;
+
+            h1 {
+                font-size: 40px;
+            }
+
+            .role {
+                margin-top: 56px;
+            }
+
+            .sectionHolder {
+                padding-top: 140px;
+
+                
+
+                .sectionHolderDescription {
+                    width: 90%;
+                }
+                .step {
+                    border-left: 4px solid var(--textNormal);
+                    padding-left: 8px;
+                }
+            }
+    
+            .designBrief {
+                margin-top: 56px;
+                .briefCards {
+                    grid-template-columns: 1fr 1fr;
+                    grid-gap: 24px;
+    
+                    .briefContent {
+                        h3, p {margin: 0; padding: 0;}
+                        width: auto;
+                        padding: 40px;
+                        display: flex;
+                        align-items: center;
+                        border: 1px var(--textNormal) solid;
+                        border-radius: 4px;
+    
+                        div {
+                            width: 60%;
+                            p {
+                                margin-top: 8px;
+                            }
+                        }
+    
+                        img {
+                            margin-left: 32px;
+                            width: auto;
+                        }
+    
+                    }
+                }
+            }
+    
+            .stepOneProcess {
+                .stepOneProcessBreakdownHolder {
+                    margin-top: 60px;
+                    display: flex;
+                    .stepOneProcessBreakdown {
+                        width: 60%;
+                        &:nth-child(2) {
+                        margin-left: 72px;
+                        }
+                    }        
+                }
+            }
+    
+            .stepTwoProcess {
+    
+                .personaSection {
+                    display: flex;
+                    align-items: center;
+                    img {
+                        width: 224px;
+                    }
+                    div {
+                        margin-left: 48px;
+                    }
+                    &:last-child {
+                        flex-direction: row-reverse;
+                        text-align: right;
+                        div {
+                            margin-right: 48px;
+                        }
+                    }
+                }
+    
+                .stepTwoProcessConclusion {
+                    margin-top: 30px;
+                }
+            }
+    
+            .stepThreeProcess {
+                .stepThreeProcessFlow {
+                   img {
+                    width: auto;
+                    }
+                }  
+            }
+    
+            .stepFourProcess {
+                .stepFourProcessFlow {
+                   img {
+                    width: auto;
+                    }
+                }  
+            }
+    
+            .stepFiveProcess {
+                .stepFiveProcessFlow {
+                   img {
+                    width: auto;
+                    }
+                }  
+            }
+    
+            .stepSixProcess {
+                .stepSixProcessFlow {
+                   img {
+                    width: auto;
+                    }
+                }  
+            }
+    
+            .stepSevenProcess {
+                .stepSevenProcessFlow {
+                   img {
+                    width: auto;
+                    }
+                }  
+            }
+            .stepEightProcess {
+                .stepSevenProcessFlow {
+                    .videoHolder {
+                        display: flex;
+                        video {
+                            &:first-child{
+                                margin-right: 80px;
+                            }
+                       display: flex;
+                       height: 600px;
+                    width: auto;
+                    }
+                    }
+                   
+                }  
+            }
+    
+            .visualLanguage {
+                .visualLanguageFlow {
+                   img {
+                    width: auto;
+                    }
+                }  
+            }
+        }
+    
+        .project01StickyNav {
+            display: block;
+                margin-top: 40px;
+                width: 15%;
+            .project01Button {
+                position: sticky;
+                // background: #000;
+                top: 180px;
+                margin-right: 60px;
+    
+                a {
+                display: block;
+                text-decoration: none;
+                color: rgb(133, 133, 133);
+                font-size: 14px;
+                padding: 8px;
+                border: none;
+                outline: none;
+                position: relative;
+                margin-bottom: 16px;
+                transform: scale(1);
+                transform-origin: center left;
+                width: 180px;
+                transition: all 0.3s ease;
+                &::before {
+                    transition: all 0.3s ease;
+                    content: '';
+                    width: 4px;
+                    height: 18px;
+                    background: var(--textNormal);
+                    position: absolute;
+                    top: 0;
+                    visibility: hidden;
+                    left: -10px;
+                    opacity: 0;    
+                }
+    
+                &:hover { 
+                    &::before {
+                        visibility: visible;
+                        opacity: 0.4;
+                        top: 40%;
+                        left: -12px;
+                        height: 10px;
+                    }
+                }
+    
+                &.active {
+                        transform: scale(1.2);
+                        color: var(--textNormal);
+                        &::before {
+                            opacity: 1;
+                            content: '';
+                            width: 4px;
+                            height: 18px;
+                            background: var(--textNormal);
+                            position: absolute;
+                            top: 25%;
+                            visibility: visible;
+                            left: -10px;
+                        }
+                    }
+                }
+            }    
+        }
+    }
+}
 
 
 

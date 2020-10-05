@@ -8,12 +8,12 @@ const typography = new Typography({
         styles: [800],
       },
       {
-        name: "Open Sans",
+        name: "Raleway",
         styles: [400]
       }
     ],
     headerFontFamily: ["Playfair Display"],
-    bodyFontFamily: ["Open Sans"],
+    bodyFontFamily: ["Raleway"],
   })
 
 // const typography = new Typography(fairyGateTheme)

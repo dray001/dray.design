@@ -264,7 +264,7 @@ header {
           background-color: unset;
           filter: unset;
           height: 0;
-          font-size: 18px;
+          font-size: 16px;
 
           &.off {
             display: flex;
@@ -275,13 +275,10 @@ header {
 
           a {
             border: none;
-            display: flex;
-            
             color: var(--textNormal);
             text-decoration: none;
             cursor: pointer;
             margin-bottom: 0;
-            //padding: 8px;
             margin-right: 32px;
             transition: transform 0.2s ease-out;
 

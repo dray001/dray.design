@@ -33,8 +33,8 @@ module.exports = {
       apiSecret: process.env.CLOUDINARY_API_SECRET,
       resourceType: `image`,
       tags: true,
-      prefix: `portfolioImages/`
-      }
+      prefix: `portfolioImages/`,
+      },
     },
     {
       resolve: `gatsby-plugin-manifest`,
