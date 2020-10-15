@@ -1,5 +1,7 @@
 @import '../styles/common.scss';
 
+// $portrait: var(--imgUrl);
+
 .secWrapper {
     position: relative;
 
@@ -230,24 +232,18 @@
             right: 8%;
     
                 .ImgWrapper {
+                    
                     div {
-                        img {
                         width: 500px;
                         height: 68vh;
                         object-fit: cover;
-                        }
-                    }
-    
-                    div:last-child {
-                        position: absolute;
-                        right: 0;
-                        top: 0;
-                        transition: 0.5s;
-                        height: 100%;
-                        overflow: hidden;
+                        background-position: center;
+                        background-repeat: no-repeat;
+                        background-size: 600px auto;;
+                        background-image: var(--imgUrl);
+                        
                     }
                 }
-       
             }
     
             .Img.nonFixed {
@@ -256,11 +252,6 @@
                 top: 0vh;
                 right: 0;
     
-                .ImgWrapper {
-                    div:last-child {
-                        height: 0%;
-                    }
-                } 
             }
         }
     

@@ -8,9 +8,10 @@
 import React, {useEffect, useState} from "react"
 import PropTypes from "prop-types"
 import { useStaticQuery, graphql } from "gatsby"
-
 import Header from "./header-component/header"
+import Footer from "./footer-component/footer"
 import "./layout.scss"
+
 
 const Layout = ({ children }) => {
   const data = useStaticQuery(graphql`
@@ -22,13 +23,13 @@ const Layout = ({ children }) => {
       }
     }
   `)
+  
 
-const [state, setState] = useState(false);
+ const [state, setState] = useState(false);
 
 useEffect(
   ()=> {
     window.addEventListener('scroll', handleScroll);
-    // window.addEventListener('load', test);
   },
 []);
 
@@ -51,14 +52,9 @@ const handleScroll = (event) => {
           </div>
           <div className='childrenWrapper'>
             {children}
-            <footer>
-              © {new Date().getFullYear()}, Built with
-              {` `}
-              <a href="https://www.gatsbyjs.org">Gatsby</a>
-            </footer>
+            <Footer />
           </div>
-        </main>
-        
+        </main>    
       </div>
     </>
   )

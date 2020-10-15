@@ -7,11 +7,10 @@
 
     .bannerContentHolder {
         width: 100%;
-        padding: 5%;
+        padding: 16px;
         color: white;
         overflow: hidden;
-        width: 50%;
-        height: 480px;
+        height: unset;
         position: relative;
 
         .bannerContent {
@@ -42,21 +41,39 @@
         }             
     }
 
-    .bannerMobile {
-        position: absolute;
-        right: -18%;
-        bottom: -20%;
-        height: 80%;
-        width: auto;
-        transform: rotate(-45deg);
-        z-index: 0;
+    .bannerDesktop,.bannerMobile {
+        display: none;
     }
+}
 
-    .bannerDesktop {
-        position: absolute;
-        right: -12%;
-        bottom: 5%;
-        height: 70%;
-        width: auto;
+@include for-desktop-only() {
+    
+    .bannerWrapper {
+
+        .bannerContentHolder {
+            padding: 5%;
+            width: 50%;
+            height: 480px;
+        }
+
+        .bannerMobile {
+            display: block;
+            position: absolute;
+            right: -18%;
+            bottom: -20%;
+            height: 80%;
+            width: auto;
+            transform: rotate(-45deg);
+            z-index: 0;
+        }
+    
+        .bannerDesktop {
+            display: block;
+            position: absolute;
+            right: -12%;
+            bottom: 5%;
+            height: 70%;
+            width: auto;
+        } 
     }
 }

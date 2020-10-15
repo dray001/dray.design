@@ -11,7 +11,8 @@
 }
 
 body {
-    --bg: #FBFCF7;
+    --bg: #FFFF;
+    --imgUrl: url('https://res.cloudinary.com/dramages/image/upload/v1602702632/portfolioImages/homePageImages/portraitDrayLight.png');
     --textNormal: #222;
     --textTitle: #222;
     --headingAccent: yellow;
@@ -19,6 +20,8 @@ body {
     --buttonBg: #F3F3F3;
     --buttonHover: #222;
     --textLink: blue;
+    --footerBg: #121212;
+    --footerline: #363636;
     --hr: hsla(0, 0%, 0%, 0.2);
     background-color: var(--bg);   
   }
@@ -30,6 +33,9 @@ body {
     --textAccent: #055D4D;
     --buttonHover: #045757;
     --bg: #121212;
+    --imgUrl: url('https://res.cloudinary.com/dramages/image/upload/v1602706827/portfolioImages/homePageImages/mePortraitDarkMode.png');
+    --footerBg:  #045757;
+    --footerline: #7D7D7D;
     --textNormal: rgb(190, 190, 190);
     --textTitle: #E4E4E4;
     --textLink: yellow;

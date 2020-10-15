@@ -1,5 +1,4 @@
 import React from "react"
-import { Link } from "gatsby"
 import Heading from "../../components/heading-component/heading"
 import Layout from "../../components/layout"
 import SEO from "../../components/seo"
@@ -57,7 +56,6 @@ const SecondPage = () => {
       description = 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Velit sed orci et purus amet. Ullamcorper in lectus suspendisse non, et in quam phasellus.'
       />
 
-      <Link to="/"> Go back to the homepage </Link>
     </div>
     
   </Layout>

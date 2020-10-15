@@ -50,14 +50,12 @@ main {
   main {
   
     .childrenWrapper {
-      padding: 0 8% 0 8%;
+      padding: 0 8% 6% 8%;
 
       &.modalOn {
         height: unset;
         overflow-y: scroll;
       }
     }
-  
   }
-
 }

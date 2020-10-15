@@ -7,9 +7,9 @@
     .imgHolder {
         width: 100%;
         margin-top: 72px;
-        display: grid;
-        grid-template-columns: 1fr 1fr 1fr;
-        grid-gap: 24px;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
         // display: none;
 
         .close {
@@ -54,8 +54,8 @@
 
         .imgComponent {
         cursor: pointer;
-        min-height: 432px;
-        max-width: 432px;
+       height: 432px;
+        width: 432px;
         display: grid;
         overflow: hidden;
         background-position: center;
@@ -82,9 +82,7 @@
          }
 
         }
-    }
-
-    
+    }  
 }
 
 // @include for-desktop-only() {

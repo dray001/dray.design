@@ -123,6 +123,43 @@
     }
 }
 
+@include for-tablet-only() {
+    .aellaWapper {
+        .aellaContentInfo{
+            .designBrief {
+                margin-top: 56px;
+                .briefCards {
+                    grid-template-columns: 1fr 1fr;
+                    grid-gap: 24px;
+        
+                    .briefContent {
+                        h3, p {margin: 0; padding: 0;}
+                        width: auto;
+                        padding: 40px;
+                        display: flex;
+                        align-items: center;
+                        border: 1px var(--textNormal) solid;
+                        border-radius: 4px;
+        
+                        div {
+                            width: 60%;
+                            p {
+                                margin-top: 8px;
+                            }
+                        }
+        
+                        img {
+                            margin-left: 32px;
+                            width: auto;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+
 @include for-desktop-only() {
     .aellaWapper {
         display: flex;
@@ -153,37 +190,6 @@
                 .step {
                     border-left: 4px solid var(--textNormal);
                     padding-left: 8px;
-                }
-            }
-    
-            .designBrief {
-                margin-top: 56px;
-                .briefCards {
-                    grid-template-columns: 1fr 1fr;
-                    grid-gap: 24px;
-    
-                    .briefContent {
-                        h3, p {margin: 0; padding: 0;}
-                        width: auto;
-                        padding: 40px;
-                        display: flex;
-                        align-items: center;
-                        border: 1px var(--textNormal) solid;
-                        border-radius: 4px;
-    
-                        div {
-                            width: 60%;
-                            p {
-                                margin-top: 8px;
-                            }
-                        }
-    
-                        img {
-                            margin-left: 32px;
-                            width: auto;
-                        }
-    
-                    }
                 }
             }
     
@@ -309,7 +315,7 @@
                 border: none;
                 outline: none;
                 position: relative;
-                margin-bottom: 16px;
+                margin-bottom: 8px;
                 transform: scale(1);
                 transform-origin: center left;
                 width: 180px;

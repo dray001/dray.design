@@ -9,6 +9,7 @@ import {homePageData} from '../data/homePageData'
 
 const IndexPage = ({data}) => {
 
+  
 
   let Smile = ({skill, op1, op2, op3, op4}) => (
     <div className='skilly'>
@@ -61,7 +62,7 @@ const IndexPage = ({data}) => {
 
     const options1 = {
       root: null,
-      threshold: 0,
+      threshold: 0.1,
       rootMargin: "0px"
 
     };
@@ -118,23 +119,19 @@ const IndexPage = ({data}) => {
         <section id='AboutMe'>
           <div className='introContent'>
             <div className='textWrapper' >
-
               <Heading title={homePageData.homeData[1].title} />
-
               <div className='textp2' dangerouslySetInnerHTML={{ __html: homePageData.homeData[1].para}} />
-
             </div>
-
-            
             <Button buttonWidth={true} link='/projects/projectListing' text='See my work' />
 
           </div>
 
           <div className='Img'>
             <div className='ImgWrapper'>
-                <div><img src={data.allCloudinaryMedia.edges[0].node.secure_url} alt="someImg" /></div>
-                {/* data.allCloudinaryMedia.edges[0].node.secure_url */}
-                <div><img src={data.allCloudinaryMedia.edges[1].node.secure_url} alt="someImg" /></div>
+                <div>
+                  {/* <img src={mePortrait} alt="someImg" /> */}
+                </div>
+                {/* <div><img src={data.allCloudinaryMedia.edges[1].node.secure_url} alt="someImg" /></div> */}
             </div>
           </div>
 
