@@ -1,0 +1,55 @@
+@import 'src/styles/common.scss';
+
+footer {
+  margin-top: 140px;
+  .footerWrapper {
+    overflow: hidden;
+    position: relative;
+    padding: 4% 4%;
+    background: var(--footerBg);
+
+    h1 {
+      color: #FFFFFF;
+    }
+    p{
+      color: #D1D1D1;
+      width: 50%;
+      margin: 32px 0 40px 0;
+    }
+    span,a {
+      color: #D1D1D1;
+    }
+
+    .emailMe {
+      text-decoration: none;
+      padding: 16px;
+      border: 1px solid  #D1D1D1;;
+    }
+
+    .magicWand {
+      position: absolute;
+      top: -5px;
+      height: 450px;
+      // top: 15%;
+      right: -332px;
+    }
+
+    .connectMe {
+      display: flex;
+      width: 78%;
+      border-top: 1px solid var(--footerline);
+      margin-top: 56px;
+      padding-top: 24px;
+      justify-content: space-between;
+      align-items: center;
+
+      div {
+        svg {
+          margin-right: 24px;
+          transform: scale(1.2)
+        }
+      }
+    }
+  }
+  
+}
