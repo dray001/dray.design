@@ -9,6 +9,9 @@ homeData: [
             para: 
             `<div>
                 <p>
+                <div className='ImgMobile' />
+                Empathy is the driving force for creating solutions to day to day problems faced by humanity.
+                Currently the <strong> Lead Designer at Aella </strong>, putting smiles to costumers by providing easy banking experience.
                 Empathy is the driving force for creating solutions to day to day problems faced by humanity.
                 Currently the <strong> Lead Designer at Aella </strong>, putting smiles to costumers by providing easy banking experience.
                 </p>         

@@ -1,0 +1,288 @@
+@import './src/styles/common.scss';
+
+.kongaWapper {
+    display: block;
+
+    .kongaContentInfo {
+        margin-top: 40px;
+        width: 100%;
+
+        h1 {
+            font-size: 22px;
+        }
+
+        .role {
+            margin-top: 40px;
+        }
+
+        .sectionHolder {
+            padding-top: 72px;
+
+            video {
+                width: 100%;
+            }
+            .sectionHolderDescription {
+                width: 100%;
+            }
+            .step {
+                border-left: 4px solid var(--textNormal);
+                padding-left: 8px;
+            }
+        }
+
+        ul {
+            margin: 0;
+            li {
+                padding-left: 0;
+                margin: 0 0 40px 20px;
+                list-style: none;
+                position: relative;
+                &::before {
+                    content: '';
+                    position: absolute;
+                    top: 12px;
+                    left: -18px;
+                    width: 8px;
+                    height: 8px;
+                    background: var(--textNormal);
+                }
+            }
+        }
+
+        .stepOneProcess {
+
+            .img1 {
+                width: 100%;
+            }
+            .img2 {
+                width: 100%;
+            }
+            
+            h3 {
+                margin-top: 32px;
+            }
+        }
+
+        .stepTwoProcess {
+    
+            .personaSection {
+                display: block;
+                img {
+                    width: 224px;
+                }
+            }
+
+            .stepTwoProcessConclusion {
+                margin-top: 30px;
+            }
+        }
+    }
+
+    .project01StickyNav {
+        display: none;
+    }
+}
+
+// @include for-tablet-only() {
+//     .aellaWapper {
+//         .kongaContentInfo{
+            
+//         }
+//     }
+// }
+
+
+@include for-desktop-only() {
+    .kongaWapper {
+        display: flex;
+        justify-content: space-between;
+        flex-direction: row-reverse;
+        margin: 0 0 80px;
+    
+        .kongaContentInfo {
+            margin-top: 40px;
+            width: 80%;
+
+            h1 {
+                font-size: 32px;
+            }
+
+            .banner {
+                .role {
+                    margin-top: 56px;
+                }
+                .DSexplained {
+                    display: flex;
+                    width: 90%;
+                    align-items: center;
+
+                    .DSexplainedInfo {
+                        p {
+                            width: 90%;
+                            &:first-child {
+                                color: #EC419C;
+                                font-size: 22px;
+                            }
+                        }
+                    }
+
+                    .DSexplainedAsset {
+                        display: flex;
+                        flex-direction: column;
+                        justify-content: center;
+                        img {
+                        width: 100%;
+                        }
+
+                        a {
+                            font-size: 14px;
+                            align-self: center;
+                        }
+                    }  
+                }
+            }  
+
+            .sectionHolder {
+                padding-top: 120px;
+
+                h3 {
+                    margin-top: 48px;
+                }
+
+                .sectionHolderDescription {
+                    width: 90%;
+                }
+                .step {
+                    border-left: 4px solid var(--textNormal);
+                    padding-left: 8px;
+                }
+            }
+    
+            .stepOneProcess {
+
+                .img1 {
+                    width: 70%;
+                }
+                .img2 {
+                    width: 100%;
+                }
+                
+            }
+    
+            .stepTwoProcess {
+    
+                video {
+                    width: 100%;
+                }
+            }
+    
+            .stepThreeProcess {
+                .stepThreeProcessFlow {
+                   img {
+                    width: auto;
+                    }
+                }  
+            }
+    
+            .stepFourProcess {
+                .stepFourProcessFlow {
+                   img {
+                    width: auto;
+                    }
+                }  
+            }
+
+            .workMate{
+                display: flex;
+                margin: 32px 0;
+                align-items: center;
+                // align-items: center;
+
+                img {
+                    width: 56px;
+                    margin: 0;
+                }
+
+                span {
+                    margin-left: 16px;
+
+                    b {
+                    display: block;
+                    margin-right: 12px;
+                    }
+                }  
+            }
+        }
+    
+        .project01StickyNav {
+            display: block;
+                margin-top: 40px;
+                width: 15%;
+            .project01Button {
+                position: sticky;
+                // background: #000;
+                top: 180px;
+                margin-right: 60px;
+    
+                a {
+                display: block;
+                text-decoration: none;
+                color: rgb(133, 133, 133);
+                font-size: 14px;
+                padding: 8px;
+                border: none;
+                outline: none;
+                position: relative;
+                margin-bottom: 8px;
+                transform: scale(1);
+                transform-origin: center left;
+                width: 180px;
+                transition: all 0.3s ease;
+                &::before {
+                    transition: all 0.3s ease;
+                    content: '';
+                    width: 3px;
+                    height: 18px;
+                    background: var(--textNormal);
+                    position: absolute;
+                    top: 0;
+                    visibility: hidden;
+                    left: -10px;
+                    opacity: 0;    
+                }
+    
+                &:hover { 
+                    &::before {
+                        visibility: visible;
+                        opacity: 0.4;
+                        top: 40%;
+                        left: -12px;
+                        height: 10px;
+                    }
+                }
+    
+                &.active {
+                        transform: scale(1.2);
+                        color: var(--textNormal);
+                        &::before {
+                            opacity: 1;
+                            content: '';
+                            width: 3px;
+                            height: 18px;
+                            background: var(--textNormal);
+                            position: absolute;
+                            top: 25%;
+                            visibility: visible;
+                            left: -10px;
+                        }
+                    }
+                }
+            }    
+        }
+    }
+}
+
+
+
+
+

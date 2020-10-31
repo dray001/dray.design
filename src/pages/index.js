@@ -10,7 +10,6 @@ import {homePageData} from '../data/homePageData'
 const IndexPage = ({data}) => {
 
   
-
   let Smile = ({skill, op1, op2, op3, op4}) => (
     <div className='skilly'>
       <span> {skill || 'non'} </span>
@@ -58,11 +57,12 @@ const IndexPage = ({data}) => {
 
   useEffect(() => {
     const text = document.querySelectorAll('section');
-    const Img = document.querySelector('.Img');
+    const Img = document.querySelector('.ImgHolder');
+    const scrolly = window.pageYOffset;
 
     const options1 = {
       root: null,
-      threshold: 0.1,
+      threshold: 0.2,
       rootMargin: "0px"
 
     };
@@ -70,7 +70,7 @@ const IndexPage = ({data}) => {
     const observer1 = new IntersectionObserver((entries, observer) => {
       entries.forEach(entry => {
 
-        console.log(observer)
+        console.log(scrolly)
 
         if (entry.isIntersecting) {
             console.log('in the view');
@@ -97,11 +97,19 @@ const IndexPage = ({data}) => {
           <div className='introContent'>
             <div className='textWrapper' >
             <div className='title'>
-              <Heading title={homePageData.homeData[0].title} />
+              <Heading size={32} title={homePageData.homeData[0].title} />
             </div>
               
               <p className='textp1'>Product Designer | Illustrator | Amateur Artist </p>
-              <div className='textp2' dangerouslySetInnerHTML={{ __html: homePageData.homeData[0].para}} />
+              {/* <div className='textp2' dangerouslySetInnerHTML={{ __html: homePageData.homeData[0].para}} /> */}
+              <div className='textp2' > 
+              <p>
+                <div className='ImgMobile' />
+                Empathy is the driving force for creating solutions to day to day problems faced by humanity.
+                Currently the <strong> Lead Designer at Aella </strong>, putting smiles to costumers by providing easy banking experience.
+    
+                </p> 
+              </div>
             </div>
 
             <div className='buttonWrapper'>
@@ -126,12 +134,9 @@ const IndexPage = ({data}) => {
 
           </div>
 
-          <div className='Img'>
+          <div className='ImgHolder'>
             <div className='ImgWrapper'>
-                <div>
-                  {/* <img src={mePortrait} alt="someImg" /> */}
-                </div>
-                {/* <div><img src={data.allCloudinaryMedia.edges[1].node.secure_url} alt="someImg" /></div> */}
+                <div className='ImgDesktop' />    
             </div>
           </div>
 

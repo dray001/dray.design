@@ -1,38 +1,60 @@
 @import 'src/styles/common.scss';
 
-.titleHeading {
-    font-weight: bold;
-    font-size: 40px;
-    color: var(--textTitle);
-    position: relative;
-    display: inline-block;
-    margin: 0;
+.titleHolder {
 
-    &::before {
-        content: '';
-        display: block;
-        position: absolute;
-        z-index: -2;
-        width: 80%;
-        height: 50%;
-        // height: 34px;
-        right: -10px;
-        top: 60%;
-        background-color: var(--headingAccent);
+    @keyframes mymove {
+        from {transform: translateY(100px);}
+        to {transform: translateY(0px);}
+      }
+
+    .sectionTitle {
+        font-weight: bold;
+        font-size: 40px;
+        color: var(--textTitle);
+        position: relative;
+        display: inline-block;
+        margin: 0;
+        transform: translateY(-100px);
+        transition: all;
+        opacity: 0;
+        transition-duration: 0.6s;
+        transition-timing-function: ease-out;
+    
+        &::before {
+            content: '';
+            display: block;
+            position: absolute;
+            z-index: -2;
+            width: 80%;
+            height: 50%;
+            right: -10px;
+            top: 60%;
+            background-color: var(--headingAccent);
+        }
+    
+        &.test {
+            opacity: 1;
+            transform: translateY(0px);
+            &::before { 
+                animation: mymove 0.6s ease-out;
+                animation-fill-mode: forwards;
+            }
+        }
     }
 }
 
 @include for-tablet-only () {
 
-    .titleHeading {
+    .sectionTitle {
         font-size: 58px;
     }
 }
 
 @include for-desktop-only () {
-
-    .titleHeading {
+    .titleHolder{
+       .sectionTitle {
         font-size: 68px;
+        } 
     }
 }
 

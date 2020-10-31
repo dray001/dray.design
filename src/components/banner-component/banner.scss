@@ -53,7 +53,20 @@
         .bannerContentHolder {
             padding: 5%;
             width: 50%;
-            height: 480px;
+
+            .bannerContent {
+                padding: 2%;
+                & > p {
+                    color: #C0C0C0;
+                    font-weight: lighter;
+                    margin: 0 0 40px 0;
+                    font-size: 16px;
+                    mix-blend-mode: screen;
+                    &:first-child {
+                        font-size: 18px;
+                    }
+                }
+            }
         }
 
         .bannerMobile {

@@ -22,6 +22,7 @@ header {
     display: flex;
     align-items: center;
     justify-content: space-between;
+    border-bottom: solid 1px #E1E1E1;
 
     .logo {
       width: auto;
@@ -243,7 +244,7 @@ header {
       }
 
       .headerContainer {
-        padding: 2% 8%;
+        padding: 1% 8%;
         display: flex;
         align-items: center;
 

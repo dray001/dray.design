@@ -30,7 +30,7 @@ main {
     transition: box-shadow 0.2s;
 
     &.sadow {
-    box-shadow: 0px 16px 25px rgba(0, 0, 0, 0.1);
+    box-shadow: 0px 16px 25px rgba(0, 0, 0, 0);
     }
   }
 
@@ -42,7 +42,15 @@ main {
       overflow-y: hidden;
     } 
   }
+}
 
+@include for-tablet-only () {
+  main {
+  
+    .childrenWrapper {
+      padding: 0 8% 6% 8%;
+    }
+  }
 }
 
 @include for-desktop-only () {
