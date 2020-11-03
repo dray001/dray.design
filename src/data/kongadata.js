@@ -86,7 +86,8 @@ projectKonga: [
             title: "Design System",
             image: "https://res.cloudinary.com/dramages/image/upload/v1604181944/designSystemZoom_1.png",
             para: `Creating an effective design system for such a large e-commerce platform like Konga, involve storing Components 
-            into a structed File, with proper Documentation, as most of The time teams in the organization are going to interact with it.
+            in well structed File, with proper documentation, as this aids effective collaboration with team members, design systems 
+            also strengthens visual consistency across an organization.
             `
         },
         {
