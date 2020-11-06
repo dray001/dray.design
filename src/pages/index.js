@@ -1,15 +1,13 @@
 import React from "react"
 import Layout from "../components/layout"
 import Heading from "../components/heading-component/heading"
-import { graphql } from 'gatsby'
 import SEO from "../components/seo"
 import './index.scss'
 import { Button } from "../components/button-component/button";
 import {homePageData} from '../data/homePageData'
 
-const IndexPage = ({data}) => {
+const IndexPage = () => {
 
-  
   let Smile = ({skill, op1, op2, op3, op4}) => (
     <div className='skilly'>
       <span> {skill || 'non'} </span>
@@ -168,18 +166,6 @@ const IndexPage = ({data}) => {
     </Layout>
   )
 }
-
-export const query = graphql`
-query MyQuery {
-  allCloudinaryMedia(filter: {tags: {eq: "home"}}) {
-    edges {
-      node {
-        secure_url
-      }
-    }
-  }
-}
-`
 
 
 
