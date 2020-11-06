@@ -27,10 +27,8 @@ header {
     .logo {
       width: auto;
       height: 42px;
-
-      path {
-        stroke: var(--textNormal);
-      }
+        path
+        {fill: var(--textNormal);}  
     }
 
     .navHolder {
@@ -251,7 +249,7 @@ header {
         .logo {
           // fill: var(--bg);
           width: auto;
-          height: 56px;
+          height: 52px;
 
         }
 
