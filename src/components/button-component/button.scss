@@ -14,12 +14,12 @@
         background: var(--buttonBg);
         padding: 16px;
         position: relative;
-        border: 1px solid var(--textNormal);
+        border: 1.8px solid var(--textNormal);
         transition: transform 0.2s;
     
         &:hover {
             color: #fff;
-            border: 1px solid var(--buttonHover);
+            border: 1.8px solid var(--buttonHover);
             background: var(--buttonHover);
             transform: translate(6px, 6px);
     
