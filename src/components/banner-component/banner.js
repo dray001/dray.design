@@ -14,7 +14,7 @@ const Banner = ({type, logo, description, logoHeight, bannerImg, bgColor}) => {
         
             <div  className='bannerContent' dangerouslySetInnerHTML={{__html: description}} />
           </div>
-          <img className={(type=='mobile') ? 'bannerMobile' : 'bannerDesktop'} src={bannerImg} alt="img"/>
+          <img className={(type==='mobile') ? 'bannerMobile' : 'bannerDesktop'} src={bannerImg} alt="img"/>
           {/* image here */}
         </div>
       </section>)

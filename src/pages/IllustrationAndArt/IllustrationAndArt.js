@@ -1,9 +1,9 @@
-import React, { useEffect, useState } from "react"
-import { Link } from "gatsby"
+import React, { useState } from "react"
+// import { Link } from "gatsby"
 import Heading from "../../components/heading-component/heading"
 import Layout from "../../components/layout"
 import SEO from "../../components/seo"
-import { Button } from "../../components/button-component/button"
+// import { Button } from "../../components/button-component/button"
 import "./IllustrationAndArt.scss"
 
 const ArtPage = () => {
