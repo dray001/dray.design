@@ -25,17 +25,17 @@ module.exports = {
         pathToConfigModule: `src/utils/typography`,
       },
     },
-    {
-      resolve:`gatsby-source-cloudinary`,
-      options: {
-      cloudName: process.env.CLOUDINARY_CLOUD_NAME,
-      apiKey: process.env.CLOUDINARY_API_KEY,
-      apiSecret: process.env.CLOUDINARY_API_SECRET,
-      resourceType: `image`,
-      tags: true,
-      prefix: `portfolioImages/`,
-      },
-    },
+    // {
+    //   resolve:`gatsby-source-cloudinary`,
+    //   options: {
+    //   cloudName: process.env.CLOUDINARY_CLOUD_NAME,
+    //   apiKey: process.env.CLOUDINARY_API_KEY,
+    //   apiSecret: process.env.CLOUDINARY_API_SECRET,
+    //   resourceType: `image`,
+    //   tags: true,
+    //   prefix: `portfolioImages/`,
+    //   },
+    // },
     {
       resolve: `gatsby-plugin-manifest`,
       options: {
