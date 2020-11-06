@@ -45,7 +45,11 @@ const handleScroll = () => {
 
   return (
     <>
+          <div className='blocker'>
+                <h1> Adding finishing touches </h1>
+          </div>
       <div className='pageWrapper'>
+      
         <main>
           <div className = {state ? 'pageHeader sadow' : 'pageHeader'} >
           <Header modalState={false} siteTitle={data.site.siteMetadata.title} />
