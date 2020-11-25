@@ -70,10 +70,9 @@ const IndexPage = () => {
               {/* <div className='textp2' dangerouslySetInnerHTML={{ __html: homePageData.homeData[0].para}} /> */}
               <div className='textp2' > 
               <p>
-                <div className='ImgMobile' />
-                I believe Empathy should be the driving force to creating solutions for day to day problems faced by humanity.
-                Currently the <strong> Lead Designer at Aella </strong>, putting smiles to costumers by providing easy banking experiences.
-                </p> 
+                I believe Empathy should be the driving force for solving day to day problems faced by humanity.
+                Currently <strong> a Product and Visual Designer at Aella </strong>, putting smiles to costumers by providing easy banking experiences.
+                </p>
               </div>
             </div>
 
@@ -81,8 +80,8 @@ const IndexPage = () => {
               <p>See what I have been up to:</p>
               <div className='buttonHolder'>
                 <div className='b1'> <Button link='/projects/projectListing' text='My Projects' /> </div>
-                <div className='b2'> <Button link='https://medium.com/@dareony' text='My Articles' /> </div>
-                <div className='b3'> <Button link='/IllustrationAndArt/IllustrationAndArt' text='Illustrations and Sketches' /> </div>
+                <div className='b2'> <Button link='articles/articlesListing' text='My Articles' /> </div>
+                <div className='b3'> <Button link='/illustrationAndArt/illustrationAndArt' text='Illustrations and Sketches' /> </div>
               </div>
             </div>
 
@@ -102,7 +101,6 @@ const IndexPage = () => {
               </div>
 
               <div className='ImgHolder'>
-                  {/* background Image div */}
                   <div>
                     <span>
                         <svg width="115" height="56" viewBox="0 0 115 56"           fill="none" xmlns="http://www.w3.org/2000/svg">

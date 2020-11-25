@@ -78,23 +78,12 @@ header {
           border: solid 1px var(--textNormal);
 
         a {
-          color: var(--textNormal);;
+          color: white;
           cursor: pointer;
+          background: var(--footerBg);
           display: flex;
           text-decoration: none;
-          padding: 8px;
-
-          span {
-            display: flex;
-            align-items: center;
-            margin-right: 8px;
-
-            svg {
-              path {
-                fill: var(--textNormal);
-              }
-            }
-          }
+          padding: 8px 16px;
         }
       }
     }
@@ -224,16 +213,8 @@ header {
   }
 }
 
-@include for-tablet-only() {
-  header {
-    .headerContainer {
-      // max-width: 1224px;
-      padding: 32px;
-    }
-  }
-}
 
-@include for-desktop-only() {
+@include for-tablet-only() {
     header {
       width: 100%;
 
@@ -242,12 +223,11 @@ header {
       }
 
       .headerContainer {
-        padding: 1% 8%;
+        padding: 24px;
         display: flex;
         align-items: center;
 
         .logo {
-          // fill: var(--bg);
           width: auto;
           height: 52px;
 
@@ -278,7 +258,7 @@ header {
             text-decoration: none;
             cursor: pointer;
             margin-bottom: 0;
-            margin-right: 32px;
+            margin-right: 24px;
             transition: transform 0.2s ease-out;
 
             &:hover {
@@ -292,22 +272,12 @@ header {
 
           .leaveAmessageButton {
               align-self: center;
-              margin: 0;
+              margin: 0 32px 0 0;
               border: 0;
 
             a {
-              color: var(--textNormal);;
               cursor: pointer;
-              display: flex;
               text-decoration: none;
-              padding-right: 50px;
-
-              span {
-                margin-left: 14px;
-                display: flex;
-                
-                align-items: center;
-              }
             }
           }
         }
@@ -328,4 +298,12 @@ header {
         }
       }
     }
+}
+
+@include for-desktop-only() {
+  header {
+    .headerContainer {
+      padding: 1% 8%;
+    }
+  }
 }

@@ -14,7 +14,7 @@ const SecondPage = () => {
         <h1>{title}</h1>
         <p> {description} </p>
         
-          <Button buttonWidth={true} link={link} text='Read Case Study' />
+        <Button buttonWidth={true} link={link} text='Read Case Study' />
         
       </div>
 

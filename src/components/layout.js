@@ -35,7 +35,7 @@ useEffect(
 
 const handleScroll = () => {
   const scrollTop = window.pageYOffset;
-  if(scrollTop > 50) {
+  if(scrollTop > 250) {
     setState(true);
   }
   else {

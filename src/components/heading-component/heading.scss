@@ -1,21 +1,20 @@
 @import 'src/styles/common.scss';
 
+@keyframes mymove {
+    0% {
+        opacity: 0;
+        transform: translateY(-100px);
+        }
+    100% {
+        opacity: 1;
+        transform: translateY(0px);
+        }
+}
+
 .titleHolder {
-
-    @keyframes mymove {
-        0% {
-            opacity: 0;
-            transform: translateY(-100px);
-            }
-        100% {
-            opacity: 1;
-            transform: translateY(0px);
-            }
-      }
-
     .sectionTitle {
         font-weight: bold;
-        font-size: 40px;
+        font-size: 10vw;
         color: var(--textTitle);
         position: relative;
         display: inline-block;
@@ -51,16 +50,16 @@
 }
 
 @include for-tablet-only () {
-
-    .sectionTitle {
-        font-size: 58px;
+    .titleHolder {
+        .sectionTitle {
+            font-size: 6.5vw;
+        }
     }
 }
 
 @include for-desktop-only () {
     .titleHolder{
        .sectionTitle {
-        // font-size: 68px;
         font-size: 4.5vw;
         } 
     }

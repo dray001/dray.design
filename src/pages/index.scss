@@ -88,23 +88,11 @@
 
     section:first-child {
         padding-top: 32px;
-        .textp2 {
-            .ImgMobile {
-                float: right;
-                width: 25vh;
-                height: 25vh;
-                object-fit: cover;
-                background-position: center;
-                background-repeat: no-repeat;
-                background-size: 25vh auto;;
-                background-image: var(--imgUrl); 
-            }
-        }
     }
 
     section:nth-child(2) {
-        .Img { 
-        display: none;
+        .ImgHolder {
+            display: none;
         }
     }
 
@@ -171,28 +159,15 @@
 
 @include for-tablet-only() {
     .secWrapper {
-        section {
-            .introContent {
-            width: 100%;
-            }
-        }
 
         section:first-child {
-            padding-top: 32px;
-            .textp2 {
-                .ImgMobile {
-                    transform: translateY(-80px);
-                    width: 35vh;
-                    height: 35vh;
-                    background-size: 35vh auto;;
-                }
-            }
-        }
 
-        section:nth-child(2) {
-            .Img {
-                display: none
-            }
+            height: calc(60vh);
+            padding-top: 32px;
+            display: flex;
+            position: relative;
+            align-items: center;
+            justify-content: space-between;
         }
 
         section:last-child {
@@ -286,8 +261,10 @@
             padding-top: 140px;
             height: calc(100vh - 140px);
             flex-direction: row-reverse;
-            
+            display: flex;
+
             .ImgHolder {
+                display: block;
                 div {
                     display: grid;
                     position: relative;
@@ -386,7 +363,7 @@
 
         section:last-child {
             // height: calc(100vh - 140px);
-            padding-top: 170px;
+            padding-top: 200px;
             display: block;
             h1 {
                 margin-bottom: 50px;

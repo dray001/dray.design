@@ -84,7 +84,7 @@ projectKonga: [
         {
             id: "designsystem",
             title: "Design System",
-            image: "https://res.cloudinary.com/dramages/image/upload/v1604181944/designSystemZoom_1.png",
+            image: "https://res.cloudinary.com/dramages/image/upload/v1604181944/portfolioImages/portfolioOnKonga/designSystemZoom_1.png",
             para: `Creating an effective design system for such a large e-commerce platform like Konga, involve storing Components 
             in well structed File, with proper documentation, as this aids effective collaboration with team members, design systems 
             also strengthens visual consistency across an organization.
@@ -93,7 +93,7 @@ projectKonga: [
         {
             id: "mockup",
             title: "Mockups",
-            image: "https://res.cloudinary.com/dramages/image/upload/v1604183035/mockUps.png",
+            image: "https://res.cloudinary.com/dramages/image/upload/v1604183035/portfolioImages/portfolioOnKonga/mockUps.png",
             para: `Some selected screenshots
             `
         }

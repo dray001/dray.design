@@ -4,7 +4,7 @@ import Heading from "../../components/heading-component/heading"
 import Layout from "../../components/layout"
 import SEO from "../../components/seo"
 // import { Button } from "../../components/button-component/button"
-import "./IllustrationAndArt.scss"
+import "./illustrationAndArt.scss"
 
 const ArtPage = () => {
 
@@ -61,6 +61,16 @@ const ArtPage = () => {
 
 const ImgComp = ({ description, image }) => {
 
+  let closeIcon = <svg width="34" height="34" viewBox="0 0 34 34" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <rect x="1" y="1" width="32" height="32" rx="16" fill="none"/>
+                  <line x1="9.66449" y1="24.4697" x2="24.1482" y2="9.98596" stroke="white" stroke-width="1.5"/>
+                  <line x1="9.40875" y1="9.98578" x2="23.8925" y2="24.4695" stroke="white" stroke-width="1.5"/>
+                  <rect x="1" y="1" width="32" height="32" rx="16" stroke="white" stroke-width="1.5"/>
+                  </svg>
+  
+  
+  
+
   const [state, setstate] = useState(false);
 
   const showImg = () => {
@@ -72,12 +82,11 @@ const ImgComp = ({ description, image }) => {
       <div className={state ? "popImage showImg" : "popImage"}>
         <img src={image} alt="img" />
         <div>
-          <button onClick={showImg} className="button">close</button>
-          <a href="#"> view on figma </a>
+          <button onClick={showImg} className="closeButton">{closeIcon}</button>
         </div>
       </div>
       
-      <div className={state ? "close modal" : "close"}></div>
+      <div onClick={showImg} className={state ? "close modal" : "close"}></div>
       
       <div
         className="imgComponent"
@@ -89,7 +98,7 @@ const ImgComp = ({ description, image }) => {
         </div>
       </div>
     </div>
-)
+  )
 }
 
 export default ArtPage
