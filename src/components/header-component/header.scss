@@ -1,12 +1,13 @@
 @import "src/styles/common.scss";
 
+
 header {
   width: 100%;
 
   .hambugerModal {
     background: var(--bg);
-    opacity: 0.8;
-    position: fixed;
+    opacity: 0.85;
+    position: absolute;
     width: 100%;
     z-index: 2;
     height: 100vh;
@@ -22,6 +23,7 @@ header {
     display: flex;
     align-items: center;
     justify-content: space-between;
+    position: relative;
     border-bottom: solid 1px var(--borderLine);
 
     .logo {
@@ -32,16 +34,16 @@ header {
     }
 
     .navHolder {
-      margin: 5%;
+      // margin: 0;
       padding: 16px;
       position: fixed;
       display: block;
-      // visibility: hidden;
-      width: 90%;
-      background: var(--bg);
-      filter: invert(100%);
+      width: 76%;
+      background: var(--mobileMenuBg);
       bottom: 0;
-      left: 0;
+      left: 50%;
+      margin-right: -50%;
+      transform: translate(-50%, -50%);
       font-size: 24px;
       z-index: 10;
 
@@ -55,18 +57,18 @@ header {
 
         a {
           border: none;
-          display: block;
+          display: flex;
           margin-bottom: 8px;
-          color: var(--textNormal);
+          color: var(--mobileMenuText);
           text-decoration: none;
           cursor: pointer;
           padding: 8px;
-          transition: transform 0.2s ease-out;
+          transition: transform 0.1s ease-out;
 
           &:hover {
+            transform: translateX(8px);
+            color: var(--headingAccent);
             font-weight: bolder;
-            transform: translateY(-4px);
-            border-bottom: solid 3px var(--textNormal);
           }
         }
 
@@ -78,9 +80,9 @@ header {
           border: solid 1px var(--textNormal);
 
         a {
-          color: white;
+          color: var(--mobileMenuButtonText);
           cursor: pointer;
-          background: var(--footerBg);
+          background: var(--mobileMenuButton);
           display: flex;
           text-decoration: none;
           padding: 8px 16px;
@@ -90,8 +92,11 @@ header {
 
     .iconHolder {
       display: flex;
-      // background: #000;
       align-items: center;
+
+      .leaveAmessageButtonDesktop{
+        display: none;
+      }
 
       .darkLightSwitcher {
         margin-right: 24px;
@@ -137,6 +142,7 @@ header {
           width: 40px;
           height: 40px;
           z-index: 10;
+          cursor: pointer;
 
         .hambuger {
           margin: 4px auto;
@@ -150,7 +156,6 @@ header {
           -moz-transition: .5s ease-in-out;
           -o-transition: .5s ease-in-out;
           transition: .5s ease-in-out;
-          cursor: pointer;
   
           & span {
             display: block;
@@ -218,71 +223,44 @@ header {
     header {
       width: 100%;
 
-      .hambugerModal {
-        display: none;
-      }
-
       .headerContainer {
-        padding: 24px;
-        display: flex;
-        align-items: center;
+        padding: 1% 8%;
+
+        .navHolder {
+          .leaveAmessageButton {
+            display: none;
+          }
+        }
 
         .logo {
           width: auto;
           height: 52px;
-
         }
 
-        .navHolder {
-          margin: 0;
-          display: flex;
-          visibility: visible;
-          position: unset;
-          justify-content: space-between;
-          width: 100%;
-          background-color: unset;
-          filter: unset;
-          height: 0;
-          font-size: 16px;
-
-          &.off {
-            display: flex;
-          }
-
-          .headerLink {
-          display: flex;
-
-          a {
-            border: none;
-            color: var(--textNormal);
-            text-decoration: none;
-            cursor: pointer;
-            margin-bottom: 0;
-            margin-right: 24px;
-            transition: transform 0.2s ease-out;
-
-            &:hover {
-              font-weight: bolder;
-              transform: translateY(-4px);
-              border-bottom: solid 3px var(--textNormal);
-            }
-          }
-
-          }
-
-          .leaveAmessageButton {
-              align-self: center;
-              margin: 0 32px 0 0;
-              border: 0;
-
-            a {
-              cursor: pointer;
-              text-decoration: none;
-            }
-          }
-        }
 
         .iconHolder {
+          display: flex;
+          align-items: center;
+          justify-content: space-between;
+          // background: #000;
+          width: 200px;
+
+            .leaveAmessageButtonDesktop {
+                  display: flex;
+
+                  align-self: center;
+                  // margin-top: 32px;
+        
+                a {
+                  color: white;
+                  cursor: pointer;
+                  background: var(--buttonHover);
+                  display: flex;
+                  text-decoration: none;
+                  padding: 8px 16px;
+                }
+
+            }
 
           .darkLightSwitcher {
             margin: 0;
@@ -290,11 +268,7 @@ header {
               width: 24px;
               height: 24px;
             }
-          }
-
-          .hambugerHolder {      
-            display: none;  
-          }   
+          }  
         }
       }
     }
@@ -303,7 +277,7 @@ header {
 @include for-desktop-only() {
   header {
     .headerContainer {
-      padding: 1% 8%;
+      padding: 1% 12%;
     }
   }
 }

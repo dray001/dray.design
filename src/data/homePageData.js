@@ -46,23 +46,11 @@ homeData: [
             image: "",
             para: 
             `<div>
-            
-            <p>
-            Ac tempor velit <span>dolor sit amet</span> porttitor vitae bibendum massa.
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
-            Vestibulum risus nunc arcu dolor. Vitae purus facilisis 
-            viverra eu feugiat auctor a. Donec nunc venenatis, neque amet. Ultrices arcu est, 
-            metus aliquet facilisis tincidunt blandit. Ac tempor velit porttitor vitae bibendum massa.
-            </p>
+                <p>
+                I build scalable and effective Design Systems for organizations. I also have a good knowledge of Front-End Development (HTML, CSS, and JavaScript [React]).
+                Sketching, Illustrating, and making Art is how I meditate.
+                </p>
 
-            <p>
-            Ac tempor velit <span>dolor sit amet</span> porttitor vitae bibendum massa.
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
-            Vestibulum risus nunc arcu dolor. Vitae purus facilisis 
-            viverra eu feugiat auctor a. Donec nunc venenatis, neque amet. Ultrices arcu est, 
-            metus aliquet facilisis tincidunt blandit. Ac tempor velit porttitor vitae bibendum massa.
-            </p>
-                    
             </div>`
 
         }

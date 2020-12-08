@@ -66,18 +66,18 @@ const IndexPage = () => {
               <Heading size={32} title={homePageData.homeData[0].title} />
             </div>
               
-              <p className='textp1'>Product Designer | Illustrator | Amateur Artist </p>
+              <p className='textp1'>Product Designer | Illustrator | Hobby Artist </p>
               {/* <div className='textp2' dangerouslySetInnerHTML={{ __html: homePageData.homeData[0].para}} /> */}
               <div className='textp2' > 
               <p>
                 I believe Empathy should be the driving force for solving day to day problems faced by humanity.
-                Currently <strong> a Product and Visual Designer at Aella </strong>, putting smiles to costumers by providing easy banking experiences.
+                Currently <span style={{fontWeight: 'bolder'}}> A Product and Visual Designer at Aella, Lagos Nigeria </span>, putting smiles to costumers by providing easy banking experiences.
                 </p>
               </div>
             </div>
 
             <div className='buttonWrapper'>
-              <p>See what I have been up to:</p>
+              <p className='highlited'> See what I have been up to: </p>
               <div className='buttonHolder'>
                 <div className='b1'> <Button link='/projects/projectListing' text='My Projects' /> </div>
                 <div className='b2'> <Button link='articles/articlesListing' text='My Articles' /> </div>
@@ -139,20 +139,31 @@ const IndexPage = () => {
             <Heading title={homePageData.homeData[2].title} />
             
             <div className='skillHolder'>
-              
-              <div className='skillset'>
-              <Smile skill='UX Design' op4='1'/>
-              <Smile skill='UI Design' op4='1'/>
-              <Smile skill='Visual Design' op3='1'/>
-              <Smile skill='Interaction Design' op4='1'/>
-              <Smile skill='Frontend Development' op2='1'/>
-            </div>
 
-            <div className='introContent'>
+              <div className='introContent'>
                 <div className='textWrapper' >
-                  <div className='text' dangerouslySetInnerHTML={{ __html: homePageData.homeData[2].para}} />
+                  <div className='textp1' dangerouslySetInnerHTML={{ __html: homePageData.homeData[2].para}} />
+                  <p className='highlited'> My Design Tool Box contains: </p>
+                    <div className='tools'>
+                        <p><span>Figma</span></p>
+                        <p><span>Protopie</span></p>
+                        <p><span>Photoshop</span></p>
+                        <p><span>Adobe Illustrator</span></p>
+                        <p><span>After Effects</span></p>
+                        <p><span>Autodesk SketchBook</span></p>
+                        <p><span>Procreate</span></p>
+                    </div>
                 </div>
               </div>
+              
+              <div className='skillset'>
+                <Smile skill='UX Design' op4='1'/>
+                <Smile skill='UI Design' op4='1'/>
+                <Smile skill='Visual Design' op3='1'/>
+                <Smile skill='Interaction Design' op4='1'/>
+                <Smile skill='Frontend Development' op2='1'/>
+              </div>
+
 
             </div>
             

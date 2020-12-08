@@ -11,6 +11,10 @@
 }
 
 body {
+    --mobileMenuBg: #121212;
+    --mobileMenuText: #FFFF;
+    --mobileMenuButton: #FFFF;
+    --mobileMenuButtonText: #121212; 
     --bg: #FFFF;
     --imgUrl: url('https://res.cloudinary.com/dramages/image/upload/v1602702632/portfolioImages/homePageImages/portraitDrayLight.png');
     --textNormal: #222;
@@ -28,6 +32,10 @@ body {
   }
   
   body.dark {
+    --mobileMenuBg: #FFFF;
+    --mobileMenuText: #222;
+    --mobileMenuButton: #045757;
+    --mobileMenuButtonText: #FFFF; 
     -webkit-font-smoothing: antialiased;
     --headingAccent: #045757;
     --buttonBg: none;

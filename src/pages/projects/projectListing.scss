@@ -1,31 +1,33 @@
 @import './src/styles/common.scss';
 
 .projectListingWapper {
-    margin-top: 104px;
+    margin: 40px auto;
 
     .projectListComponent {
         display: flex;
         justify-content: space-between;
         flex-direction: column-reverse;
-        margin: 80px 0;
+        margin: 40px 0 80px;
         
 
         .projectListContentArea {
             width: 100%;
             h1 {
-                margin-bottom: 40px;
+                margin: 24px 0;
             }
         }
 
         .imageHolder {
             display: inline-flex;
             background-color: rgb(240, 240, 240);
-            width: 100%; 
+            width: 100%;
+            overflow: hidden;
             height: 30vh;
 
             img {
                 margin: auto;
-                padding: 4%;
+                width: 75%;
+                height: auto;
             }
         }
     }
@@ -34,16 +36,22 @@
 @include for-tablet-only() {
     
     .projectListingWapper {
+        margin-top: 104px;
     
         .projectListComponent {
             display: flex;
             justify-content: space-between;
             flex-direction: row;
             align-items: center;
-            margin-bottom: 80px;
+            margin: 80px 0;
 
             .imageHolder {
                 margin: 0 0 0 5%;
+                img {
+                    margin: auto;
+                    width: 80%;
+                    height: auto;
+                }
             }
     
             &:nth-child(odd) {
