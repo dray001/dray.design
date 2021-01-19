@@ -3,49 +3,49 @@ import './heading.scss'
 
 const Heading = ({title, size}) => {
 
-    useEffect(()=> {
-        let titles = document.querySelectorAll('.sectionTitle');
-        let titleHolders = document.querySelectorAll('.titleHolder');
+    // useEffect(()=> {
+    //     let titles = document.querySelectorAll('.sectionTitle');
+    //     let titleHolders = document.querySelectorAll('.titleHolder');
 
-        const observeIntersection = (titleCount) => {
+    //     const observeIntersection = (titleCount) => {
     
-            const options = {
-                root: null,
-                threshold: 1,
-                rootMargin: "50px"
-            };
+    //         const options = {
+    //             root: null,
+    //             threshold: 1,
+    //             rootMargin: "50px"
+    //         };
           
-            const observer = new IntersectionObserver((entries) => {
-            entries.forEach(entry => {
+    //         const observer = new IntersectionObserver((entries) => {
+    //         entries.forEach(entry => {
         
-                console.log(observer)
+    //             console.log(observer)
         
-                if (entry.isIntersecting) {
-                    console.log('in the view');
-                    titles[titleCount].classList.add('test');
-                }
+    //             if (entry.isIntersecting) {
+    //                 console.log('in the view');
+    //                 titles[titleCount].classList.add('test');
+    //             }
 
-            //   else {
-            //     console.log('out of view');
-            //     titles[titleCount].classList.remove('test');
-            //   }
+    //           else {
+    //             console.log('out of view');
+    //             titles[titleCount].classList.remove('test');
+    //           }
 
-            });
-            }, options);
+    //         });
+    //         }, options);
         
-            observer.observe(titleHolders[titleCount]);
-        }
+    //         observer.observe(titleHolders[titleCount]);
+    //     }
 
-        const titleCollector = () => {
-           let headingCount = titleHolders.length - 1;
-           for (let i = 0; i <= headingCount; i++) {
-                observeIntersection(i);   
-           }
-        }
-        console.log(titleCollector());
+    //     const titleCollector = () => {
+    //        let headingCount = titleHolders.length - 1;
+    //        for (let i = 0; i <= headingCount; i++) {
+    //             observeIntersection(i);   
+    //        }
+    //     }
+    //     console.log(titleCollector());
 
  
-    },[]);
+    // },[]);
 
     return (
         <div className='titleHolder'>

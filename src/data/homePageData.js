@@ -4,14 +4,14 @@ export const homePageData = {
 homeData: [
         {
             id: "Intro",
-            title: "I'm Dare Oni",
+            title: "I'm Dray Oni",
             image: "",
             para: 
             `<div>
                 <p>
                 <div className='ImgMobile' />
                 Empathy is the driving force to creating solutions for day to day problems faced by humanity.
-                Currently the <strong> Lead Designer at Aella </strong>, putting smiles to costumers by providing easy banking experience.
+                <strong> Lead Designer at Aella </strong>, putting smiles to costumers by providing easy banking experience.
                 Empathy is the driving force for creating solutions to day to day problems faced by humanity.
                 Currently the <strong> Lead Designer at Aella </strong>, putting smiles to costumers by providing easy banking experience.
                 </p>         

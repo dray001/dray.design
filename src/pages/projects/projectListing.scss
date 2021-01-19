@@ -3,98 +3,77 @@
 .projectListingWapper {
     margin: 40px auto;
 
-    .projectListComponent {
-        display: flex;
-        justify-content: space-between;
-        flex-direction: column-reverse;
-        margin: 40px 0 80px;
-        
+    .projects {
 
-        .projectListContentArea {
-            width: 100%;
-            h1 {
-                margin: 24px 0;
+        .projectListComponent {
+            margin: 40px 0 80px;
+            
+    
+            .projectListContentArea {
+                width: 100%;
+                h1 {
+                    margin: 24px 0;
+                }
             }
-        }
-
-        .imageHolder {
-            display: inline-flex;
-            background-color: rgb(240, 240, 240);
-            width: 100%;
-            overflow: hidden;
-            height: 30vh;
-
-            img {
-                margin: auto;
-                width: 75%;
-                height: auto;
+    
+            .imageHolder {
+                display: inline-flex;
+                background-color: rgb(240, 240, 240);
+                width: 100%;
+                overflow: hidden;
+                height: 30vh;
+    
+                // if it's not of compartible mediatype video or image is displayed none
+                // img.video, video.image {
+                //     display: none;
+                // }
+    
+                img, video {
+                    margin: auto;
+                    width: 75%;
+                    transform: scale(1.15);
+                    height: auto;
+                }
+    
+                video {
+                    width: 55%; 
+                }
             }
         }
     }
+
 }
 
 @include for-tablet-only() {
     
     .projectListingWapper {
         margin-top: 104px;
-    
-        .projectListComponent {
+        
+        .projects {
             display: flex;
-            justify-content: space-between;
-            flex-direction: row;
-            align-items: center;
-            margin: 80px 0;
+            width: 100%;
 
-            .imageHolder {
-                margin: 0 0 0 5%;
-                img {
-                    margin: auto;
-                    width: 80%;
-                    height: auto;
+            .projectListComponent {
+                width: 70%;
+                
+                .imageHolder { 
+                    width: 70%; 
+                    padding: 40px;
+                    display: grid;
+                    height: 30vh;
+    
+                    img {
+                        align-self: center;
+                    }
                 }
-            }
-    
-            &:nth-child(odd) {
-                flex-direction: row-reverse;
-                .imageHolder {
-                        margin: 0 5% 0 0;
-                }
-            }
-    
-            .projectListContentArea {
-                width: 100%;
-            }
-        }
-    }
-}
-
-@include for-desktop-only() {
-
-    .projectListingWapper {
-        .projectListComponent {
-            margin-bottom: 180px;
-
-            &:nth-child(odd) {
-                flex-direction: row-reverse;
-            }
-    
-            .projectListContentArea {
-                width: 40%;
-            }
-
-            .imageHolder { 
-                width: 50%; 
-                padding: 40px;
-                display: grid;
-                height: 50vh;
-
-                img {
-                    align-self: center;
+        
+                .projectListContentArea {
+                    width: 70%;
                 }
             }
         }
+    
     }
-
 }
 
 

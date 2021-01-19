@@ -1,6 +1,7 @@
 import React, { useEffect } from "react"
 import { Link } from "gatsby"
 import Banner from "../../../components/banner-component/banner"
+import NextProject from "../../../components/nextProjectBrief-component/nextProjectBrief"
 import Layout from "../../../components/layout"
 import SEO from "../../../components/seo"
 import {staticData} from '../../../data/kongadata'
@@ -11,6 +12,13 @@ let francisAvatarImg = 'https://res.cloudinary.com/dramages/image/upload/v160381
 let francisProfile = 'https://www.linkedin.com/in/francis-otuogbai/';
 let tobbyAvatarImg = 'https://res.cloudinary.com/dramages/image/upload/v1603814293/portfolioImages/portfolioOnKonga/tobby.png';
 let tobbyProfile = 'https://www.linkedin.com/in/tobi-akanni/';
+
+// next project details
+let projectTitle = 'Aella App'
+let projectType = 'Fintech'
+let projectLink = '/projects/aellaFinanceApp/aellaFinDesignProcess'
+let projectDescription = `Finance is complex enough. People and Businesses deserve easy, straightforward products that works. deserve easy, straightforward products that works.`
+
 
 const SecondPag = () => {
 
@@ -217,6 +225,14 @@ const SecondPag = () => {
                   </span>
                 </div>
             </div> 
+            
+            < NextProject
+              type = {projectType}
+              projectName = {projectTitle}
+              description = {projectDescription}
+              link = {projectLink}
+            />
+
           </div>
 
         <div className='project01StickyNav'>
@@ -228,10 +244,13 @@ const SecondPag = () => {
             <Link to='#mockups'> High Fidelity MockUps </Link>
           </div>
         </div>
+        
       </div>
 
     </Layout>
   )
 }
+
+
 
 export default SecondPag

@@ -16,9 +16,8 @@ const ArtPage = () => {
           <Heading title={`Illustrations`} />
         </div>
         <p>
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum
-          risus nunc arcu dolor. <br /> Vitae purus facilisis viverra eu feugiat
-          auctor a. Donec nunc venenatis,
+          Sketching and Illustrating is a form of meditation to me, and it's also how I express my artistic self. 
+          <br /> Please scroll through for your viewing pleasure 😊
         </p>
 
         <div className="imgHolder">

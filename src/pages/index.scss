@@ -1,31 +1,51 @@
 @import '../styles/common.scss';
 
+$anim-speed: 1s;
+
+@keyframes reviewer {
+    0% {
+        transform: translateY(40px);
+        opacity: 0;
+    }
+
+    30% {
+        transform: translateY(-20px);
+        opacity: 1;
+    }
+
+    100% {
+        transform: translateY(0px);
+        opacity: 1;
+    }
+}
+
 @keyframes anim1  {
     0%, 100% {
       transform: scale(1);
-      box-shadow: 0px 0px 2px rgba(0, 0, 0, 0.2);
+      box-shadow: 0px 0px 2px 0px rgba(0, 0, 0, 0);
     }
 
     50% {
       transform: scale(1.05);
-      box-shadow: 0px 30px 17px rgba(0, 0, 0, 0.15);
+      box-shadow: 0px 50px 40px -20px rgba(0, 0, 0, 0.2);
     }
 }
 
 @keyframes anim2  {
     0%, 100% {
-      box-shadow: 0px 0px 2px rgba(0, 0, 0, 0.2);
+      box-shadow: 0px 0px 2px rgba(0, 0, 0, 0);
       transform: scale(1.05);
     }
 
     50% {
       transform: scale(1);
-      box-shadow: 0px 30px 17px rgba(0, 0, 0, 0.15);
+      box-shadow: 0px 50px 40px -20px rgba(0, 0, 0, 0.2);
     }
 }
 
 .secWrapper {
     position: relative;
+    visibility: hidden;
 
     section {
         padding-top: 80px;
@@ -65,7 +85,7 @@
                 }
             }
     
-            .buttonWrapper {
+            .buttonWrapperContainer {
     
                 .buttonHolder {
                     width: 100%;
@@ -85,15 +105,24 @@
         padding-top: 32px;
     }
 
-    section:nth-child(2) {
-        .ImgHolder {
-            display: none;
+    .mySkills {
+        .section2title {
+            opacity: 0;
+            &.review {
+                animation: reviewer $anim-speed 0.1s forwards ease-out;
+            }
         }
-    }
 
-    section:last-child {
         .skillHolder {
             .textWrapper {
+
+                .textp1 {
+                    opacity: 0;
+                    &.review {
+                        animation: reviewer $anim-speed 0.2s forwards ease-out;
+                    }  
+                }
+
                 
                 .tools {
                     display: flex;
@@ -109,6 +138,10 @@
                         }
                     }
                 }
+            }
+
+            .sec2button {
+                margin-top: 40px;
             }
 
             .skillset {
@@ -140,6 +173,22 @@
             }
         } 
     }
+
+    .aboutMe {
+        display: block;
+
+        .aboutMeContentHolder {
+            display: flex;
+            flex-direction: column-reverse;
+        }
+        
+        .ImgHolder {
+            .aboutMeChart {
+                display: none;
+            } 
+        }
+    }
+
 }
 
 @include for-tinnyP-only() {
@@ -176,16 +225,15 @@
     .secWrapper {
 
         section:first-child {
-
-            height: calc(60vh);
-            padding-top: 32px;
             display: flex;
             position: relative;
             align-items: center;
             justify-content: space-between;
+            // margin: 0;
         }
 
-        section:last-child {
+        .mySkills {
+            // margin: 0;
             .skillHolder {
 
                 .textWrapper {
@@ -220,28 +268,29 @@
     
         section {
             padding: 0;
-            margin: 0;
+            margin-bottom: 100px;
+            // height: 80vh;
             display: flex;
             position: relative;
             align-items: center;
             justify-content: space-between;
         
             .introContent {
-                width: 50%;
+                width: 54%;
        
-                .textWrapper {
-                    
+                .textWrapper {  
     
                     .textp1 {
                         margin-top: 24px;
                     }
-        
+
                     .textp2 {
                         margin-top: 40px;
                     }
+
                 }
         
-                .buttonWrapper {
+                .buttonWrapperContainer {
         
                     p {
                         font-size: 18px;
@@ -265,12 +314,64 @@
 
         & > section:first-child {
             height: calc(100vh - 140px);
+
             .textp2 {
                 .ImgMobile {
                     display: none;
                 }
             }
+
+            .textWrapper {
+                
+                .title {
+                    opacity: 0;
+                    &.review {
+                        animation: reviewer $anim-speed forwards ease-out;
+                    }
+                }
+
+
+                .textp1 {
+                    opacity: 0;
+                    &.review {
+                        animation: reviewer $anim-speed 0.15s forwards ease-out;
+                    }
+                }
+
+
+                .textp2 {
+                    opacity: 0;
+                    &.review {
+                        animation: reviewer $anim-speed 0.2s forwards ease-out;
+                    }
+                }
+            }
+
+            .buttonWrapperContainer {
+                opacity: 0;
+                &.review {
+                    animation: reviewer $anim-speed 0.25s forwards ease-out;
+                }
+
+                .buttonHolder {
+                    .b1 {
+                        opacity: 0;
+                        animation: reviewer $anim-speed 0.3s forwards ease-out;
+                    }
+                    .b2 {
+                        opacity: 0;
+                        animation: reviewer $anim-speed 0.35s forwards ease-out;
+                    }
+                    .b3 {
+                        opacity: 0;
+                        animation: reviewer $anim-speed 0.4s forwards ease-out;
+                    }
+                }
+            }
+            
             .ImgDesktop {
+                opacity: 0;
+                animation: reviewer $anim-speed forwards ease-out; 
                 width: 30vw;
                 height: 60vh;
                 object-fit: cover;
@@ -283,115 +384,122 @@
         }
 
 
-        section:nth-child(2) {
-            padding-top: 140px;
-            height: calc(100vh - 140px);
-            flex-direction: row-reverse;
-            display: flex;
+        .aboutMe {
+            margin-top: 150px;
 
-            .ImgHolder {
-                display: block;
-                div {
-                    display: grid;
-                    position: relative;
-                    transform-origin: center right;
-                    grid-template-columns: auto auto;
-                    grid-gap: 40px;
-                    
-                    span {
-                        display: flex;
-                        justify-content: center;
-                        align-items: center;
-                        padding: auto;
-                        cursor: pointer;
+            .aboutMeContentHolder {
+                flex-direction: row-reverse;
+                justify-content: space-between;
+                display: flex;
+
+                .ImgHolder {
+                    display: block;
+                    .aboutMeChart {
+                        display: grid;
                         position: relative;
-                        background: var(--bg);
-                        border: 1.5px solid var(--textTitle);
-                        width: 22vh;
-                        height: 22vh;
-                        top: 0px;
-                        left: 0px;
-                        transition: top, left, 0.1s ease-out;
-
-                        &:hover {
-                            background: var(--buttonHover);
-                            border: 2px solid var(--buttonHover);
-                            top: -5px;
-                            left: 5px;
-                            svg {
-                                path {
-                                    stroke: #ffff;
-                                }
-                            }
-
-                            &::before {
-                                content: 'I go with the Flow';
-                                min-width: 100%;
-                                z-index: -15;
-                                padding: 8px;
-                                color: white;
-                                text-align: center;
-                                font-size: 16px;
+                        transform-origin: center right;
+                        grid-template-columns: auto auto;
+                        grid-gap: 40px;
+                        
+                        span {
+                            display: flex;
+                            justify-content: center;
+                            align-items: center;
+                            padding: auto;
+                            cursor: pointer;
+                            position: relative;
+                            background: var(--bg);
+                            border: 1.5px solid var(--textTitle);
+                            width: 22vh;
+                            height: 22vh;
+                            top: 0px;
+                            left: 0px;
+                            transition: top, left, 0.1s ease-out;
+    
+                            &:hover {
                                 background: var(--buttonHover);
-                                position: absolute;
-                                top: -20%;
-                                left: 50%;
-                                transform: translate(-50%, -50%);
-                            }
-                        }
-
-                        &:nth-child(1) {
-                        animation: anim1 5s infinite linear;
-                        transform: scale(1);
-                        }
-
-                        &:nth-child(2) {
-                        animation: anim2 5s infinite linear;
-                        transform: scale(1.05);
-                            &:hover {
-                                &::before {
-                                    content: 'Love is the Reason';
+                                border: 2px solid var(--buttonHover);
+                                top: -5px;
+                                left: 5px;
+                                svg {
+                                    path {
+                                        stroke: #ffff;
+                                    }
                                 }
-                            }
-                        }
-
-                        &:nth-child(3) {
-                        transform: scale(1.05);
-                        animation: anim2 5s 0.8s infinite linear;
-                            &:hover {
+    
                                 &::before {
-                                    content: 'My Pen is my escape';
+                                    content: 'I go with the Flow';
+                                    min-width: 100%;
+                                    z-index: 115;
+                                    padding: 8px;
+                                    color: white;
+                                    text-align: center;
+                                    font-size: 16px;
+                                    background: var(--buttonHover);
+                                    position: absolute;
                                     top: 120%;
+                                    left: 50%;
+                                    transform: translate(-50%, -50%);
                                 }
                             }
-                        }
-
-                        &:nth-child(4) {
-                        transform: scale(1);
-                        animation: anim1 5s infinite linear;
-                            &:hover {
-                                &::before {
-                                    content: 'Stars are mysteries';
-                                    top: 120%;
+    
+                            &:nth-child(1) {
+                            animation: anim1 5s infinite linear;
+                            transform: scale(1);
+                            }
+    
+                            &:nth-child(2) {
+                            animation: anim2 5s infinite linear;
+                            transform: scale(1.05);
+                                &:hover {
+                                    &::before {
+                                        content: 'Love is the Reason';
+                                    }
                                 }
                             }
+    
+                            &:nth-child(3) {
+                            transform: scale(1.05);
+                            animation: anim2 5s 0.8s infinite linear;
+                                &:hover {
+                                    &::before {
+                                        content: 'My Pen is my escape';
+                                        // top: 120%;
+                                    }
+                                }
+                            }
+    
+                            &:nth-child(4) {
+                            transform: scale(1);
+                            animation: anim1 5s infinite linear;
+                                &:hover {
+                                    &::before {
+                                        content: 'Stars are mysteries';
+                                        // top: 120%;
+                                    }
+                                }
+                            }
+    
+                            svg {
+                            transform: scale(1.1);
+                            path {
+                                stroke: var(--textNormal);
+                              }
+                            } 
                         }
-
-                        svg {
-                        transform: scale(1.1);
-                        path {
-                            stroke: var(--textNormal);
-                          }
-                        } 
                     }
                 }
             }
+
+            .titleHolder {
+                margin-bottom: 96px;
+            }
         }
 
-        section:last-child {
-            // height: calc(100vh - 140px);
-            padding-top: 200px;
+        .mySkills {
             display: block;
+            // margin: 0;
+
             h1 {
                 margin-bottom: 50px;
                 } 

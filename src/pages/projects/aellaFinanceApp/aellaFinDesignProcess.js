@@ -1,10 +1,17 @@
 import React, { useEffect } from "react"
 import { Link } from "gatsby"
 import Banner from "../../../components/banner-component/banner"
+import NextProject from "../../../components/nextProjectBrief-component/nextProjectBrief"
 import Layout from "../../../components/layout"
 import SEO from "../../../components/seo"
 import {staticData} from '../../../data/aelladata'
 import './aellaFinDesignProcess.scss';
+
+// next project details
+let projectTitle = 'Konga'
+let projectType = 'E-commerce'
+let projectLink = '/projects/konga/kongaDesignProcess'
+let projectDescription = `Konga is one of Nigeria's largest online mall. offering products that span various categories including Phones...`
 
 const SecondPag = () => {
 
@@ -327,12 +334,18 @@ const SecondPag = () => {
                   <img src={aellaData[10].image2 } alt="img"/>
                 </div>
                 <div className='visualLanguageFlow'> 
-                   <h3>Color</h3>
-                   <p> {aellaData[10].para2 } </p>
+                   <h3>Color pallete</h3>
                   <img src={aellaData[10].image3 } alt="img"/>
                 </div>
               </div>
             </div>
+
+            < NextProject
+              type = {projectType}
+              projectName = {projectTitle}
+              description = {projectDescription}
+              link = {projectLink}
+            />
            
           </div>
 

@@ -5,55 +5,64 @@ import SEO from "../../components/seo"
 import { Button } from "../../components/button-component/button";
 import './projectListing.scss';
 
-const SecondPage = () => {
-
-  let Sec = ({title, description, link, image}) => (
-    <div className='projectListComponent' >
-
-      <div className='projectListContentArea'>
-        <h1>{title}</h1>
-        <p> {description} </p>
-        
-        <Button buttonWidth={true} link={link} text='Read Case Study' />
-        
-      </div>
-
-      <div className='imageHolder' >
-        <img src={image} alt="Aella"/>
-      </div>
-    </div>
-    
-  )
-
-  
-  return (
+const SecondPage = () => (
   <Layout>
     <SEO title="Page two" />
     <div className='projectListingWapper' >
+
       <Heading title={`Projects`} />
 
-      <Sec 
-      title = 'Aella Finance App'
-      image = 'https://res.cloudinary.com/dramages/image/upload/v1600893182/portfolioImages/portfolioOnAella/bannerAella.png'
-      // image = {data.allCloudinaryMedia.edges[0].node.secure_url}
-      link = '/projects/aellaFinanceApp/aellaFinDesignProcess'
-      description = 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Velit sed orci et purus amet. Ullamcorper in lectus suspendisse non, et in quam phasellus.'
-      />
+      <div className='projects'>
+        {/* project comp can display video or Images depending 
+          on the data passed to the mediaUrl, also mediaType
+          most be provided.*/}
 
+        <Project 
+        title = 'Aella Finance App'
+        mediaUrl = 'https://res.cloudinary.com/dramages/image/upload/v1609808981/portfolioImages/portfolioOnAella/bannerAellaCover.png'
+        mediaType = 'image'
+        color = '#2054D2'
+        link = '/projects/aellaFinanceApp/aellaFinDesignProcess'
+        description = 'Aella makes it super easy for anyone to borrow, invest and make payments. No excuses...'
+        />
 
-      <Sec 
-      title = 'Konga Online Shopping'
-      image = 'https://res.cloudinary.com/dramages/image/upload/v1600708297/portfolioImages/projectListing/kongabannerPink.png'
-      link = '/projects/konga/kongaDesignProcess'
-      // image = {data.allCloudinaryMedia.edges[1].node.secure_url}
-      description = 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Velit sed orci et purus amet. Ullamcorper in lectus suspendisse non, et in quam phasellus.'
-      />
+        <Project 
+        title = 'Konga Online Shopping'
+        mediaUrl = 'https://res.cloudinary.com/dramages/image/upload/v1600708297/portfolioImages/projectListing/kongabannerPink.png'
+        mediaType = 'image'
+        link = '/projects/konga/kongaDesignProcess'
+        description = {`Konga is one of Nigeria's largest online mall. offering products that span various categories...`}
+        />
+
+      </div>
 
     </div>
     
   </Layout>
   )
-}
+
+let Project = ({title, description, link, mediaUrl, color, mediaType}) => (
+  <div className='projectListComponent' >
+
+    <div className='imageHolder' style={{backgroundColor: `${color}`}}>
+
+      {
+        mediaType === 'image' ? <img src={mediaUrl} alt="Aella"/> :
+        <video loop="true" autoplay="autoplay" muted>
+          <source src={mediaUrl} type="video/mp4" />
+        </video>
+      }
+
+    </div>
+
+    <div className='projectListContentArea'>
+      <h1>{title}</h1>
+      <p> {description} </p>
+      <Button link={link} text='Read Case Study' />
+    </div>
+
+  </div>
+)
 
 
 export default SecondPage

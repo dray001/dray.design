@@ -9,7 +9,7 @@ projectAellaApp: [
             type: 'mobile',
             bgColor: '#2054D2',
             logoHeight: '36px',
-            bannerImg: 'https://res.cloudinary.com/dramages/image/upload/v1600893182/portfolioImages/portfolioOnAella/bannerAella.png',
+            bannerImg: 'https://res.cloudinary.com/dramages/image/upload/v1609808434/portfolioImages/portfolioOnAella/bannerAella.png',
             description: 
             `   <p>
                     Finance is complex enough. People and Businesses deserve easy, straightforward 
@@ -109,7 +109,7 @@ projectAellaApp: [
             id: "prototype",
             title: "Prototype / Usability testing",
             image: "https://res.cloudinary.com/dramages/image/upload/v1601423757/portfolioImages/portfolioOnAella/highFidelity.png",
-            para: `From previously highlighted design goals, the use of the primary Aella Blue Color gives Emphasis on important informations, and needful actions to perform, also the use of white space to reduce cognitive load.`
+            para: `Prototyping is very useful for usability testing, because it points out the pain-points of the users, and how I can further improve the UI for better User experience.`
         },
         {
             id: "visuals",

@@ -1,0 +1,81 @@
+@import 'src/styles/common.scss';
+
+.nextProjectWrapper {
+    background: rgb(241, 241, 241);
+    padding: 40px;
+    margin-top: 80px;
+    position: relative;
+    overflow: hidden;
+
+    .nextProjectContentHolder {
+        width: 100%;
+        
+        & > span {
+            position: relative;
+            display: inline-block;
+            width: 100%;
+
+            &::after {
+                content: '';
+                display: inline-block;
+                position: absolute;
+                width: 100%;
+                top: 50%;
+                left: 160px;
+                height: 2px;
+                background: rgb(212, 212, 212);
+            }
+        }
+        
+        .nextProjectContent {
+            width: 100%;
+            display: block;        
+
+
+            .heading {
+                margin: 16px 0;
+                width: 100%;
+
+                h3 {
+                display: inline;
+                font-size: 38px;
+                padding-right: 8px;
+                }
+
+                p {
+                    margin: 24px 0 0 0;
+                }
+            }
+
+            .buttonWapper {
+                width: 100%;
+                margin-top: auto;
+                padding-bottom: 16px;
+            }
+        }
+    }
+}
+
+@include for-tablet-only() {
+    .nextProjectWrapper {
+        .nextProjectContentHolder {
+            .nextProjectContent {
+                display: flex;
+                align-items: center;
+
+                .heading {
+                    margin: 16px 0;
+                    width: 50%;
+                }
+
+                .buttonWapper {
+                    width: 40%;
+                    margin-top: auto;
+                    padding-bottom: 16px;
+                    margin-left: 40px;
+                }
+            }
+        }
+    }
+}
+
