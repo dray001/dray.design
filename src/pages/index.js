@@ -95,7 +95,7 @@ const IndexPage = () => {
               {/* <div className='textp2' dangerouslySetInnerHTML={{ __html: homePageData.homeData[0].para}} /> */}
               <div className='textp2' ref={el => sec1Para2 = el} > 
               <p>
-                I believe Empathy should be the driving force for solving day to day problems faced by humanity.
+                I blah blah believe Empathy should be the driving force for solving day to day problems faced by humanity.
                 <span style={{fontWeight: 'bolder'}}> Lead Designer at Aella, Lagos Nigeria </span>, putting smiles ☺️ to costumers by providing easy banking experiences.
                 </p>
               </div>
