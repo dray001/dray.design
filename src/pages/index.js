@@ -62,7 +62,7 @@ const IndexPage = () => {
         observeIntersection(1, sectionTwoAnimIn);
 
     console.log(sections.length);
-  },[])
+  })
 
   let sectionOneAnimIn =()=> {
     sec1Title.classList.add("review");
