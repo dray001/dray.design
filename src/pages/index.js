@@ -8,7 +8,7 @@ import {homePageData} from '../data/homePageData'
 
 const IndexPage = () => {
   let wrapper = useRef(null);
-  let sections = document.getElementsByTagName('SECTION');
+  // let sections = document.getElementsByTagName('SECTION');
 
   // taggetting contents in first section
   let sec1Title = useRef(null);
@@ -55,13 +55,13 @@ const IndexPage = () => {
             });
             }, options);
         
-            observer.observe(sections[count]);
+            // observer.observe(sections[count]);
         }
 
         
         observeIntersection(1, sectionTwoAnimIn);
 
-    console.log(sections.length);
+    // console.log(sections.length);
   })
 
   let sectionOneAnimIn =()=> {
