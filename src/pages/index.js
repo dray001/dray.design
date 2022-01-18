@@ -16,66 +16,17 @@ const IndexPage = () => {
   let sec1Para2 = useRef(null);
   let sec1Buttons = useRef(null);
 
-  // taggetting contents in section section
-  let sec2Title = useRef(null);
-  let sec2Para = useRef(null);
-  let tools = useRef(null);
-  let sec2Button = useRef(null);
 
   useEffect(()=> {
     wrapper.style.visibility = 'visible';
     sectionOneAnimIn();
-
-        const observeIntersection = (count,func) => {
-    
-            const options = {
-              root: null,
-              threshold: 0.2,
-              rootMargin: "50px"
-            };
-          
-            const observer = new IntersectionObserver((entries) => {
-            entries.forEach(entry => {
-        
-                console.log(observer)
-        
-                if (entry.isIntersecting) {
-                    console.log('in the view');
-                    try {
-                      func()   
-                    } catch(e) {
-                      console.log('cannot read property of classlist of null');
-                    }     
-                }
-
-                else {
-                  return;
-                }
-
-            });
-            }, options);
-        
-            // observer.observe(sections[count]);
-        }
-
-        
-        observeIntersection(1, sectionTwoAnimIn);
-
-    // console.log(sections.length);
-  })
+  });
 
   let sectionOneAnimIn =()=> {
     sec1Title.classList.add("review");
     sec1Para1.classList.add("review");
     sec1Para2.classList.add("review");
     sec1Buttons.classList.add("review");
-  }
-
-  let sectionTwoAnimIn =()=> {
-    sec2Title.classList.add("review");
-    sec2Para.classList.add("review");
-    tools.classList.add("review");
-    sec2Button.classList.add("review");
   }
 
   return (
@@ -106,7 +57,7 @@ const IndexPage = () => {
               <div className='buttonHolder'>
                 <div className='b1'> <Button link='/projects/projectListing' text='My Projects' /> </div>
                 <div className='b2'> <Button link='articles/articlesListing' text='My Articles' /> </div>
-                <div className='b3'> <Button link='/illustrationAndArt/illustrationAndArt' text='Illustrations and Sketches' /> </div>
+                {/* <div className='b3'> <Button link='/illustrationAndArt/illustrationAndArt' text='Illustrations and Sketches' /> </div> */}
               </div>
             </div>
 
@@ -116,7 +67,7 @@ const IndexPage = () => {
 
         <section className='mySkills' id='mySkills' >
 
-            <div className='section2title' ref={el => sec2Title = el}>
+            <div >
               <Heading title={homePageData.homeData[2].title} />
             </div>
             
@@ -125,9 +76,9 @@ const IndexPage = () => {
 
               <div className='introContent'>
                 <div className='textWrapper' >
-                    <div className='textp1' dangerouslySetInnerHTML={{ __html: homePageData.homeData[2].para}} ref={el => sec2Para = el} />
+                    <div dangerouslySetInnerHTML={{ __html: homePageData.homeData[2].para}} />
                     <p className='highlited'> My Design Tool Box contains: </p>
-                    <div className='tools' ref={el => tools = el}>
+                    <div className='tools' >
                         <p><span>Figma</span></p>
                         <p><span>Protopie</span></p>
                         <p><span>Photoshop</span></p>
@@ -138,7 +89,7 @@ const IndexPage = () => {
                     </div>
                 </div>
 
-                <div className='sec2button' ref={el => sec2Button = el}>
+                <div className='sec2button' >
                   <Button buttonWidth='50' link='/projects/projectListing' text='My Projects'/>
                 </div>
               </div>
