@@ -20,19 +20,7 @@
         display: inline-block;
         margin: 0;
         opacity: 1;
-    
-        &::before {
-            content: '';
-            display: block;
-            position: absolute;
-            z-index: -2;
-            opacity: 1;
-            width: 80%;
-            height: 50%;
-            right: -10px;
-            top: 60%;
-            background-color: var(--headingAccent);
-        }
+        text-shadow: 6px 0px 0px var(--headingAccent);
     }
 }
 

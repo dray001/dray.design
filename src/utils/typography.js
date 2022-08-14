@@ -1,18 +1,18 @@
 import Typography from "typography"
 const typography = new Typography({
-    baseFontSize: "18px",
+    baseFontSize: "16px",
     baseLineHeight: 1.666,
     googleFonts: [
       {
-        name: "Playfair Display",
-        styles: [800],
+        name: "Roboto Serif",
+        styles: [700],
       },
       {
         name: "Raleway",
         styles: [400]
       }
     ],
-    headerFontFamily: ["Playfair Display"],
+    headerFontFamily: ["Roboto Serif"],
     bodyFontFamily: ["Raleway"],
   })
 

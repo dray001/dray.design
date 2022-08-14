@@ -7,7 +7,6 @@ const Banner = ({type, logo, description, logoHeight, bannerImg, bgColor}) => {
   logoHeight ? getHit = logoHeight : getHit = '28px';
 
     return (
-      <section >
         <div className='bannerWrapper' style={{backgroundColor: `${bgColor}`}} >
           <div className='bannerContentHolder'>
             <img className='logo' src={logo} style={{height:  `${getHit}`, width: 'auto'}} alt="img"/>
@@ -17,7 +16,7 @@ const Banner = ({type, logo, description, logoHeight, bannerImg, bgColor}) => {
           <img className={(type==='mobile') ? 'bannerMobile' : 'bannerDesktop'} src={bannerImg} alt="img"/>
           {/* image here */}
         </div>
-      </section>)
+    )
 }
 
 export default Banner

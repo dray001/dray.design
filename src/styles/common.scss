@@ -12,6 +12,7 @@
 
 body {
     --mobileMenuBg: #121212;
+    --picFrameStroke: #000000;
     --mobileMenuText: #FFFF;
     --mobileMenuButton: #FFFF;
     --mobileMenuButtonText: #121212; 
@@ -33,6 +34,7 @@ body {
   
   body.dark {
     --mobileMenuBg: #FFFF;
+    --picFrameStroke: #009e9e;
     --mobileMenuText: #222;
     --mobileMenuButton: #045757;
     --mobileMenuButtonText: #FFFF; 

@@ -52,7 +52,7 @@ const Header = ({siteTitle}) => {
 
           <div className="leaveAmessageButton">
             <a href="mailto:dareony@gmail.com">
-            <span>Learn Design</span> 
+            <span>Hire me</span> 
             </a>    
           </div>
       
@@ -87,7 +87,7 @@ const Header = ({siteTitle}) => {
 
             <div className="leaveAmessageButtonDesktop">
               <a href="https://www.youtube.com/c/DesignIsFun" target="_blank">
-              <span>Learn Design</span> 
+              <span>Hire me</span> 
               </a>    
             </div>
 

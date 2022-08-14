@@ -3,8 +3,10 @@ import Layout from "../components/layout"
 import Heading from "../components/heading-component/heading"
 import SEO from "../components/seo"
 import './index.scss'
-import { Button } from "../components/button-component/button";
+import { Button } from "../components/button-component/button"
+import DocThumbnail from "../components/docThumbnail-component/docThumbnail"
 import {homePageData} from '../data/homePageData'
+import myImage from '../images/profilePix.png'
 
 const IndexPage = () => {
   let wrapper = useRef(null);
@@ -14,7 +16,6 @@ const IndexPage = () => {
   let sec1Title = useRef(null);
   let sec1Para1 = useRef(null);
   let sec1Para2 = useRef(null);
-  let sec1Buttons = useRef(null);
 
 
   useEffect(()=> {
@@ -26,7 +27,6 @@ const IndexPage = () => {
     sec1Title.classList.add("review");
     sec1Para1.classList.add("review");
     sec1Para2.classList.add("review");
-    sec1Buttons.classList.add("review");
   }
 
   return (
@@ -38,37 +38,52 @@ const IndexPage = () => {
         <section className='intro'>
           <div className='introContent'>
             <div className='textWrapper' >
+            
               <div className='title' ref={el => sec1Title = el} >
                 <Heading size={32} title={homePageData.homeData[0].title} />
               </div>
               
-              <p className='textp1' ref={el => sec1Para1 = el} > Product & Interaction Designer | Illustrator | Hobby Artist </p>
+              <p className='textp1' ref={el => sec1Para1 = el} > Prooduct & Interaction Designer | Illustrator | Hobby Artist </p>
               {/* <div className='textp2' dangerouslySetInnerHTML={{ __html: homePageData.homeData[0].para}} /> */}
               <div className='textp2' ref={el => sec1Para2 = el} > 
               <p>
-                I blah blah believe Empathy should be the driving force for solving day to day problems faced by humanity.
+                I believe Empathy should be the driving force for solving day to day problems faced by humanity.
                 <span style={{fontWeight: 'bolder'}}> Lead Designer at Aella, Lagos Nigeria </span>, putting smiles ☺️ to costumers by providing easy banking experiences.
                 </p>
               </div>
             </div>
 
-            <div className='buttonWrapperContainer' ref={el => sec1Buttons = el} >
-              <p className='highlited'> See what I have been up to: </p>
-              <div className='buttonHolder'>
-                <div className='b1'> <Button link='/projects/projectListing' text='My Projects' /> </div>
-                <div className='b2'> <Button link='articles/articlesListing' text='My Articles' /> </div>
-                {/* <div className='b3'> <Button link='/illustrationAndArt/illustrationAndArt' text='Illustrations and Sketches' /> </div> */}
-              </div>
-            </div>
-
           </div>
-          <div className='ImgDesktop' />
+          {/* <div className='ImgDesktop' /> */}
+          <div className='pictureFrameGroup'> <PictureFrame /> </div>
         </section>
 
-        <section className='mySkills' id='mySkills' >
+        <section id='projectFolder'>
+          <Heading size={32} title={homePageData.homeData[1].title} />
+
+            <div className="thumbnailWrapper">
+              <svg width="52" height="94" viewBox="0 0 52 94" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M21.0513 25.2821V48.1282C21.0513 55.6053 27.1127 61.6667 34.5897 61.6667C42.0668 61.6667 48.1282 55.6053 48.1282 48.1282M25.5641 91C13.1023 91 3 80.8977 3 68.4359V25.5641C3 13.1023 13.1023 3 25.5641 3C38.0259 3 48.1282 13.1023 48.1282 25.5641V68.4359C48.1282 80.8977 38.0259 91 25.5641 91Z" stroke="#93FF91" stroke-width="6" stroke-linecap="round"/>
+              </svg>
+              {
+                homePageData.homeData[1].docThumbnail.map(
+                  (n)=> <DocThumbnail
+                          title = {n.title}
+                          logoUrl = {n.logoUrl}
+                          link = {n.link}
+                          linkString= {n.linkString}
+                          description = {n.description}
+                        />
+                )
+              }
+            </div>
+
+        </section>
+
+        {/* <section className='mySkills' id='mySkills' >
 
             <div >
-              <Heading title={homePageData.homeData[2].title} />
+              <Heading title={homePageData.homeData[3].title} />
             </div>
             
             
@@ -76,7 +91,7 @@ const IndexPage = () => {
 
               <div className='introContent'>
                 <div className='textWrapper' >
-                    <div dangerouslySetInnerHTML={{ __html: homePageData.homeData[2].para}} />
+                    <div dangerouslySetInnerHTML={{ __html: homePageData.homeData[3].para}} />
                     <p className='highlited'> My Design Tool Box contains: </p>
                     <div className='tools' >
                         <p><span>Figma</span></p>
@@ -105,14 +120,14 @@ const IndexPage = () => {
 
             </div>
             
-          </section>
+          </section> */}
         <section className='aboutMe' id='AboutMe' >
 
-          <Heading title={homePageData.homeData[1].title} />
+          <Heading title={homePageData.homeData[2].title} />
           <div className='aboutMeContentHolder'>
             <div className='introContent'>
               <div className='textWrapper' >
-                <div className='textp2' dangerouslySetInnerHTML={{ __html: homePageData.homeData[1].para}} />
+                <div className='textp2' dangerouslySetInnerHTML={{ __html: homePageData.homeData[2].para}} />
               </div>
               <Button buttonWidth={true} link='/projects/projectListing' text='See my work' />
             </div>
@@ -198,6 +213,34 @@ let Smile = ({skill, op1, op2, op3, op4}) => (
         </g>
     </svg>
     </div>
+    
+  </div>
+);
+
+let PictureFrame = ()=> (
+  <div className='pictureFrame'>
+    
+    <svg width="604" height="544" viewBox="0 0 604 544" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <g id="pictureFrame">
+        <g id="boxFrame">
+        <path id="box" d="M569.123 2V542M569.123 2L602 24.0408V519.959L569.123 542M569.123 2H2V542H569.123" stroke="black" stroke-width="4"/>
+        <path id="stroke" d="M43.0959 117.714V456.592L45.6288 457.138C67.8992 461.937 86.1139 477.984 93.7743 499.553L95.1507 503.429H470.493L474.452 494.899C483.934 474.465 503.119 460.299 525.346 457.319L530.767 456.592V117.714L520.582 115.019C495.175 108.296 476.187 87.0092 472.29 60.8824L470.493 48.8369H97.8905V52.3121C97.8905 82.6536 77.3559 109.101 48.0846 116.46L43.0959 117.714Z" stroke="black" stroke-width="4"/>
+        </g>
+        <g id="picture">
+          <mask id="svgmask1">
+            <path id="mask" d="M469.712 48.498H122C124.735 75.8496 116.877 122.347 64.9087 136.023L70.379 440.891C92.0535 440.891 122.5 470.178 122.5 503L469.712 503.799C482.014 477.438 500.165 461.265 529.886 457.302V116.877C488 107.5 475.22 85.2161 469.712 48.498Z" fill= 'white' />
+          </mask>
+          <image href={myImage} alt="dare" mask="url(#svgmask1)"/>
+        </g>
+        <g id="outlines">
+          <path id="stroke_2" d="M469.712 48.4976H122C124.735 75.8492 116.877 122.347 64.9087 136.023L70.379 440.89C92.0535 440.89 122.347 470.977 122.347 503.799H470.712C480 478.5 502 459 529.886 457.301V116.877L519.718 114.201C494.353 107.526 475.397 86.3936 471.506 60.4559L469.712 48.4976Z" stroke="black" stroke-width="4"/>
+          <circle id="circle[TL]" cx="45.7626" cy="62.1733" r="19.8813" stroke="black" stroke-width="4"/>
+          <circle id="circle[TR]" cx="527.151" cy="62.1733" r="19.8813" stroke="black" stroke-width="4"/>
+          <circle id="circle[BL]" cx="45.7626" cy="499.799" r="19.8813" stroke="black" stroke-width="4"/>
+          <circle id="circle[BR]" cx="527.151" cy="499.799" r="19.8813" stroke="black" stroke-width="4"/>
+        </g>
+        </g>
+    </svg>
     
   </div>
 );
