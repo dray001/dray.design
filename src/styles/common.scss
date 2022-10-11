@@ -14,6 +14,13 @@ body {
     --mobileMenuBg: #121212;
     --picFrameStroke: #000000;
     --mobileMenuText: #FFFF;
+
+    --projectFolder: #C1CBFF; 
+    --thumbnailWrapper: #AAB2E0;
+    --docThumbnailGroup: #FFFFFF;
+    --linkTextColor: #0A0A0A;
+    --linkBgColor: #F2F2F2;
+
     --mobileMenuButton: #FFFF;
     --mobileMenuButtonText: #121212; 
     --bg: #FFFF;
@@ -34,6 +41,13 @@ body {
   
   body.dark {
     --mobileMenuBg: #FFFF;
+
+    --projectFolder: #323545;
+    --thumbnailWrapper: #2D303E;
+    --docThumbnailGroup: #212330;
+    --linkTextColor: #DADADA;
+    --linkBgColor: #3A3E58;
+
     --picFrameStroke: #009e9e;
     --mobileMenuText: #222;
     --mobileMenuButton: #045757;

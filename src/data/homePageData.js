@@ -29,28 +29,28 @@ homeData: [
                     title: 'Aella Finance App Design process',
                     logoUrl: aellaLogo,
                     link: '/projects/aellaFinanceApp/aellaFinDesignProcess',
-                    linkString: 'Reed Article',
+                    linkString: 'Read Article',
                     description: 'Finance is complex enough. People and Businesses deserve easy, straightforward products that works. Aella makes it super easy for anyone to borrow...'
                 },
                 {
                     title: 'Scaling and maintancing design systems for ecomerce',
                     logoUrl: kongaLogo,
                     link: '/projects/konga/kongaDesignProcess',
-                    linkString: 'Reed Article',
+                    linkString: 'Read Article',
                     description: `Konga is one of Nigeria's largest online mall. offering products that span various categories including Phones, Computers, Clothing, Shoes, Home Appliances...`
                 },
                 {
                     title: 'Object Oriented Design Paradigm with Figma',
                     logoUrl: figmaLogo,
                     link: '/projects/aellaFinanceApp/aellaFinDesignProcess',
-                    linkString: 'Reed Article',
+                    linkString: 'Read Article',
                     description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Velit sed orci et purus amet. Ullamcorper in lectus suspendisse non...'
                 },
                 {
                     title: 'Digital Illustrating with Figma',
                     logoUrl: figmaLogo,
                     link: 'https://medium.com/figma-africa/making-illustrations-with-figma-2fb23749907',
-                    linkString: 'Reed Article',
+                    linkString: 'Read Article',
                     description: 'A lot of designers think Figma is just meant for UI design and prototyping. But Figma is great for making flat illustrations and icons, and this is a great way...'
                 }
             ]

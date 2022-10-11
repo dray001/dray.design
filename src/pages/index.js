@@ -8,6 +8,7 @@ import DocThumbnail from "../components/docThumbnail-component/docThumbnail"
 import {homePageData} from '../data/homePageData'
 import myImage from '../images/profilePix.png'
 
+
 const IndexPage = () => {
   let wrapper = useRef(null);
   // let sections = document.getElementsByTagName('SECTION');
@@ -58,22 +59,26 @@ const IndexPage = () => {
           <div className='pictureFrameGroup'> <PictureFrame /> </div>
         </section>
 
+       
+
         <section id='projectFolder'>
           <Heading size={32} title={homePageData.homeData[1].title} />
 
             <div className="thumbnailWrapper">
-              <svg width="52" height="94" viewBox="0 0 52 94" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <path d="M21.0513 25.2821V48.1282C21.0513 55.6053 27.1127 61.6667 34.5897 61.6667C42.0668 61.6667 48.1282 55.6053 48.1282 48.1282M25.5641 91C13.1023 91 3 80.8977 3 68.4359V25.5641C3 13.1023 13.1023 3 25.5641 3C38.0259 3 48.1282 13.1023 48.1282 25.5641V68.4359C48.1282 80.8977 38.0259 91 25.5641 91Z" stroke="#93FF91" stroke-width="6" stroke-linecap="round"/>
-              </svg>
+            <svg width="54" height="90" viewBox="0 0 54 90" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M3 55V27C3 13.7452 13.7452 3 27 3C40.2548 3 51 13.7452 51 27V69C51 78.9411 42.9411 87 33 87C23.0589 87 15 78.9411 15 69V45C15 38.6487 20.1487 33.5 26.5 33.5C32.8513 33.5 38 38.6487 38 45V55.5" stroke="#C0FFBE" stroke-width="6"/>
+            </svg>
+
               {
                 homePageData.homeData[1].docThumbnail.map(
-                  (n)=> <DocThumbnail
-                          title = {n.title}
-                          logoUrl = {n.logoUrl}
-                          link = {n.link}
-                          linkString= {n.linkString}
-                          description = {n.description}
-                        />
+                  (n)=> 
+                          <DocThumbnail
+                            title = {n.title}
+                            logoUrl = {n.logoUrl}
+                            link = {n.link}
+                            linkString= {n.linkString}
+                            description = {n.description}
+                          />
                 )
               }
             </div>

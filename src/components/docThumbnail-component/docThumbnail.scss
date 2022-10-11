@@ -1,8 +1,11 @@
 @import 'src/styles/common.scss';
 
 .docThumbnailGroup {
-    background: rgb(255, 255, 255);
+    display: block;
+    background-color: var(--docThumbnailGroup);
     min-width: 280px;
+    text-decoration: none;
+    color: unset;
     padding: 24px;
     border-radius: 16px;
     box-shadow: 6px 6px 0px rgba(60, 60, 60, 0.24);
@@ -11,6 +14,13 @@
     &:hover {
         box-shadow: unset;
         transform: translate(6px,6px);
+
+        .contentWrapper {
+           a {
+                background: #D0D2FF;
+                color: #0A0A0A;
+            } 
+        }  
     }
 
     .contentWrapper {
@@ -29,9 +39,11 @@
 
         a {
             padding: 8px 16px;
-            background: #F5F5F5;
+            background: var(--linkBgColor);
             border-radius: 6px;
             text-decoration: none;
+            color: var(--linkTextColor);
+            transition: all .2s;
         }
 
         p {

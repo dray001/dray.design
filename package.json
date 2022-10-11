@@ -55,5 +55,8 @@
   },
   "bugs": {
     "url": "https://github.com/gatsbyjs/gatsby/issues"
+  },
+  "resolutions": {
+    "node-sass": "^6.0.1"
   }
 }
