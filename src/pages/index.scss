@@ -43,12 +43,36 @@ $anim-speed: 1s;
     }
 }
 
+@keyframes twinklers  {
+    0%, 100% {
+      transform: scale(1);
+    }
+
+    50% {
+      transform: scale(1.4);
+    }
+}
+
+@keyframes arrowDown  {
+    0%, 100% {
+      transform: translateY(0);
+    }
+
+    50% {
+      transform: translateY(10px);
+    }
+}
+
 .secWrapper {
     position: relative;
     visibility: hidden;
 
     section {
-        padding-top: 80px;
+        padding: 24px;
+    }
+
+    section {
+        padding-top: 40px;
         display: block;
         position: relative;
 
@@ -75,27 +99,11 @@ $anim-speed: 1s;
             }
     
             .textWrapper {
-
-                .textp1 {
-                    margin-top: 24px;
-                }
+                
+                margin-top: 24px; 
     
                 .textp2 {
                     margin-top: 24px;
-                }
-            }
-    
-            .buttonWrapperContainer {
-    
-                .buttonHolder {
-                    width: 100%;
-                    margin-top: 16px;
-                    display: grid;
-                    grid-template-columns: 1fr 1fr;
-                    grid-gap: 16px;
-                    .b3, .b4 {
-                        grid-column: 1 / 3;
-                    }
                 }
             }
         }
@@ -103,6 +111,120 @@ $anim-speed: 1s;
 
     section:first-child {
         padding-top: 32px;
+        display: flex;
+        flex-direction: column-reverse;
+    }
+
+    #intro {
+        
+        .introContent {
+
+            margin: auto;
+            text-align: center;
+
+             .profileHolder {
+                position: relative;
+                margin: auto;
+                margin-bottom: 32px;
+                width: 240px;
+                height: 200px;
+                transform: scale(0.8);
+
+                .twinkle:nth-child(1) {
+                    z-index: 4;
+                    position: absolute;
+                    bottom: 0;
+                    right: 0;
+                    animation: twinklers 1s .5s infinite ease-out;
+                }
+
+                .twinkle:nth-child(2) {
+                    z-index: 4;
+                    position: absolute;
+                    top: 0px;
+                    left: 0px;
+                    animation: twinklers $anim-speed infinite ease-out;
+                }
+
+                .imgMask {
+                    margin: auto;
+                    width: 200px;
+                    height: 200px;
+                    overflow: hidden;
+                    border-radius: 200px;
+                }
+
+             }
+
+
+            h1 {
+                line-height: 1.4;
+                font-size: 24px;
+            }
+
+                
+            .imgMask {
+                opacity: 0;
+                &.review {
+                    animation: reviewer $anim-speed forwards ease-out;
+                }
+            }
+
+
+            .textp1 {
+                opacity: 0;
+                &.review {
+                    animation: reviewer $anim-speed 0.15s forwards ease-out;
+                }
+            }
+
+
+            .textp2 {
+                opacity: 0;
+                &.review {
+                    animation: reviewer $anim-speed 0.2s forwards ease-out;
+                }
+            }
+
+            .arrowDown {
+                animation: arrowDown 2s infinite ease-out;
+                path {
+                    stroke: var(--textTitle);
+                }
+            }
+            
+        }
+
+    }
+
+    #projectFolder {
+        margin-top: 40px;
+        background: var(--projectFolder);
+        display: block;
+
+        .titleHolder {
+            text-align: center;
+        }
+        
+        .thumbnailWrapper {
+            display: block;
+            width: 100%;
+            padding: 24px;
+            border-radius: 24px;
+            margin-top: 16px;
+            position: relative;
+
+            .docThumbnailGroup {
+                margin-bottom: 24px;
+            }
+
+            svg {
+                position: absolute;
+                right: 56px;
+                top: -55px;
+                z-index: 1;
+            }
+        }
     }
 
     .mySkills {
@@ -176,6 +298,7 @@ $anim-speed: 1s;
 
     .aboutMe {
         display: block;
+        margin-top: 40px;
 
         .aboutMeContentHolder {
             display: flex;
@@ -189,12 +312,15 @@ $anim-speed: 1s;
         }
     }
 
-    .pictureFrameGroup {
+    .pictureFrame {
         position: relative;
+        display: flex;
+        height: 300px;
 
-        .pictureFrame > svg {
-            transform-origin: center right;
-            transform: scale(0.75);
+        svg {
+            transform-origin: top center;
+            transform: scale(0.8);
+            height: auto;
             circle, path {
                 stroke: var(--picFrameStroke);
             }
@@ -208,22 +334,7 @@ $anim-speed: 1s;
 
 }
 
-@include for-tinnyP-only() {
-
-    .buttonWrapper {
-
-        .buttonHolder {
-                margin-top: 16px;
-                grid-template-columns: repeat(2, 1fr);;
-                // background: rgb(199, 112, 112);
-
-                div {
-                    grid-column: 1 / -1;
-                }
-            }
-    }
-
-    
+@include for-tinnyP-only() {    
     
     .skilly {
 
@@ -241,16 +352,45 @@ $anim-speed: 1s;
 @include for-tablet-only() {
     .secWrapper {
 
+        .titleHolder {
+            text-align: left;
+        }
+
+        section {
+            margin: 0;
+        }
+
         section:first-child {
             display: flex;
+            flex-direction: row;
             position: relative;
             align-items: center;
             justify-content: space-between;
-            // margin: 0;
+        }
+
+        #intro {
+            height: 90vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+            .introContent {
+                padding-top: 80px;
+                
+                .profileHolder {
+                    transform: scale(1);
+                }
+
+                h1 {
+                    line-height: 1.4;
+                    font-size: 32px;
+                }
+            }
+            
         }
 
         .mySkills {
-            // margin: 0;
+
             .skillHolder {
 
                 .textWrapper {
@@ -271,133 +411,9 @@ $anim-speed: 1s;
                         width: 50%;
                         // margin-left: 3px;
                         display: block;
-                        padding: 20px 0;
+                        padding: 10px 0;
                     }
                 }
-            }
-        }
-    }  
-}
-
-@include for-desktop-only() {
-
-    .secWrapper {
-    
-        section {
-            // padding: 0;
-            // margin-bottom: 100px;
-            width: 100%;
-            display: flex;
-            position: relative;
-            align-items: center;
-            justify-content: space-between;
-        
-            .introContent {
-                width: 54%;
-       
-                .textWrapper {  
-    
-                    .textp1 {
-                        margin-top: 24px;
-                    }
-
-                    .textp2 {
-                        margin-top: 40px;
-                    }
-
-                }
-        
-                .buttonWrapperContainer {
-        
-                    p {
-                        font-size: 18px;
-                        font-weight: 600;
-                    }
-        
-                    .buttonHolder {
-                        width: 88%;
-                        justify-items: stretch;
-                        margin-top: 32px;
-                        grid-template-columns: 1fr 1fr;
-                        grid-gap: 24px;
-
-                        .b3, .b4 {
-                            grid-column: 1 / 3;
-                          }
-                    }
-                }
-            }
-        }
-
-        & > section:first-child {
-            // height: calc(100vh - 140px);
-            justify-content: space-between;
-
-            .textp2 {
-                .ImgMobile {
-                    display: none;
-                }
-            }
-
-            .textWrapper {
-                
-                .title {
-                    opacity: 0;
-                    &.review {
-                        animation: reviewer $anim-speed forwards ease-out;
-                    }
-                }
-
-
-                .textp1 {
-                    opacity: 0;
-                    &.review {
-                        animation: reviewer $anim-speed 0.15s forwards ease-out;
-                    }
-                }
-
-
-                .textp2 {
-                    opacity: 0;
-                    &.review {
-                        animation: reviewer $anim-speed 0.2s forwards ease-out;
-                    }
-                }
-            }
-
-            .buttonWrapperContainer {
-                opacity: 0;
-                &.review {
-                    animation: reviewer $anim-speed 0.25s forwards ease-out;
-                }
-
-                .buttonHolder {
-                    .b1 {
-                        opacity: 0;
-                        animation: reviewer $anim-speed 0.3s forwards ease-out;
-                    }
-                    .b2 {
-                        opacity: 0;
-                        animation: reviewer $anim-speed 0.35s forwards ease-out;
-                    }
-                    .b3 {
-                        opacity: 0;
-                        animation: reviewer $anim-speed 0.4s forwards ease-out;
-                    }
-                }
-            }
-            
-            .ImgDesktop {
-                opacity: 0;
-                animation: reviewer $anim-speed forwards ease-out; 
-                width: 30vw;
-                height: 60vh;
-                object-fit: cover;
-                background-position: center;
-                background-repeat: no-repeat;
-                background-size: 100% auto;;
-                background-image: var(--imgUrl); 
-                transform: scale(1.25);
             }
         }
 
@@ -406,15 +422,14 @@ $anim-speed: 1s;
             display: flex;
             flex-direction: column;
             align-items: center;
+            padding-top: 8%;
             
             .thumbnailWrapper {
                 display: grid;
                 grid-template-columns: 1fr 1fr;
                 width: 100%;
                 gap: 32px;
-                background-color: var(--thumbnailWrapper);
-                background-blend-mode: multiply;
-                padding: 40px;
+                padding: 0;
                 border-radius: 24px;
                 margin-top: 48px;
                 position: relative;
@@ -427,17 +442,99 @@ $anim-speed: 1s;
                 }
             }
         }
+    }  
+}
+
+@include for-desktop-only() {
+
+    .secWrapper {
+    
+        section {
+            width: 100%;
+            display: flex;
+            position: relative;
+            align-items: center;
+            justify-content: space-between;
+        
+            .introContent {
+                width: 64%;
+       
+                .textWrapper {  
+    
+                    .textp1 {
+                        margin-top: 24px;
+                    }
+
+                    .textp2 {
+                        margin-top: 40px;
+                    }
+
+                }
+            }
+        }
+
+        & > section:first-child {
+            // height: calc(100vh - 140px);
+            height: 90vh;
+            justify-content: space-between;
+
+            .textp2 {
+                .ImgMobile {
+                    display: none;
+                }
+            }
+
+        }
+
+        #projectFolder {
+            
+            .thumbnailWrapper {
+                display: grid;
+                grid-template-columns: 1fr 1fr;
+                width: 100%;
+                gap: 32px;
+                padding: 24px;
+                border-radius: 24px;
+                margin-top: 48px;
+                position: relative;
+
+                svg {
+                    position: absolute;
+                    right: 56px;
+                    top: -55px;
+                    z-index: 1;
+                }
+            }
+
+        }
+
+        #AboutMe {
+            padding-top: 8%;
+            min-height: 60vh;
+            margin-top: 0;
+        }
+
+        #Skillset {
+            padding-top: 4%;
+            min-height: 40vh;
+            margin-top: 0;
+        }
 
 
         .aboutMe {
 
             .aboutMeContentHolder {
+                display: flex;
                 flex-direction: row-reverse;
                 justify-content: space-between;
-                display: flex;
+
+                .introContent {
+                    max-width: 50%;
+                }
 
                 .ImgHolder {
                     display: block;
+
                     .aboutMeChart {
                         display: grid;
                         position: relative;
@@ -461,8 +558,8 @@ $anim-speed: 1s;
                             transition: top, left, 0.1s ease-out;
     
                             &:hover {
-                                background: var(--buttonHover);
-                                border: 2px solid var(--buttonHover);
+                                // background: var(--buttonHover);
+                                // border: 2px solid var(--buttonHover);
                                 top: -5px;
                                 left: 5px;
                                 svg {
@@ -472,16 +569,17 @@ $anim-speed: 1s;
                                 }
     
                                 &::before {
-                                    content: 'I go with the Flow';
-                                    min-width: 100%;
+                                    content: '🌊 I go with the flow';
+                                    min-width: 80%;
+                                    // min-height: 100%;
                                     z-index: 115;
-                                    padding: 8px;
+                                    padding: 12px;
                                     color: white;
                                     text-align: center;
                                     font-size: 16px;
                                     background: var(--buttonHover);
                                     position: absolute;
-                                    top: 120%;
+                                    top: 50%;
                                     left: 50%;
                                     transform: translate(-50%, -50%);
                                 }
@@ -497,7 +595,7 @@ $anim-speed: 1s;
                             transform: scale(1.05);
                                 &:hover {
                                     &::before {
-                                        content: 'Love is the Reason';
+                                        content: '💗 Love is the reason';
                                     }
                                 }
                             }
@@ -507,7 +605,7 @@ $anim-speed: 1s;
                             animation: anim2 5s 0.8s infinite linear;
                                 &:hover {
                                     &::before {
-                                        content: 'My Pen is my escape';
+                                        content: '✏️ My pen is my escape';
                                         // top: 120%;
                                     }
                                 }
@@ -518,8 +616,7 @@ $anim-speed: 1s;
                             animation: anim1 5s infinite linear;
                                 &:hover {
                                     &::before {
-                                        content: 'Stars are mysteries';
-                                        // top: 120%;
+                                        content: '✨ Stars make me wonder';
                                     }
                                 }
                             }
@@ -533,10 +630,6 @@ $anim-speed: 1s;
                         }
                     }
                 }
-            }
-
-            .titleHolder {
-                margin-bottom: 96px;
             }
         }
 
@@ -560,23 +653,25 @@ $anim-speed: 1s;
                 .skillset {
                     width: 60%;
                     display: block;
-                    padding-left: 50px;
+                    // padding-left: 50px;
+                    margin-top: 0;
                     margin-left: 50px;
-                    border-left: 1px solid #C8C8C8;
+                    border: solid 1px var(--borderLine);
         
                     .skilly {
-                        width: 90%;
+                        width: 100%;
                         justify-content: space-between;
                         display: flex;
-                        padding: 8px 0;
+                        padding-left: 32px;
                         align-items: center;
+
+                        // div {
+                        //     align-self: baseline;
+                        // }
                     }
                 }    
             }
         }
 
-        // .pictureFrameGroup {
-        //     transform: scale(0.75);
-        // }
     }
 }

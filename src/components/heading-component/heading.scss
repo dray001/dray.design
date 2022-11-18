@@ -14,29 +14,20 @@
 .titleHolder {
     .sectionTitle {
         font-weight: bold;
-        font-size: 10vw;
+        font-size: 32px;
         color: var(--textTitle);
         position: relative;
         display: inline-block;
         margin: 0;
         opacity: 1;
-        text-shadow: 6px 0px 0px var(--headingAccent);
     }
 }
 
 @include for-tablet-only () {
     .titleHolder {
         .sectionTitle {
-            font-size: 6.5vw;
+            font-size: 40px;
         }
-    }
-}
-
-@include for-desktop-only () {
-    .titleHolder{
-       .sectionTitle {
-        font-size: 4.5vw;
-        } 
     }
 }
 

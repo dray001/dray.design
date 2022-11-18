@@ -25,29 +25,32 @@ const Layout = ({ children }) => {
   `)
   
 
- const [state, setState] = useState(false);
+  const [prevScrollPos, setPrevScrollPos] = useState(0); 
+  const [visible, setVisible] = useState(true);
 
-useEffect(
-  ()=> {
+  const handleScroll = () => {
+    // find current scroll position
+    const currentScrollPos = window.pageYOffset;
+
+    // set state based on location info (explained in more detail below)
+    setVisible(prevScrollPos > currentScrollPos);
+
+    // set state to new scroll position
+    setPrevScrollPos(currentScrollPos);
+  };
+
+  useEffect(() => {
     window.addEventListener('scroll', handleScroll);
-  },
-[]);
+    
+    return () => window.removeEventListener('scroll', handleScroll);
 
-const handleScroll = () => {
-  const scrollTop = window.pageYOffset;
-  if(scrollTop > 250) {
-    setState(true);
-  }
-  else {
-    setState(false);
-  }
-}
+  }, [prevScrollPos, visible, handleScroll])
 
   return (
     <>
       <div className='pageWrapper'>
         <main>
-          <div className = {state ? 'pageHeader sadow' : 'pageHeader'} >
+          <div className = {visible ? 'navHolda' : 'navHolda hide'} >
           <Header modalState={false} siteTitle={data.site.siteMetadata.title} />
           </div>
           <div className='childrenWrapper'>

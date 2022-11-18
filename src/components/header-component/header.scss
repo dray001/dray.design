@@ -27,14 +27,10 @@ header {
     border-bottom: solid 1px var(--borderLine);
 
     .logo {
-      width: auto;
-      height: 42px;
-        path
-        {stroke: var(--textNormal);}  
+        path {fill: var(--textNormal);}  
     }
 
     .navHolder {
-      // margin: 0;
       padding: 16px;
       position: fixed;
       display: block;
@@ -71,21 +67,40 @@ header {
             font-weight: bolder;
           }
         }
-
       }
 
-      .leaveAmessageButton {
-          align-self: center;
-          margin-top: 32px;
-          border: solid 1px var(--textNormal);
+      .contactMeGroupMobile {
+        display: flex;
+        // align-self: center;
+        // justify-content: center;
+        align-items: center;
+        margin-top: 16px;
+        border-top: solid 1px #A5A5A5;
+        padding-top: 12px;
+
+        h4 {
+          margin: 0;
+          color: var(--mobileMenuText);
+        }
+
+        .contactMeMedium {
+          display: flex;
+          margin-top: 16px;
+          margin-left: 32px;
+        }
 
         a {
-          color: var(--mobileMenuButtonText);
           cursor: pointer;
-          background: var(--mobileMenuButton);
-          display: flex;
+          margin-right: 40px;
           text-decoration: none;
-          padding: 8px 16px;
+          position: relative;
+
+          svg {
+            transform: scale(1.6);
+            path {
+              fill: var(--mobileMenuText);
+            }
+          }
         }
       }
     }
@@ -218,13 +233,22 @@ header {
   }
 }
 
+@include for-tinnyP-only() {
+  .desktopNav {
+    display: none;
+  }
+  .contactMeGroupDesktop {
+    display: none;
+  }
+}
+
 
 @include for-tablet-only() {
     header {
       width: 100%;
 
       .headerContainer {
-        padding: 1% 8%;
+        padding: 8px 8%;
 
         .navHolder {
           .leaveAmessageButton {
@@ -232,38 +256,24 @@ header {
           }
         }
 
-        .logo {
-          width: auto;
-          height: 52px;
-        }
-
-
         .iconHolder {
           display: flex;
           align-items: center;
           justify-content: space-between;
           // background: #000;
-          min-width: 240px;
+          // min-width: 240px;
 
-            .leaveAmessageButtonDesktop {
-                  display: flex;
+            .contactMeGroupDesktop {
 
-                  align-self: center;
-                  // margin-top: 32px;
-        
-                a {
-                  color: white;
-                  cursor: pointer;
-                  background: var(--buttonHover);
-                  display: flex;
-                  text-decoration: none;
-                  padding: 8px 16px;
+                .contactMeMedium {
+                  display: none;
                 }
-
+        
             }
 
           .darkLightSwitcher {
             margin: 0;
+            margin-right: 16px;
             .switch {
               width: 24px;
               height: 24px;
@@ -275,9 +285,72 @@ header {
 }
 
 @include for-desktop-only() {
+
   header {
     .headerContainer {
-      padding: 1% 12%;
-    }
+
+      .desktopNav {
+        display: flex;
+        align-self: center;
+
+        a {
+          border: none;
+          display: flex;
+          margin-bottom: 8px;
+          margin-right: 16px;
+          font-size: 16px;
+          color: var(--textNormal);
+          text-decoration: none;
+          cursor: pointer;
+          padding: 8px;
+          transition: transform 0.1s ease-out;
+
+          &:hover {
+            // transform: translateY(-4px);
+            // color: var(--headingAccent);
+            font-weight: 900;
+          }
+
+        }
+      }
+
+      .iconHolder{
+        min-width: 14px;
+
+        .contactMeGroupDesktop {
+          display: flex;
+          align-self: center;
+          justify-content: center;
+          align-items: center;
+          margin-left: 16px;
+          border-left: solid 1px #A5A5A5;
+          padding-left: 12px;
+
+          .contactMeMedium {
+            display: flex;
+          }
+  
+          a {
+            color: white;
+            cursor: pointer;
+            margin-left: 24px;
+            text-decoration: none;
+            position: relative;
+            
+            svg {
+              transform: scale(1.2);
+              path {
+                fill: var(--textNormal);
+              }
+            }
+          }
+      }
+
+        .hambugerHolder{
+          display: none;
+        }
+      }
   }
+  }
+  
 }

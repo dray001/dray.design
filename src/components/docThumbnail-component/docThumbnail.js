@@ -1,10 +1,10 @@
 import React from "react"
 import './docThumbnail.scss'
 
-const DocThumbnail = ({title, description, link, linkString, logoUrl}) => {
+const DocThumbnail = ({title, description, link, linkString, logoUrl, newTab}) => {
 
   return (
-    <a href={link} className='docThumbnailGroup'>
+    <a  target={newTab ? "_blank" : ''}  href={link} className='docThumbnailGroup'>
       
         <div className='contentWrapper'>
           <div className="img_titleWrapper">

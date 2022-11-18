@@ -20,23 +20,20 @@ body {
 
 main {
 
-  .pageHeader {
-    z-index: 10;
-    display: block;
-    width: 100%;
+  .navHolda {
     position: sticky;
+    width: 100%;
     top: 0;
-    background-color: white;
-    transition: box-shadow 0.2s;
+    transition: top 0.4s ease-out;
+    z-index: 20;
 
-    &.sadow {
-    box-shadow: 0px 16px 25px rgba(0, 0, 0, 0);
-    // position: static;
+    &.hide {
+      top: -80px;
     }
   }
 
   .childrenWrapper {
-    padding: 24px;
+    padding: 0;
 
     &.modalOn {
       height: 100vh;
@@ -49,7 +46,10 @@ main {
   main {
   
     .childrenWrapper {
-      padding: 0 8% 6% 8%;
+      padding: 0;
+      section {
+        padding: 4% 8%;
+      }
     }
   }
 }

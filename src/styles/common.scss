@@ -3,11 +3,11 @@
 }
 
 @mixin for-desktop-only {
-    @media only screen and (min-width: 1025px) { @content; }
+    @media only screen and (min-width: 1024px) { @content; }
 }
 
 @mixin for-tinnyP-only {
-    @media only screen and (max-width: 320px) { @content; }
+    @media only screen and (min-width: 320px) { @content; }
 }
 
 body {
@@ -15,7 +15,7 @@ body {
     --picFrameStroke: #000000;
     --mobileMenuText: #FFFF;
 
-    --projectFolder: #C1CBFF; 
+    --projectFolder: #F8F8F8; 
     --thumbnailWrapper: #AAB2E0;
     --docThumbnailGroup: #FFFFFF;
     --linkTextColor: #0A0A0A;
