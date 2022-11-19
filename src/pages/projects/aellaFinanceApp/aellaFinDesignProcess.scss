@@ -7,6 +7,10 @@
         margin-top: 40px;
         width: 100%;
 
+        .mobilePadder {
+            padding: 0 24px;
+        }
+
         h1 {
             font-size: 28px;
         }
@@ -126,6 +130,11 @@
 @include for-tablet-only() {
     .aellaWapper {
         .aellaContentInfo{
+
+            .mobilePadder {
+                padding: 0 40px;
+            }
+
             .designBrief {
                 margin-top: 56px;
                 .briefCards {
@@ -155,6 +164,10 @@
                     }
                 }
             }
+
+            .sectionHolder {
+                padding-top: 70px;
+            }
         }
     }
 }
@@ -171,6 +184,10 @@
         .aellaContentInfo {
             margin-top: 80px;
             width: 80%;
+
+            .mobilePadder {
+                padding: 0;
+            }
 
             h1 {
                 font-size: 32px;

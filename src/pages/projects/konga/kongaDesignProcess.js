@@ -14,10 +14,10 @@ let tobbyAvatarImg = 'https://res.cloudinary.com/dramages/image/upload/v16038142
 let tobbyProfile = 'https://www.linkedin.com/in/tobi-akanni/';
 
 // next project details
-let projectTitle = 'Aella App'
-let projectType = 'Fintech'
-let projectLink = '/projects/aellaFinanceApp/aellaFinDesignProcess'
-let projectDescription = `Finance is complex enough. People and Businesses deserve easy, straightforward products that works. deserve easy, straightforward products that works.`
+// let projectTitle = 'Aella App'
+// let projectType = 'Fintech'
+// let projectLink = '/projects/aellaFinanceApp/aellaFinDesignProcess'
+// let projectDescription = `Finance is complex enough. People and Businesses deserve easy, straightforward products that works. deserve easy, straightforward products that works.`
 
 
 const SecondPag = () => {
@@ -106,11 +106,11 @@ const SecondPag = () => {
 
   return (
     <Layout>
-      <SEO title="Page two" />
+      <SEO title="Design System for E-commerce" />
       <div className='kongaWapper' >
         
           <div className='kongaContentInfo'>
-            <div id='brief' className='banner stepHolder'>
+            <div id='brief' className='banner stepHolder mobilePadder'>
               {kongaBanner}
               <div className='role'>
                 <h1>{kongaData[1].title}</h1>
@@ -138,7 +138,7 @@ const SecondPag = () => {
               </div>
             </div>
 
-            <div id='atomicDesign' className='sectionHolder stepHolder stepOneProcess'>
+            <div id='atomicDesign' className='sectionHolder stepHolder mobilePadder stepOneProcess'>
               <div className='sectionHolderDescription'>
                 <span className='step'>Step 1 on Design System Development</span>
                 <h1>{ kongaData[2].title }</h1>
@@ -155,7 +155,7 @@ const SecondPag = () => {
               </div>
             </div>
             
-            <div id='component' className='sectionHolder stepHolder stepTwoProcess'>
+            <div id='component' className='sectionHolder stepHolder mobilePadder stepTwoProcess'>
               <div className='sectionHolderDescription'>
                 <span className='step'>Step 2 of design process</span>
                 <h1>{ kongaData[3].title }</h1>
@@ -174,7 +174,7 @@ const SecondPag = () => {
               
             </div>
 
-            <div id='designSystem' className='sectionHolder stepHolder stepThreeProcess'>
+            <div id='designSystem' className='sectionHolder stepHolder mobilePadder stepThreeProcess'>
               <div className='sectionHolderDescription'>
                 <span className='step'>Step 3 of design process</span>
                 <h1>{ kongaData[4].title }</h1>
@@ -185,7 +185,7 @@ const SecondPag = () => {
               </div>
             </div>
             
-            <div id='mockups' className='sectionHolder stepHolder stepFourProcess'>
+            <div id='mockups' className='sectionHolder stepHolder mobilePadder stepFourProcess'>
                 <div className='sectionHolderDescription'>
                   <span className='step'>Step 4 of design process</span>
                   <h1>{ kongaData[5].title }</h1>
@@ -203,35 +203,41 @@ const SecondPag = () => {
                 </div>
             </div>
 
-            <div className='workMateHolder'>
+            <div className='workMateHolder mobilePadder'>
                 <h3>Design Team</h3>
                 <p>
                 Working with Francis and Toby, broaden my understanding on 
                 building complex digital solution.
                 </p>
-                <div className='workMate'>
-                  <img src={francisAvatarImg} alt="img"/>
-                  <span>
-                    <b>Francis Otuogbai</b>
-                    <a href={francisProfile}>see profile</a>
-                  </span>
-                </div>
 
-                <div className='workMate'>
-                  <img src={tobbyAvatarImg} alt="img"/>
-                  <span>
-                    <b>Tobi Akanni</b>
-                    <a href={tobbyProfile}>see profile</a>
-                  </span>
+                <div className="workMateGroup">
+
+                  <div className='workMate'>
+                    <img src={tobbyAvatarImg} alt="img"/>
+                    <span>
+                      <b>Tobi Akanni</b>
+                      <a target='_blank' href={tobbyProfile}>Visit LinkedIn</a>
+                    </span>
+                  </div>
+
+                  <div className='workMate'>
+                    <img src={francisAvatarImg} alt="img"/>
+                    <span>
+                      <b>Francis Otuogbai</b>
+                      <a target='_blank' href={francisProfile}>Visit LinkedIn</a>
+                    </span>
+                  </div>
+
                 </div>
+                
             </div> 
             
-            < NextProject
+            {/* < NextProject
               type = {projectType}
               projectName = {projectTitle}
               description = {projectDescription}
               link = {projectLink}
-            />
+            /> */}
 
           </div>
 

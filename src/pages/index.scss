@@ -209,7 +209,7 @@ $anim-speed: 1s;
         .thumbnailWrapper {
             display: block;
             width: 100%;
-            padding: 24px;
+            padding: 0;
             border-radius: 24px;
             margin-top: 16px;
             position: relative;
@@ -635,7 +635,6 @@ $anim-speed: 1s;
 
         .mySkills {
             display: block;
-            // margin: 0;
 
             h1 {
                 margin-bottom: 50px;

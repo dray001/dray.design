@@ -7,7 +7,7 @@
 }
 
 @mixin for-tinnyP-only {
-    @media only screen and (min-width: 320px) { @content; }
+    @media only screen and (min-width: 280px) { @content; }
 }
 
 body {

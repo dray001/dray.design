@@ -7,6 +7,10 @@
         margin-top: 40px;
         width: 100%;
 
+        .mobilePadder {
+            padding: 0 24px;
+        }
+
         h1 {
             font-size: 22px;
         }
@@ -76,21 +80,97 @@
                 margin-top: 30px;
             }
         }
+
+        .workMateHolder {
+            .workMateGroup {
+                display: block;
+            }
+        }
     }
 
     .project01StickyNav {
         display: none;
     }
 
+    .workMateHolder {
+        margin-bottom: 40px;
+        
+        .workMateGroup {
+            display: flex;
+            flex-direction: row;
+
+            .workMate{
+                display: block;
+                margin-top: 32px;
+
+                // align-items: center;
+
+                img {
+                    width: 124px;
+                    margin: 0;
+                }
+
+                span {
+                    margin-left: 16px;
+                    display: block;
+
+                    b {
+                    display: block;
+                    margin-right: 12px;
+                    }
+
+                    a {
+                        text-decoration: none;
+                        color: rgb(102, 102, 255);
+                    }
+                }  
+            }
+        }
+    }
+
 }
 
-// @include for-tablet-only() {
-//     .aellaWapper {
-//         .kongaContentInfo{
+@include for-tablet-only () {
+
+    .kongaWapper {
+        .aellaWapper {
+            .kongaContentInfo {
+                .mobilePadder {
+                    padding: 0 40px;
+                }
+    
+                .workMateHolder {
+    
+                    .workMateGroup {
+                        display: flex;
+
+                        .workMate{
+                            display: flex;
+                            margin: 32px 0;
+                            align-items: center;
+                            // align-items: center;
             
-//         }
-//     }
-// }
+                            img {
+                                width: 56px;
+                                margin: 0;
+                            }
+            
+                            span {
+                                margin-left: 16px;
+            
+                                b {
+                                display: block;
+                                margin-right: 12px;
+                                }
+                            }  
+                        }
+                    }
+                }
+                
+            }
+        }
+    }
+}
 
 
 @include for-desktop-only() {
@@ -104,6 +184,10 @@
         .kongaContentInfo {
             margin-top: 80px;
             width: 80%;
+
+            .mobilePadder {
+                padding: 0;
+            }
 
             h1 {
                 font-size: 32px;
@@ -194,25 +278,32 @@
                 }  
             }
 
-            .workMate{
-                display: flex;
-                margin: 32px 0;
-                align-items: center;
-                // align-items: center;
+            .workMateHolder {
+    
+                .workMateGroup {
+                    display: flex;
 
-                img {
-                    width: 56px;
-                    margin: 0;
-                }
-
-                span {
-                    margin-left: 16px;
-
-                    b {
-                    display: block;
-                    margin-right: 12px;
+                    .workMate{
+                        display: flex;
+                        margin: 32px 40px 0 0;
+                        align-items: center;
+                        // align-items: center;
+        
+                        img {
+                            width: 56px;
+                            margin: 0;
+                        }
+        
+                        span {
+                            margin-left: 16px;
+        
+                            b {
+                            display: block;
+                            margin-right: 12px;
+                            }
+                        }  
                     }
-                }  
+                }
             }
         }
     

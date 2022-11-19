@@ -7,7 +7,7 @@
 
     .bannerContentHolder {
         width: 100%;
-        padding: 16px;
+        padding: 24px;
         color: white;
         overflow: hidden;
         height: unset;
@@ -43,6 +43,15 @@
 
     .bannerDesktop,.bannerMobile {
         display: none;
+    }
+}
+
+@include for-tablet-only() {
+    .bannerWrapper {
+
+        .bannerContentHolder {
+            padding: 40px;
+        }
     }
 }
 

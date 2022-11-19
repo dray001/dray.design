@@ -114,11 +114,11 @@ const SecondPag = () => {
 
   return (
     <Layout>
-      <SEO title="Page two" />
+      <SEO title="Fintech App Design Process" />
       <div className='aellaWapper' >
         
           <div className='aellaContentInfo'>
-            <div id='brief' className='banner stepHolder'>
+            <div id='brief' className='banner stepHolder mobilePadder'>
               {dataCollector('Aella')}
             {/* <Heading size='52px' title={aellaData[1].title} /> */}
               <div className='role'>
@@ -129,7 +129,7 @@ const SecondPag = () => {
               </div>
             </div>
 
-            <div className='designBrief'>
+            <div className='designBrief mobilePadder'>
               <h1>Design Brief</h1>
               <p>
               Business requirement is to make Aella a super financial solution that solves day to day financial 
@@ -168,7 +168,7 @@ const SecondPag = () => {
               </div>
             </div>
 
-            <div id='solution' className='sectionHolder stepHolder stepOneProcess'>
+            <div id='solution' className='sectionHolder mobilePadder stepHolder stepOneProcess'>
               <div className='sectionHolderDescription'>
                 <span className='step'>Step 1 of design process</span>
                 <h1>{ aellaData[2].title }</h1>
@@ -197,7 +197,7 @@ const SecondPag = () => {
 
             </div>
             
-            <div id='personas' className='sectionHolder stepHolder stepTwoProcess'>
+            <div id='personas' className='sectionHolder mobilePadder stepHolder stepTwoProcess'>
               <div className='sectionHolderDescription'>
                 <span className='step'>Step 2 of design process</span>
                 <h1>{ aellaData[3].title }</h1>
@@ -242,7 +242,7 @@ const SecondPag = () => {
               </div>
             </div>
 
-            <div id='userflow' className='sectionHolder stepHolder stepThreeProcess'>
+            <div id='userflow' className='sectionHolder mobilePadder stepHolder stepThreeProcess'>
               <div className='sectionHolderDescription'>
                 <span className='step'>Step 3 of design process</span>
                 <h1>{ aellaData[4].title }</h1>
@@ -253,7 +253,7 @@ const SecondPag = () => {
               </div>
             </div>
             
-            <div id='thinking' className='sectionHolder stepHolder stepFourProcess'>
+            <div id='thinking' className='sectionHolder mobilePadder stepHolder stepFourProcess'>
               <div className='sectionHolderDescription'>
                 <span className='step'>Step 4 of design process</span>
                 <h1>{ aellaData[5].title }</h1>
@@ -265,7 +265,7 @@ const SecondPag = () => {
               </div>
             </div>
 
-            <div id='wireframe' className='sectionHolder stepHolder stepFiveProcess'>
+            <div id='wireframe' className='sectionHolder mobilePadder stepHolder stepFiveProcess'>
               <div className='sectionHolderDescription'>
                 <span className='step'>Step 5 of design process</span>
                 <h1>{ aellaData[6].title }</h1>
@@ -276,7 +276,7 @@ const SecondPag = () => {
               </div>
             </div>
 
-            <div id='designsystem' className='sectionHolder stepHolder stepSixProcess'>
+            <div id='designsystem' className='sectionHolder mobilePadder stepHolder stepSixProcess'>
               <div className='sectionHolderDescription'>
                 <span className='step'>Step 6 of design process</span>
                 <h1>{ aellaData[7].title }</h1>
@@ -288,7 +288,7 @@ const SecondPag = () => {
               </div>
             </div>
 
-            <div id='hifi' className='sectionHolder stepHolder stepSevenProcess'>
+            <div id='hifi' className='sectionHolder mobilePadder stepHolder stepSevenProcess'>
               <div className='sectionHolderDescription'>
                 <span className='step'>Step 7 of design process</span>
                 <h1>{ aellaData[8].title }</h1>
@@ -299,7 +299,7 @@ const SecondPag = () => {
               </div>
             </div>
             
-            <div id='prototype' className='sectionHolder stepHolder stepEightProcess'>
+            <div id='prototype' className='sectionHolder mobilePadder stepHolder stepEightProcess'>
               <div className='sectionHolderDescription'>
                 <span className='step'>Step 8 of design process</span>
                 <h1>{ aellaData[9].title }</h1>
@@ -319,7 +319,7 @@ const SecondPag = () => {
               </div>
             </div>
 
-            <div id='visuals' className='sectionHolder stepHolder visualLanguage'>
+            <div id='visuals' className='sectionHolder mobilePadder stepHolder visualLanguage'>
               <div className='sectionHolderDescription'>
                 <h1>{ aellaData[10].title }</h1>
                 <p> {aellaData[10].para1 } </p>
