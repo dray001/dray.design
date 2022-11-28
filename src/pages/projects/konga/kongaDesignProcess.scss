@@ -177,8 +177,7 @@
     .kongaWapper {
         display: flex;
         justify-content: space-between;
-        flex-direction: row-reverse;
-        padding: 0 12% 6% 12%;
+        padding: 0 8% 6% 8%;
         margin: 0 0 80px;
     
         .kongaContentInfo {
@@ -309,13 +308,12 @@
     
         .project01StickyNav {
             display: block;
-                margin-top: 40px;
                 width: 15%;
             .project01Button {
                 position: sticky;
-                // background: #000;
-                top: 180px;
-                margin-right: 60px;
+                top: 50%;
+                transform: translate(0, -50%);
+                text-align: right;
     
                 a {
                 display: block;
@@ -326,9 +324,8 @@
                 border: none;
                 outline: none;
                 position: relative;
-                margin-bottom: 8px;
                 transform: scale(1);
-                transform-origin: center left;
+                transform-origin: center right;
                 width: 180px;
                 transition: all 0.3s ease;
                 &::before {
@@ -340,7 +337,7 @@
                     position: absolute;
                     top: 0;
                     visibility: hidden;
-                    left: -10px;
+                    right: -10px;
                     opacity: 0;    
                 }
     
@@ -349,7 +346,7 @@
                         visibility: visible;
                         opacity: 0.4;
                         top: 40%;
-                        left: -12px;
+                        right: -12px;
                         height: 10px;
                     }
                 }
@@ -366,7 +363,7 @@
                             position: absolute;
                             top: 25%;
                             visibility: visible;
-                            left: -10px;
+                            right: -10px;
                         }
                     }
                 }
