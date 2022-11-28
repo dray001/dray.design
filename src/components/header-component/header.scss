@@ -27,19 +27,16 @@ header {
     border-bottom: solid 1px var(--borderLine);
 
     .logo {
-        path {fill: var(--textNormal);}  
+        path {fill: var(--textTitle);}  
     }
 
     .navHolder {
-      padding: 16px;
-      position: fixed;
-      display: block;
-      width: 76%;
-      background: var(--mobileMenuBg);
-      bottom: 0;
-      left: 50%;
-      margin-right: -50%;
-      transform: translate(-50%, -50%);
+      position: relative;
+      width: 100%;
+      // bottom: 32px;
+      // right: 32px;
+      // margin-right: -50%;
+      // transform: translate(-50%, -50%);
       font-size: 24px;
       z-index: 10;
 
@@ -47,58 +44,64 @@ header {
         display: none;
       }
 
+      .navHolderWrapper {
+        position: fixed;
+        border-radius: 8px;
+        bottom: 0;
+        left: 0;
+        width: 90%;
+        margin: 5%;
+        background: var(--mobileMenuBg);
+        padding: 16px;
+
         .headerLink {
-        display: block;
-        align-self: center;
-
-        a {
-          border: none;
-          display: flex;
-          margin-bottom: 8px;
-          color: var(--mobileMenuText);
-          text-decoration: none;
-          cursor: pointer;
-          padding: 8px;
-          transition: transform 0.1s ease-out;
-
-          &:hover {
-            transform: translateX(8px);
-            color: var(--headingAccent);
-            font-weight: bolder;
+          display: block;
+          align-self: center;
+  
+          a {
+            border: none;
+            display: flex;
+            margin-bottom: 8px;
+            color: var(--mobileMenuText);
+            text-decoration: none;
+            cursor: pointer;
+            padding: 8px;
+            transition: transform 0.1s ease-out;
+  
+            &:hover {
+              transform: translateX(8px);
+              color: var(--headingAccent);
+              font-weight: bolder;
+            }
           }
         }
-      }
-
-      .contactMeGroupMobile {
-        display: flex;
-        // align-self: center;
-        // justify-content: center;
-        align-items: center;
-        margin-top: 16px;
-        border-top: solid 1px #A5A5A5;
-        padding-top: 12px;
-
-        h4 {
-          margin: 0;
-          color: var(--mobileMenuText);
-        }
-
-        .contactMeMedium {
+  
+        .contactMeGroupMobile {
           display: flex;
+          // align-self: center;
+          // justify-content: center;
+          align-items: center;
           margin-top: 16px;
-          margin-left: 32px;
-        }
-
-        a {
-          cursor: pointer;
-          margin-right: 40px;
-          text-decoration: none;
-          position: relative;
-
-          svg {
-            transform: scale(1.6);
-            path {
-              fill: var(--mobileMenuText);
+          border-top: solid 1px #A5A5A5;
+          padding-top: 12px;
+  
+          .contactMeMedium {
+            display: flex;
+            margin-top: 16px;
+            margin-left: 8px;
+          }
+  
+          a {
+            cursor: pointer;
+            margin-right: 52px;
+            text-decoration: none;
+            position: relative;
+  
+            svg {
+              transform: scale(2);
+              path {
+                fill: var(--mobileMenuText);
+              }
             }
           }
         }
@@ -177,7 +180,7 @@ header {
             position: absolute;
             height: 4px;
             width: 80%;
-            background-color: var(--textNormal);
+            background-color: var(--textTitle);
             opacity: 1;
             left: 0;
             -webkit-transform: rotate(0deg);
@@ -299,7 +302,7 @@ header {
           margin-bottom: 8px;
           margin-right: 16px;
           font-size: 16px;
-          color: var(--textNormal);
+          color: var(--textTitle);
           text-decoration: none;
           cursor: pointer;
           padding: 8px;
@@ -340,7 +343,7 @@ header {
             svg {
               transform: scale(1.2);
               path {
-                fill: var(--textNormal);
+                fill: var(--textTitle);
               }
             }
           }

@@ -9,7 +9,7 @@ const typography = new Typography({
       },
       {
         name: "Raleway",
-        styles: [500]
+        styles: [300]
       }
     ],
     headerFontFamily: ["Roboto"],
