@@ -61,7 +61,7 @@ const IndexPage = () => {
               </p>
             </div>
 
-            <a href="/#projectFolder">
+            <a href="/#portfolioFolder">
               <svg className='arrowDown' width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
               <path d="M8.75 16.25L20.368 27.868L32.2961 15.9399" stroke="black" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
               </svg>
@@ -99,15 +99,15 @@ const IndexPage = () => {
                 {
                   homePageData.homeData[1].docThumbnailArticles.map(
                     (n)=> 
-                            <DocThumbnail
-                              title = {n.title}
-                              newTab = {n.newTab}
-                              img = {n.imgUrl}
-                              live = {n.live}
-                              tags = {n.tags}
-                              link= {n.link}
-                              description = {n.description}
-                            />
+                        <DocThumbnail
+                          title = {n.title}
+                          newTab = {n.newTab}
+                          img = {n.imgUrl}
+                          live = {n.live}
+                          tags = {n.tags}
+                          link= {n.link}
+                          description = {n.description}
+                        />
                   )
                 }
             </div>
