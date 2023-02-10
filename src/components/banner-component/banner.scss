@@ -61,10 +61,14 @@
 
         .bannerContentHolder {
             padding: 5%;
-            width: 50%;
+            width: 80%;
 
             .bannerContent {
                 padding: 2%;
+                h1 {
+                    color: #fff;
+                }
+
                 & > p {
                     color: #C0C0C0;
                     font-weight: lighter;
@@ -90,12 +94,13 @@
         }
     
         .bannerDesktop {
-            display: block;
+            display: none;
             position: absolute;
-            right: -12%;
+            right: -20%;
             bottom: 5%;
             height: 70%;
             width: auto;
+            transform: scale(0.9);
         } 
     }
 }

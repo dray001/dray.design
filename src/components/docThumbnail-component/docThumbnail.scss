@@ -8,7 +8,8 @@
     color: unset;
     padding: 24px;
     border-radius: 12px;
-    border: 1px solid #000000;
+    cursor: pointer;
+    box-shadow: 6px 10px 8px rgba(60, 60, 60, 0.04);
     transition: all .2s;
 
     &:hover {
@@ -27,13 +28,32 @@
 
         .img_titleWrapper {
             display: block;
-            img {
-                margin: 0px 16px 0px 0px;
+            position: relative;
+
+            span {
+                position: absolute;
+                right: 16px;
+                bottom: 16px;
+                padding: 10px;
+                line-height: 18px;
+                border-radius: 12px;
+                background: #1F1F1F;
+                color: #E2E2E2;
             }
-            h6 {
-                font-size: 24px;
+
+            img {
+                border-radius: 8px;
                 margin: 0;
             }
+        }
+
+        h6 {
+            font-size: 24px;
+            margin: 32px 0 16px;
+        }
+
+        span {
+            font-size: 16px;
         }
 
         a {
@@ -66,10 +86,11 @@
                 img {
                     margin: 0px 16px 0px 0px;
                 }
-                h6 {
-                    font-size: 24px;
-                    margin: 0;
-                }
+            }
+
+            h6 {
+                font-size: 24px;
+                // margin: 0;
             }
 
         }

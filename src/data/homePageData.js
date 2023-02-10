@@ -1,7 +1,8 @@
-import aellaLogo from '../images/thumbnailLogos/aellaLogo.svg'
-import kongaLogo from '../images/thumbnailLogos/kongaLogo.svg'
-import figmaLogo from '../images/thumbnailLogos/figmaLogo.svg'
-import objectLogo from '../images/thumbnailLogos/objectLogo.svg'
+import aellaImg from '../images/thumbnailImages/Aella.png'
+import visualLangDS_Img from '../images/thumbnailImages/aellaVisualLanguage.gif'
+import figmaImg from '../images/thumbnailImages/Illustration.png'
+import kongaImg from '../images/thumbnailImages/Konga.png'
+import objectImg from '../images/thumbnailImages/OOD.png'
 
 export const homePageData = {
 homeData: [
@@ -20,38 +21,54 @@ homeData: [
 
         {
             id: "portfolio_file",
-            title: "Projects and Studies",
-            docThumbnail: [
+            title: "Selected works 🧑🏾‍💻",
+            docThumbnailProjects: [
                 {
-                    title: 'Aella Finance App Design process',
-                    logoUrl: aellaLogo,
+                    title: 'Design System for Visual Branding',
+                    imgUrl: visualLangDS_Img,
                     newTab: false,
+                    live: true,
+                    link: '/projects/aellaVisualDS/aellaVisualDS',
+                    tags: 'Design Systems, Visual language, Branding',
+                    description: 'Design system for visual branding increases consistency across digital assets used for marketing and advertisement...'
+                },
+                {
+                    title: 'Fintech App Design process',
+                    imgUrl: aellaImg,
+                    newTab: false,
+                    live: true,
                     link: '/projects/aellaFinanceApp/aellaFinDesignProcess',
-                    linkString: 'Read Case Study',
-                    description: 'Finance is complex enough. People and Businesses deserve easy, straightforward products that works. Aella makes it super easy for anyone to borrow...'
+                    tags: 'Fintech, UIDesign, UXDesign',
+                    description: 'Finance is complex enough. People and Businesses deserve easy, straightforward products that works. Aella makes...'
                 },
                 {
                     title: 'Scaling and maintancing design systems for ecomerce',
-                    logoUrl: kongaLogo,
+                    imgUrl: kongaImg,
                     newTab: false,
+                    live: true,
                     link: '/projects/konga/kongaDesignProcess',
-                    linkString: 'Read Design Process',
+                    tags: 'E-commerce, Design system, UIDesign, UXDesign',
                     description: `Konga is one of Nigeria's largest online mall. offering products that span various categories including Phones, Computers, Clothing, Shoes, Home Appliances...`
-                },
+                }
+            ],
+
+            docThumbnailArticles: [
                 {
                     title: 'Object-Oriented Design paradigm for building User Interfaces',
-                    logoUrl: objectLogo,
+                    imgUrl: objectImg,
                     newTab: true,
+                    live: true,
                     link: 'https://dareoni.medium.com/object-oriented-design-paradigm-for-building-user-interfaces-ee13aa2f6726',
-                    linkString: 'Read Article',
+                    tags: 'Object-Oriented Design, Design Thinking, UIDesign',
                     description: 'In the digital world, digital objects such as (buttons, headers, footers, input fields, etc.) have similarities with physical things we see regularly...'
                 },
                 {
                     title: 'Digital Illustrating with Figma',
-                    logoUrl: figmaLogo,
+                    imgUrl: figmaImg,
                     newTab: true,
+                    live: true,
                     link: 'https://medium.com/figma-africa/making-illustrations-with-figma-2fb23749907',
-                    linkString: 'Read Article',
+                    tags: 'Illustration, Figma, Vector Tools',
                     description: 'A lot of designers think Figma is just meant for UI design and prototyping. But Figma is great for making flat illustrations and icons, and this is a great way...'
                 }
             ]

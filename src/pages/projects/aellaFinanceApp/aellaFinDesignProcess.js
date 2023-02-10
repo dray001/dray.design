@@ -122,7 +122,7 @@ const SecondPag = () => {
               {dataCollector('Aella')}
             {/* <Heading size='52px' title={aellaData[1].title} /> */}
               <div className='role'>
-                <h1>Role & Responsibility</h1>
+                <h1>Introduction</h1>
                 <p>
                 {aellaData[1].para}
                 </p>

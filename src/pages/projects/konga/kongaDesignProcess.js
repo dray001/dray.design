@@ -111,6 +111,7 @@ const SecondPag = () => {
         
           <div className='kongaContentInfo'>
             <div id='brief' className='banner stepHolder mobilePadder'>
+              
               {kongaBanner}
               <div className='role'>
                 <h1>{kongaData[1].title}</h1>

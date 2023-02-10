@@ -11,7 +11,10 @@ projectKonga: [
             logoHeight: '36px',
             bannerImg: 'https://res.cloudinary.com/dramages/image/upload/v1600900186/portfolioImages/portfolioOnKonga/kongabannerwhite.png',
             description: 
-                `   <p>
+                `   
+                    <h1>Scaling and maintancing design systems for ecomerce</h1>
+                
+                    <p>
                         Konga is one of Nigeria's largest online mall. offering 
                         products that span various categories including Phones, Computers, 
                         Clothing, Shoes, Home Appliances, Books, healthcare, Baby Products, 

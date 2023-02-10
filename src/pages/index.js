@@ -70,25 +70,48 @@ const IndexPage = () => {
           </div>
         </section>
 
-        <section id='projectFolder'>
+        <section id='portfolioFolder'>
 
-          <Heading title={'Work and Articles'} />
-
+          <div>
+            <h1>{homePageData.homeData[1].title}</h1>
             <div className="thumbnailWrapper">
                 {
-                  homePageData.homeData[1].docThumbnail.map(
+                  homePageData.homeData[1].docThumbnailProjects.map(
                     (n)=> 
                             <DocThumbnail
                               title = {n.title}
                               newTab = {n.newTab}
-                              logoUrl = {n.logoUrl}
-                              link = {n.link}
-                              linkString= {n.linkString}
+                              img = {n.imgUrl}
+                              live = {n.live}
+                              tags = {n.tags}
+                              link= {n.link}
                               description = {n.description}
                             />
                   )
                 }
             </div>
+          </div>
+
+          <div>
+            <h1>{'Articles 🖋'}</h1>
+
+            <div className="thumbnailWrapper">
+                {
+                  homePageData.homeData[1].docThumbnailArticles.map(
+                    (n)=> 
+                            <DocThumbnail
+                              title = {n.title}
+                              newTab = {n.newTab}
+                              img = {n.imgUrl}
+                              live = {n.live}
+                              tags = {n.tags}
+                              link= {n.link}
+                              description = {n.description}
+                            />
+                  )
+                }
+            </div>
+          </div>
 
         </section>
 

@@ -55,7 +55,7 @@ const Header = ({siteTitle}) => {
         </Link>
 
         <div className="desktopNav">
-          <Link to ='/#projectFolder' > Work & Articles </Link>
+          <Link to ='/#portfolioFolder' > Work </Link>
           <Link to = '/#Skillset' > Skillset </Link>
           <Link to = '/#AboutMe' > About Me </Link>
           <a target='_blank' href={pdf}> Resume </a>
