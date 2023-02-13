@@ -431,7 +431,7 @@ $anim-speed: 1s;
                 grid-template-columns: 1fr 1fr;
                 width: 100%;
                 gap: 32px;
-                padding: 24px;
+                // padding: 24px;
                 border-radius: 24px;
                 margin-top: 48px;
                 position: relative;
@@ -443,10 +443,9 @@ $anim-speed: 1s;
                         display: flex;
                         flex-direction: row-reverse;
 
-                        & > div {
-                            margin-left: 32px;
+                        & > :last-child {
+                            padding-right: 16px;
                         }
-
                     }
                 }
             }
