@@ -3,6 +3,7 @@ import visualLangDS_Img from '../images/thumbnailImages/aellaVisualLanguage.gif'
 import figmaImg from '../images/thumbnailImages/Illustration.png'
 import kongaImg from '../images/thumbnailImages/Konga.png'
 import objectImg from '../images/thumbnailImages/OOD.png'
+import loveImg from '../images/thumbnailImages/loveCover.png'
 
 export const homePageData = {
 homeData: [
@@ -23,6 +24,15 @@ homeData: [
             id: "portfolio_file",
             title: "Selected works 🧑🏾‍💻",
             docThumbnailProjects: [
+                {
+                    title: 'How my design became a moment in a love story',
+                    imgUrl: loveImg,
+                    newTab: true,
+                    live: true,
+                    link: 'https://medium.com/@dareoni/how-my-design-became-a-moment-in-a-love-story-1f9d55d9d92c',
+                    tags: 'E-commerce, Design system, UIDesign, UXDesign',
+                    description: `It’s been more than a decade since I started exploring visual design, I started as a graphic designer...`
+                },
                 {
                     title: 'Design System for Visual Branding',
                     imgUrl: visualLangDS_Img,
