@@ -30,7 +30,7 @@ homeData: [
                     newTab: true,
                     live: true,
                     link: 'https://medium.com/@dareoni/how-my-design-became-a-moment-in-a-love-story-1f9d55d9d92c',
-                    tags: 'E-commerce, Design system, UIDesign, UXDesign',
+                    tags: 'UI/UX, Design Thinking, Interaction Design',
                     description: `It’s been more than a decade since I started exploring visual design, I started as a graphic designer...`
                 },
                 {
