@@ -25,13 +25,13 @@ homeData: [
             title: "Selected works 🧑🏾‍💻",
             docThumbnailProjects: [
                 {
-                    title: 'How my design became a moment in a love story',
-                    imgUrl: loveImg,
-                    newTab: true,
+                    title: 'Fintech App Design process',
+                    imgUrl: aellaImg,
+                    newTab: false,
                     live: true,
-                    link: 'https://medium.com/@dareoni/how-my-design-became-a-moment-in-a-love-story-1f9d55d9d92c',
-                    tags: 'UI/UX, Design Thinking, Interaction Design',
-                    description: `It’s been more than a decade since I started exploring visual design, I started as a graphic designer...`
+                    link: '/projects/aellaFinanceApp/aellaFinDesignProcess',
+                    tags: 'Fintech, UIDesign, UXDesign',
+                    description: 'Finance is complex enough. People and Businesses deserve easy, straightforward products that works. Aella makes...'
                 },
                 {
                     title: 'Design System for Visual Branding',
@@ -43,13 +43,13 @@ homeData: [
                     description: 'Design system for visual branding increases consistency across digital assets used for marketing and advertisement...'
                 },
                 {
-                    title: 'Fintech App Design process',
-                    imgUrl: aellaImg,
-                    newTab: false,
+                    title: 'How my design became a moment in a love story',
+                    imgUrl: loveImg,
+                    newTab: true,
                     live: true,
-                    link: '/projects/aellaFinanceApp/aellaFinDesignProcess',
-                    tags: 'Fintech, UIDesign, UXDesign',
-                    description: 'Finance is complex enough. People and Businesses deserve easy, straightforward products that works. Aella makes...'
+                    link: 'https://medium.com/@dareoni/how-my-design-became-a-moment-in-a-love-story-1f9d55d9d92c',
+                    tags: 'UI/UX, Design Thinking, Interaction Design',
+                    description: `It’s been more than a decade since I started exploring visual design, I started as a graphic designer...`
                 },
                 {
                     title: 'Scaling and maintancing design systems for ecomerce',
