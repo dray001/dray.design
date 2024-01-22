@@ -39,7 +39,7 @@ const Footer = () => {
           <a target='blank' href="mailto:dareony@gmail.com">{email}</a>
           {/* <a href="#">{youtube}</a>   */}
         </div>
-        <span> Made with Love © {new Date().getFullYear()} Dare Oni</span>
+        <span> Made with Love (back to coding) © {new Date().getFullYear()} Dare Oni</span>
       </div>
     </div>
   </footer>
