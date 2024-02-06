@@ -42,15 +42,7 @@ homeData: [
                     tags: 'Design Systems, Visual language, Branding',
                     description: 'Design system for visual branding increases consistency across digital assets used for marketing and advertisement...'
                 },
-                {
-                    title: 'How my design became a moment in a love story',
-                    imgUrl: loveImg,
-                    newTab: true,
-                    live: true,
-                    link: 'https://medium.com/@dareoni/how-my-design-became-a-moment-in-a-love-story-1f9d55d9d92c',
-                    tags: 'UI/UX, Design Thinking, Interaction Design',
-                    description: `It’s been more than a decade since I started exploring visual design, I started as a graphic designer...`
-                },
+                
                 {
                     title: 'Scaling and maintancing design systems for ecomerce',
                     imgUrl: kongaImg,
@@ -59,6 +51,16 @@ homeData: [
                     link: '/projects/konga/kongaDesignProcess',
                     tags: 'E-commerce, Design system, UIDesign, UXDesign',
                     description: `Konga is one of Nigeria's largest online mall. offering products that span various categories including Phones, Computers, Clothing, Shoes, Home Appliances...`
+                },
+
+                {
+                    title: 'How my design became a moment in a love story',
+                    imgUrl: loveImg,
+                    newTab: true,
+                    live: true,
+                    link: 'https://medium.com/@dareoni/how-my-design-became-a-moment-in-a-love-story-1f9d55d9d92c',
+                    tags: 'UI/UX, Design Thinking, Interaction Design',
+                    description: `It’s been more than a decade since I started exploring visual design, I started as a graphic designer...`
                 }
             ],
 

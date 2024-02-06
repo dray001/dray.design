@@ -15,7 +15,18 @@ const Header = ({siteTitle}) => {
    const [openState, setOpenstate] = useState(false);
 
    useEffect(()=> {
-      setOpenstate(false);
+    let navButtons = document.querySelectorAll('.navButton');
+    const test = (e) => {
+      const active_button = e.currentTarget;
+      navButtons.forEach(norm_button => {
+        norm_button.classList.remove("active");
+      });
+
+      active_button.classList.add("active");
+    }
+    navButtons.forEach((button) => button.addEventListener('click', test));
+    
+    setOpenstate(false);
    },[])
 
    const toggleMenu =()=> {
@@ -55,10 +66,10 @@ const Header = ({siteTitle}) => {
         </Link>
 
         <div className="desktopNav">
-          <Link to ='/#portfolioFolder' > Work </Link>
-          <Link to = '/#Skillset' > Skillset </Link>
-          <Link to = '/#AboutMe' > About Me </Link>
-          <a target='_blank' href={pdf}> Resume </a>
+          <Link className="navButton active" to ='/#portfolioFolder' > Work </Link>
+          <Link className="navButton" to = '/#Skillset' > Skillset </Link>
+          <Link className="navButton" to = '/#AboutMe' > About Me </Link>
+          <a className="navButton" target='_blank' href={pdf}> Resume </a>
         </div>
 
         <div className={openState ? 'navHolder' : 'navHolder off' }>
