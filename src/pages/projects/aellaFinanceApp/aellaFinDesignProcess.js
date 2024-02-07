@@ -79,9 +79,10 @@ const SecondPag = () => {
     observeIntersection(4,4);
     observeIntersection(5,5);
     observeIntersection(6,6);
-    observeIntersection(7,7);
+    observeIntersection(7,7,0.3,150);
     observeIntersection(8,8);
     observeIntersection(9,9,0.3,150);
+    observeIntersection(10,10,0.3,150);
     
   },[]);
 
@@ -293,8 +294,12 @@ const SecondPag = () => {
                 <span className='step'>Step 7 of design process</span>
                 <h1>{ aellaData[8].title }</h1>
                 <div className='stepSevenProcessFlow'>
-                  <p> {aellaData[8].para } </p> 
-                  <img src={aellaData[8].image } alt="img"/>
+                  <p> {aellaData[8].para1 } </p> 
+                  <img src={aellaData[8].image1 } alt="img"/>
+                </div>
+                <div className='stepSevenProcessFlow'>
+                  {/* <p> {aellaData[8].para2 } </p>  */}
+                  <img src={aellaData[8].image2} alt="img"/>
                 </div>
               </div>
             </div>
@@ -340,6 +345,49 @@ const SecondPag = () => {
               </div>
             </div>
 
+            <div id='Impact' className='sectionHolder mobilePadder stepHolder stepOneProcess'>
+              <div className='sectionHolderDescription'>
+                {/* <span className='step'>Step 1 of design process</span> */}
+                <h1>Conclusion</h1>
+                <p> Having over 11 years in visual design and communications (graphics
+                    and motion design) I was able to create visual elements/assets in
+                    accordance with the brand of the business, creating a visual design
+                    system with design tokens such as colors, typography,
+                    iconography, and illustrations, etc . these design elements and
+                    assets are stored in a design library like Figma which is then
+                    published for use across digital product files within the organization. </p>
+              </div>
+
+              <div className='stepOneProcessBreakdownHolder'>
+                <div className='stepOneProcessBreakdown'>
+                  <h3>Design Impact</h3>
+                  <ul>
+                    <li>I was able to drive over <Emphasis text='70% in user growth and engagement'/> by
+                      implementing a design system that effectively meets the needs of
+                      business and its end users, this design system includes world-class
+                      user experience designs (UED) across all digital products (Apps and
+                      Dashboards) backed with a beautiful visual language which increases
+                      usability and retention.</li>
+                    <li>In collaboration with my design teams and development team, we
+                        were able to build a super fintech app that covers a wide range of
+                        users' needs, such as <Emphasis text='payments, loans, insurance, savings,
+                        ticketing, etc.'/> The design and launching of the app were a success
+                        thanks to our design system and understanding of user's needs, <Emphasis text='user
+                        downloads increased by over 100% (1M+ downloads on playstore)'/>.</li>
+                  </ul>
+                </div>
+
+                <div className='stepOneProcessBreakdown'>
+                  <h3>Learnings and Reflections</h3>
+                  <ul>
+                    <li>Proper Research and wireframe prototype shouldn't be taken for granted, as it might cost the business lots of money and time if things are not properly structured in the initial stage of the project.</li>
+                    <li>it is crucial to allocate time for user testing before releasing it to the public as the goal is to create a product that prioritizes the user experience.</li>
+                  </ul>
+                </div>
+              </div>
+
+            </div>
+
             < NextProject
               type = {projectType}
               projectName = {projectTitle}
@@ -361,6 +409,7 @@ const SecondPag = () => {
             <Link to='#hifi'> High Fidelity Mockup </Link>
             <Link to='#prototype'> Prototype </Link>
             <Link to='#visuals'> Visual Language </Link>
+            <Link to='#Impact'> Conclusion </Link>
           </div>
         </div>
 
@@ -378,5 +427,7 @@ const Brief = ({title,description,image, imgHeight}) =>
   </div>
   <img style = {{height: `${imgHeight}`}} src={image} alt="img"/>
 </div>
+
+const Emphasis = ({text}) => <span className="emphasis"> {text} </span>
 
 export default SecondPag

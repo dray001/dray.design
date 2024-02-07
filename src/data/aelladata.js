@@ -9,7 +9,8 @@ projectAellaApp: [
             type: 'mobile',
             bgColor: '#2054D2',
             logoHeight: '36px',
-            bannerImg: 'https://res.cloudinary.com/dramages/image/upload/v1609808434/portfolioImages/portfolioOnAella/bannerAella.png',
+            bannerImg: 'https://res.cloudinary.com/dramages/image/upload/v1707266037/portfolioImages/portfolioOnAella/portfolioOnAella___v2.0.png',
+            // bannerImg: 'https://res.cloudinary.com/dramages/image/upload/v1609808434/portfolioImages/portfolioOnAella/bannerAella.png',
             description: 
             `   <p>
                     Finance is complex enough. People and Businesses deserve easy, straightforward 
@@ -20,8 +21,8 @@ projectAellaApp: [
                 <div>
                 <p> <span>Role -</span>  Lead Designer </p>
                 <p> <span>Platforms -</span>  Website, Mobile app </p>
-                <p> <span>Wesbite -</span>  Website, Mobile app <a href="#">visit</a> </p>
-                <p> <span>Year -</span>  2019 </p>
+                <p> <span>Wesbite -</span>  Website, Mobile app <a target='_blank' href="https://aellaapp.com/">visit</a> </p>
+                <p> <span>Year -</span>  2019 - 2023 </p>
                 </div>
             `
         }, 
@@ -102,8 +103,10 @@ projectAellaApp: [
         {
             id: "highfidelity",
             title: "High Fidelity Design",
-            image: "https://res.cloudinary.com/dramages/image/upload/v1601423757/portfolioImages/portfolioOnAella/highFidelity.png",
-            para: `From previously highlighted design goals, the use of the primary Aella Blue Color gives Emphasis on important informations, and needful actions to perform, also the use of white space to reduce cognitive load.`
+            image1: "https://res.cloudinary.com/dramages/image/upload/v1601423757/portfolioImages/portfolioOnAella/highFidelity.png",
+            para1: `From previously highlighted design goals, the use of the primary Aella Blue Color gives Emphasis on important informations, and needful actions to perform, also the use of white space to reduce cognitive load.`,
+            image2: "https://res.cloudinary.com/dramages/image/upload/v1707266561/portfolioImages/portfolioOnAella/highFidelity_V2.png",
+            para2: `From previously highlighted design goals, the use of the primary Aella Blue Color gives Emphasis on important informations, and needful actions to perform, also the use of white space to reduce cognitive load.`
         },
         {
             id: "prototype",

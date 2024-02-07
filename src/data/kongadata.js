@@ -24,7 +24,7 @@ projectKonga: [
                     <div>
                     <p> <span>Role -</span>  UI/UX Designer </p>
                     <p> <span>Platforms -</span>  Website, Mobile app </p>
-                    <p> <span>Wesbite -</span>  www.konga.com <a href="https://www.konga.com/">visit</a> </p>
+                    <p> <span>Wesbite -</span>  www.konga.com <a target='_blank' href="https://www.konga.com/">visit</a> </p>
                     <p> <span>Year -</span>  2018 </p>
                     </div>
                 `
