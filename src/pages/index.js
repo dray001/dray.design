@@ -51,7 +51,7 @@ const IndexPage = () => {
             </div>
           
             <div className='textp1' ref={el => sec1Para1 = el} >
-              <h1>Hi, I'm Dray, a product designer passionate about UX & Design Systems </h1>
+              <h1>Hi, I'm Dray, a Digital Designer passionate about creating digital solutions and experiences </h1>
             </div>
             
             

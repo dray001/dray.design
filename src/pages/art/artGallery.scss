@@ -1,0 +1,24 @@
+@import './src/styles/common.scss';
+
+    .artPage {
+        width: 100%;
+        margin: 40px auto;
+        padding-top: 0% !important;
+
+        .board {
+            width: 100%;
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr;
+            grid-gap: 24px;
+            align-items: center;
+            justify-content: center;
+        } 
+    }
+
+    
+
+
+
+
+
+

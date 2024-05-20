@@ -1,0 +1,84 @@
+@import './src/styles/common.scss';
+
+$colors0: (
+  skin: #D49C45,
+  eyes_highlight: #cb1268,
+  lips: #B73021,
+  part0: #A8B4B0,
+  part1: #BDD0D4,
+  part2: #982C3B,
+  part3: #EA4056,
+  part4: #6D0003,
+  part5: #D9D9D9,
+  part6: #BDD0D4,
+);
+
+$colors1: (
+  skin: #7D5B27,
+  eyes_highlight: #B696A5,
+  lips: #FE9387,
+  part0: #139268,
+  part1: #A6D4FF,
+  part2: #2C6498,
+  part3: #5287B9,
+  part4: #FF767A,
+  part5: #D9D9D9,
+  part6: #CF5457,
+);
+
+.ProtoArtFrame {
+    // width: 50%;
+    overflow: hidden;
+    cursor: pointer;
+
+    #protoArt {
+        width: 100%;
+        height: auto;
+        border-radius: 24px;
+    
+        path {
+            transition: all 1s;
+        }
+    
+        &.pallete0 {
+            .skinColor {
+                fill: map-get($colors0, skin);
+                transition: unset;
+            }
+            .lips {
+                fill: map-get($colors0, lips);
+                transition: unset;
+                // transition-delay: 0.2s;
+            }
+            // Apply styles to each item in the list
+            @for $i from 0 through 6 { // Adjust the range as needed
+                $delay: $i * 0.1s;
+                .part#{$i} {
+                    fill: map-get($colors0, part#{$i});
+                    transform: scale(1.02);
+                    transition-delay: $delay;
+                }
+            }
+        }
+    
+        &.pallete1 {
+            .skinColor {
+                fill: map-get($colors1, skin);
+                transition: unset;
+            }
+            .lips {
+                fill: map-get($colors1, lips);
+                transition: unset;
+                // transition-delay: 0.2s;
+            }
+            @for $i from 0 through 6 { // Adjust the range as needed
+                $delay: $i * 0.1s;
+                .part#{$i} {
+                    fill: map-get($colors1, part#{$i});
+                    transform: scale(1);
+                    transition-delay: $delay;
+                }
+            }
+        }
+    }
+}

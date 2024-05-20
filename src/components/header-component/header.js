@@ -3,7 +3,7 @@ import React, {useState, useEffect} from "react"
 import PropTypes from "prop-types"
 import "./header.scss"
 import { ThemeToggler } from 'gatsby-plugin-dark-mode'
-import pdf from '../doc/Dare_Oni_Resumé.pdf'
+import pdf from '../doc/Onis_Resume.pdf'
 
 const linkedInLink = "https://www.linkedin.com/in/goddray/";
 const twitterLink = "https://twitter.com/orishadray";
@@ -58,6 +58,7 @@ const Header = ({siteTitle}) => {
           <Link to ='/#portfolioFolder' > Work </Link>
           <Link to = '/#Skillset' > Skillset </Link>
           <Link to = '/#AboutMe' > About Me </Link>
+          {/* <Link to = '/art/artGallery' > Art </Link> */}
           <a target='_blank' href={pdf}> Resume </a>
         </div>
 
