@@ -4,16 +4,16 @@ const typography = new Typography({
     baseLineHeight: 1.666,
     googleFonts: [
       {
-        name: "Roboto",
+        name: "Figtree",
         styles: [700],
       },
       {
-        name: "Raleway",
+        name: "Figtree",
         styles: [500]
       }
     ],
-    headerFontFamily: ["Roboto"],
-    bodyFontFamily: ["Raleway"],
+    headerFontFamily: ["Figtree"],
+    bodyFontFamily: ["Figtree"],
   })
 
 // const typography = new Typography(fairyGateTheme)
