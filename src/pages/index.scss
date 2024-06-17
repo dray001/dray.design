@@ -126,32 +126,36 @@ $anim-speed: 1s;
                 position: relative;
                 margin: auto;
                 margin-bottom: 32px;
-                width: 240px;
-                height: 200px;
-                transform: scale(0.8);
-
-                .twinkle:nth-child(1) {
-                    z-index: 4;
-                    position: absolute;
-                    bottom: 0;
-                    right: 0;
-                    animation: twinklers 1s .5s infinite ease-out;
-                }
-
-                .twinkle:nth-child(2) {
-                    z-index: 4;
-                    position: absolute;
-                    top: 0px;
-                    left: 0px;
-                    animation: twinklers $anim-speed infinite ease-out;
-                }
+                width: 350px;
+                height: 350px;
 
                 .imgMask {
-                    margin: auto;
-                    width: 200px;
-                    height: 200px;
-                    overflow: hidden;
-                    border-radius: 200px;
+                    width: 300px;
+                    height: 275px;
+                    position: absolute;
+                    top: 12.5%;
+                    left: 12.5%;
+                    transform: scale(1.2);
+
+                    svg {  
+                         path {
+                            stroke: var(--textTitle);
+                            stroke-width: 1px;
+                        }
+
+                        #fill {
+                            stroke: var(--textTitle);
+                            fill: var(--bg);
+                        }
+                    }
+
+                    img {
+                        position: absolute;
+                        top: 50%;
+                        left: 50%;
+                        transform: translate(-50%, -50%);
+                        z-index: -10;
+                    }
                 }
 
              }
@@ -326,6 +330,7 @@ $anim-speed: 1s;
             image {
                 y: 48px;
                 x: 66px;
+                --textNormal:
             }
         }
     }
@@ -376,7 +381,25 @@ $anim-speed: 1s;
                 padding-top: 80px;
                 
                 .profileHolder {
-                    transform: scale(1);
+                    width: 350px;
+                    height: 350px;
+                    // background: #000;
+                    transform: scale(1.2);
+
+                    .imgMask {
+                        width: 300px;
+                        height: 275px;
+                        // background-color: red;
+                        position: absolute;
+                        top: 38px;
+                        left: 25px;
+    
+                        img {
+                            content: '';
+                            height: 240px;
+                            // display: none;
+                        }
+                    }
                 }
 
                 h1 {
